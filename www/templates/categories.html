@@ -1,4 +1,4 @@
-<ion-view view-title="Categories">
+<ion-view view-title="Categories" >
   <ion-nav-buttons side="right">
     <div class="input-label">
       <label for="language">English</label>
@@ -14,9 +14,10 @@
   <ion-content>
     <ion-list>
       <div class="row">
-        <div class="col col-center" style="text-align:center">
+        <div class="col col-center " style="text-align:center">
           <a ng-repeat="category in categories" href="#/app/categories/{{category.id}}">
-            <img style="border-radius: 100%;" src="http://lorempixel.com/200/200/people/{{category.id}}">
+            <div class="circle" style="background-color: rgb(255, 221, 0); border-radius: 50%;"></div>
+            <img style="border-radius: 100%; margin: 10px;" src="http://lorempixel.com/150/150/people/{{category.id}}">
           </a>
         </div>
       </div>

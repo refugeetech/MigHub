@@ -61,6 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('app.single', {
     url: '/categories/:categoryId',
+    animate: 'slide-in-up',
     views: {
       'menuContent': {
         templateUrl: 'templates/category.html',
