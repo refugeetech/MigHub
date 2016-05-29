@@ -42,14 +42,14 @@ angular.module('starter.controllers', [])
 
   .controller('CategoriesCtrl', function ($scope) {
     $scope.categories = [
-      { title: 'Employment', id: 1, color: "blue", icon: "" },
-      { title: 'Housing', id: 2, color: "red" },
-      { title: 'Coordination', id: 3, color: "green" },
-      { title: 'Information', id: 4, color: "magenta" },
-      { title: 'Education', id: 5, color: "purple" },
-      { title: 'Language', id: 6, color: "brown" },
-      { title: 'Social', id: 7,  color: "yellow" },
-      { title: 'Text', id: 8, color: "pink" }
+      { title: 'Employment', id: 1, color: "#fe5504", icon: "" },
+      { title: 'Housing', id: 2, color: "#00ddff" },
+      { title: 'Coordination', id: 3, color: "#ffdd00" },
+      { title: 'Information', id: 4, color: "#000055" },
+      { title: 'Education', id: 5, color: "#ff9966" },
+      { title: 'Language', id: 6, color: "#55ddb0" },
+      { title: 'Social', id: 7,  color: " #00ddff" },
+      { title: 'Text', id: 8, color: "#ffdd00" }
     ]
   })
 
