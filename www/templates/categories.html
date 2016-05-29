@@ -14,14 +14,14 @@
   <ion-content>
     <ion-list>
       <div class="row">
-        <div class="col col-center " style="text-align:center">
-          <a ng-repeat="category in categories" href="#/app/categories/{{category.slug}}">
+        <div class="col col-center categories">
+          <a class="category" ng-repeat="category in categories" href="#/app/categories/{{category.slug}}">
             <!-- <div class="circle" style="background-color: rgb(255, 221, 0); border-radius: 50%;"></div> -->
             <!-- <img style="border-radius: 100%; margin: 5px;" src="http://lorempixel.com/150/150/people/{{category.id}}"> -->
-            <svg style="text-align: center;" height="250" width="250">
-              <circle cx="110" cy="110" r="100" stroke="" stroke-width="" fill="{{category.color}}" />
-              <image x="10" y="10" width="80%" height="80%" href="img/categories-{{category.slug}}.svg" />
+            <svg class="icon" style="background-color:{{category.color}}">
+              <image href="img/categories-{{category.slug}}.svg" />
             </svg>
+            <span class="title">{{category.title}}</span>
           </a>
         </div>
       </div>

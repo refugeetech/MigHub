@@ -1,0 +1,33 @@
+a {
+	text-decoration: none;
+}
+
+.categories {
+	text-align:center;
+	.category {
+		display: inline-block;
+		position: relative;
+		width:90px;
+		height:90px;
+		margin:8px;
+		margin-bottom:38px;
+	
+		.icon {
+			width:100%;
+			height:100%;
+			border-radius:50%;
+			image {
+				width: 90%;
+				height: 90%;
+				x: 5%;
+				y: 5%;
+			}
+		}
+		.title {
+			width: 100%;
+			text-align:center;
+			display:block;
+			color: $text-dark;
+		}
+	}
+}
