@@ -70,7 +70,7 @@ angular.module('starter.controllers', [])
 
   .controller('CategoryCtrl', function ($scope, $stateParams) {
     $scope.category = $scope.categories.filter(function (category) {
-      return category.id === $stateParams.id
+      return category.slug === $stateParams.categoryId
     })[0]
 
     $scope.apps = $scope.apps.filter(function (app) {
