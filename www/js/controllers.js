@@ -61,7 +61,6 @@ angular.module('starter.controllers', [])
 
     // Perform the app action when the user submits the app form
     $scope.doapp = function () {
-      console.log('Doing app', $scope.appData)
       $scope.closeapp()
     }
   })
