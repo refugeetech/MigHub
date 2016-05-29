@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">{{app.title}}</h1>
+    <div class="buttons">
+      <button class="button" ng-click="closeapp()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doapp()">
+      <div class="row">
+        <div class="col">
+          <div class="text-center">
+            <img style="border-radius: 10%" ng-src="{{ app.logo }}" height="45%" width="45%">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="text-center" style="padding: 25px" >
+            <h2>App-Title</h2>
+            <p>{{ app.description }}</p>
+            <button class="button button-stable">
+              <i class="icon ion-social-apple"></i> IOS
+            </button>
+            <button class="button button-stable">
+              <i class="icon ion-social-android"></i> Android
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,23 @@
+<ion-view view-title="Categories" >
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear" ng-click="show();">
+      Language
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <div class="row">
+        <div class="col col-center categories">
+          <a class="category" ng-repeat="category in categories" href="#/app/categories/{{category.slug}}">
+            <!-- <div class="circle" style="background-color: rgb(255, 221, 0); border-radius: 50%;"></div> -->
+            <!-- <img style="border-radius: 100%; margin: 5px;" src="http://lorempixel.com/150/150/people/{{category.id}}"> -->
+            <svg class="icon" style="background-color:{{category.color}}">
+              <image href="img/categories-{{category.slug}}.svg" />
+            </svg>
+            <span class="title">{{category.title}}</span>
+          </a>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
