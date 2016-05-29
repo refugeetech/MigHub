@@ -6628,7 +6628,7 @@ button.item.item-button-right {
 .card,
 .list-inset {
   overflow: hidden;
-  margin: 20px 10px;
+  margin: 36px 18px;
   border-radius: 2px;
   background-color: #fff; }
 
@@ -9430,23 +9430,23 @@ a.button {
  * --------------------------------------------------
  */
 .padding {
-  padding: 10px; }
+  padding: 18px; }
 
 .padding-top,
 .padding-vertical {
-  padding-top: 10px; }
+  padding-top: 18px; }
 
 .padding-right,
 .padding-horizontal {
-  padding-right: 10px; }
+  padding-right: 18px; }
 
 .padding-bottom,
 .padding-vertical {
-  padding-bottom: 10px; }
+  padding-bottom: 18px; }
 
 .padding-left,
 .padding-horizontal {
-  padding-left: 10px; }
+  padding-left: 18px; }
 
 /**
  * Scrollable iFrames
@@ -9810,10 +9810,12 @@ a.button {
 
 .category_description_container {
   background: #fff;
-  padding: 10px;
+  padding: 18px;
   border-radius: 10px; }
   .category_description_container .card {
     box-shadow: none;
-    padding: 10px; }
+    padding: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
   .category_description_container .item {
     border: none; }
