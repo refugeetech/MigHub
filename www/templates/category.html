@@ -3,16 +3,21 @@
 
     <div class="row text-center">
       <div class="col">
-        <h1>Looking for {{category.title}}</h1>
         <img class="img-rounded img-responsive" src="http://lorempixel.com/400/400/people/2">
       </div>
     </div>
-    <ion-list>
-        <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
-          <img src="{{app.icon}}">
-          <h2>{{app.title}}</h2>
-          <p>{{app.description}}</p>
-        </a>
-    </ion-list>
+    <div class="category_description_container">
+      <div class="card text-center">
+        <h4>{{category.title}}</h4>
+        <p>Squid intelligentsia yr gentrify, four dollar toast flexitarian blog narwhal 8-bit pour-over you probably haven't heard of them tilde tote bag truffaut brunch.</p>
+      </div>
+      <ion-list>
+          <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
+            <img src="{{app.icon}}">
+            <h2>{{app.title}}</h2>
+            <p>{{app.description}}</p>
+          </a>
+      </ion-list>
+    </div>
   </ion-content>
 </ion-view>
