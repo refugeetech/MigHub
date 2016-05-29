@@ -58,7 +58,8 @@
         });
     }
 
-    var httpRequest = function (url, params={}) {
+    var httpRequest = function (url, params) {
+      if (params===undefined) params = (function () {});
       return $q(function(resolve, reject) {
 
         var cache = CacheFactory.get('categoriesDataCache'),
