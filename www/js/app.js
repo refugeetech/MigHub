@@ -4,7 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module(
+  'starter', 
+    ['ionic', 'starter.controllers', 'mighub.services', 'angular-cache']
+  )
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +25,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, CacheFactoryProvider) {
+
+  angular.extend(CacheFactoryProvider.defaults, {
+    maxAge: 15 * 60 * 1000, // 15 minutes
+    deleteOnExpire: 'aggressive',
+    onExpire: function (key, value) {
+      var _this = this; // "this" is the cache in which the item expired
+      angular.injector(['ng']).get('$http').get(key).success(function (data) {
+        _this.put(key, data);
+      });
+    }
+  });
+
   $stateProvider
 
     .state('app', {

@@ -8,9 +8,6 @@ angular.module('starter.controllers', [])
     // $scope.$on('$ionicView.enter', function(e) {
     // })
 
-    // Form data for the app modal
-    $scope.appData = {}
-
     // root scope
     $scope.categories = [
       { title: 'Employment', slug: 'employment', color: '#fe5504' },
@@ -65,7 +62,11 @@ angular.module('starter.controllers', [])
     }
   })
 
-  .controller('CategoriesCtrl', function ($scope) {})
+  .controller('CategoriesCtrl', function ($scope, API) {
+    API.categories().then(function(res) {
+      console.log('res', res);
+    })
+  })
 
   .controller('CategoryCtrl', function ($scope, $stateParams) {
     $scope.category = $scope.categories.filter(function (category) {

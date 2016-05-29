@@ -14,13 +14,11 @@
       </select>
     </div>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content style="background-color:{{category.color}};" padding="true">
 
     <div class="row text-center">
       <div class="col">
-        <svg style="text-align: center;" height="450" width="450">
-          <image x="30" y="30" width="80%" height="80%" href="img/categories-{{category.slug}}.svg" />
-        </svg>
+        <img class="img-responsive" src="img/categories-{{category.slug}}.svg">
       </div>
     </div>
     <div class="category_description_container">
