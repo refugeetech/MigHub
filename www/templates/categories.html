@@ -5,9 +5,9 @@
     </div>
     <div class="item-input item-select">
       <select id="language">
-        <option>Blue</option>
-        <option selected>Green</option>
-        <option>Red</option>
+        <option>Arabic</option>
+        <option selected>English</option>
+        <option>Farsi</option>
       </select>
     </div>
   </ion-nav-buttons>
@@ -16,8 +16,8 @@
       <div class="row">
         <div class="col col-center " style="text-align:center">
           <a ng-repeat="category in categories" href="#/app/categories/{{category.id}}">
-            <div class="circle" style="background-color: rgb(255, 221, 0); border-radius: 50%;"></div>
-            <img style="border-radius: 100%; margin: 10px;" src="http://lorempixel.com/150/150/people/{{category.id}}">
+            <!-- <div class="circle" style="background-color: rgb(255, 221, 0); border-radius: 50%;"></div> -->
+            <img style="border-radius: 100%; margin: 5px;" src="http://lorempixel.com/150/150/people/{{category.id}}">
           </a>
         </div>
       </div>
