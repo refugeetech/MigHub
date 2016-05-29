@@ -1,5 +1,6 @@
 <ion-view view-title="Category" animation="slide-down-up">
   <ion-content>
+
     <h1>Looking for {{category.title}} </h1>
     <div class="row" style="text-align:center">
       <div class="col">
@@ -7,35 +8,10 @@
       </div>
     </div>
     <ion-list>
-        <a class="item item-thumbnail-left" ng-click="app()">
-          <img src="http://lorempixel.com/400/400/nightlife/1">
-          <h2>Pretty Hate Machine</h2>
-          <p>Nine Inch Nails</p>
-        </a>
-        <a class="item item-thumbnail-left" ng-click="app()">
-          <img src="http://lorempixel.com/400/400/nightlife/2">
-          <h2>Pretty Hate Machine</h2>
-          <p>Nine Inch Nails</p>
-        </a>       
-        <a class="item item-thumbnail-left" ng-click="app()">
-          <img src="http://lorempixel.com/400/400/nightlife/3">
-          <h2>Pretty Hate Machine</h2>
-          <p>Nine Inch Nails</p>
-        </a>        
-        <a class="item item-thumbnail-left" ng-click="app()">
-          <img src="http://lorempixel.com/400/400/nightlife/4">
-          <h2>Pretty Hate Machine</h2>
-          <p>Nine Inch Nails</p>
-        </a>        
-        <a class="item item-thumbnail-left" ng-click="app()">
-          <img src="http://lorempixel.com/400/400/nightlife/5">
-          <h2>Pretty Hate Machine</h2>
-          <p>Nine Inch Nails</p>
-        </a>        
-        <a class="item item-thumbnail-left" ng-click="app()">
-          <img src="http://lorempixel.com/400/400/nightlife/6">
-          <h2>Pretty Hate Machine</h2>
-          <p>Nine Inch Nails</p>
+        <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
+          <img src="{{app.icon}}">
+          <h2>{{app.title}}</h2>
+          <p>{{app.description}}</p>
         </a>
     </ion-list>
   </ion-content>
