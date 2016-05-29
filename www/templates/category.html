@@ -3,7 +3,7 @@
     <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <div class="input-label">
+<!--     <div class="input-label">
       <label for="language">English</label>
     </div>
     <div class="item-input item-select">
@@ -12,7 +12,7 @@
         <option selected>English</option>
         <option>Farsi</option>
       </select>
-    </div>
+    </div> -->
   </ion-nav-buttons>
   <ion-content style="background-color:{{category.color}};" padding="true">
 
@@ -28,7 +28,7 @@
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
-            <img src="{{app.icon}}">
+            <img src="{{app.logo}}">
             <h2>{{app.title}}</h2>
             <p>{{app.description}}</p>
           </a>

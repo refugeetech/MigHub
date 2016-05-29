@@ -9803,28 +9803,53 @@ a {
   text-decoration: none; }
 
 .categories {
-  text-align: center; }
+  text-align: center;
+  margin: 0px auto; }
+  @media all and (min-width: 860px) {
+    .categories {
+      max-width: 860px;
+      font-size: 1.1em; } }
+  @media all and (min-width: 1100px) {
+    .categories {
+      max-width: 860px;
+      font-size: 1.2em; } }
   .categories .category {
     display: inline-block;
     position: relative;
-    width: 90px;
-    height: 90px;
     margin: 8px;
-    margin-bottom: 38px; }
+    margin-bottom: 38px;
+    width: 90px;
+    height: 90px; }
+    @media all and (min-width: 640px) {
+      .categories .category {
+        width: 130px;
+        height: 130px; } }
+    @media all and (min-width: 1100px) {
+      .categories .category {
+        width: 150px;
+        height: 150px;
+        margin: 24px; } }
     .categories .category .icon {
       width: 100%;
       height: 100%;
       border-radius: 50%; }
       .categories .category .icon image {
-        width: 90%;
-        height: 90%;
-        x: 5%;
-        y: 5%; }
+        width: 100%;
+        height: 100%;
+        x: 0%;
+        y: 0%; }
     .categories .category .title {
-      width: 100%;
+      position: relative;
+      width: 120%;
+      left: -10%;
       text-align: center;
       display: block;
-      color: #000055; }
+      color: #000055;
+      font-weight: 400;
+      font-size: 1.1em; }
+      @media all and (min-width: 860px) {
+        .categories .category .title {
+          margin-top: 7px; } }
 
 .img-rounded {
   border-radius: 100%; }
@@ -9846,3 +9871,5 @@ a {
     margin-bottom: 5px; }
   .category_description_container .item {
     border: none; }
+    .category_description_container .item img {
+      object-fit: contain; }

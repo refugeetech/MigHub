@@ -38,10 +38,14 @@
 
     var getCategories = function () {
       return $q(function(resolve, reject) {
-        httpRequest('/projects/json')
-          .then(function(response) {
-            resolve(response);
-          });
+        // httpRequest('/projects/json')
+        //   .then(function(response) {
+        //     resolve(response);
+        //   });
+          $http({url: './data.json'})
+            .then(function(res) {
+              resolve(res);
+            });
         });
     }
 
