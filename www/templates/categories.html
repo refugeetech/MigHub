@@ -13,7 +13,6 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <i class="smashicons-solid-outdoors-solid-038">&#xea75</i>
       <div class="row">
         <div class="col col-center " style="text-align:center">
           <a ng-repeat="category in categories" href="#/app/categories/{{category.id}}">
@@ -21,6 +20,7 @@
             <!-- <img style="border-radius: 100%; margin: 5px;" src="http://lorempixel.com/150/150/people/{{category.id}}"> -->
             <svg style="text-align: center;" height="250" width="250">
               <circle cx="110" cy="110" r="100" stroke="" stroke-width="" fill="{{category.color}}" />
+              <image x="10" y="10" width="80%" height="80%" href="img/categories-0{{category.id}}.svg" />
             </svg>
           </a>
         </div>
