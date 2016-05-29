@@ -13,33 +13,33 @@ angular.module('starter.controllers', [])
 
     // root scope
     $scope.categories = [
-      {title: 'Employment', slug: 'employment' },
-      {title: 'Housing', slug: 'housing' },
-      {title: 'Coordination', slug: 'coordination' },
-      {title: 'Information', slug: 'information' },
-      {title: 'Education', slug: 'education' },
-      {title: 'Language', slug: 'language' },
-      {title: 'Social', slug: 'social' },
-      {title: 'Text', slug: 'text' }
+      { title: 'Employment', slug: 'employment', color: '#fe5504' },
+      { title: 'Housing', slug: 'housing', color: '#00ddff' },
+      { title: 'Coordination', slug: 'coordination', color: '#ffdd00' },
+      { title: 'Information', slug: 'information', color: '#000055' },
+      { title: 'Education', slug: 'education', color: '#ff9966' },
+      { title: 'Language', slug: 'language', color: '#55ddb0' },
+      { title: 'Social', slug: 'social', color: ' #00ddff' },
+      { title: 'Text', slug: 'text', color: '#ffdd00' }
     ]
 
     $scope.apps = [
-      {title: 'Just Arrived', tags: ['employment']},
-      {title: 'WelcomeApp', tags: ['social']},
-      {title: 'Competency.se', tags: ['employment', 'information']},
-      {title: 'Information Sverige', tags: ['information']},
-      {title: 'Kompisbyrån', tags: ['social']},
-      {title: 'Lingio', tags: ['language']},
-      {title: 'Newcomers.io', tags: ['social']},
-      {title: 'Yrkesdörren', tags: ['education']},
-      {title: 'Språkkraft', tags: ['language']},
-      {title: 'Vårdguiden', tags: ['health']},
-      {title: 'Kiron University', tags: ['education']},
-      {title: '400 contacts', tags: ['employment']},
-      {title: 'Novare Potential', tags: ['employment']},
-      {title: 'Refugees Welcome', tags: ['housing']},
-      {title: 'Welcome to Sweden', tags: ['information']},
-      {title: 'Newbie guide to Sweden', tags: ['information']}
+      { title: 'Just Arrived', tags: ['employment'] },
+      { title: 'WelcomeApp', tags: ['social'] },
+      { title: 'Competency.se', tags: ['employment', 'information'] },
+      { title: 'Information Sverige', tags: ['information'] },
+      { title: 'Kompisbyrån', tags: ['social'] },
+      { title: 'Lingio', tags: ['language'] },
+      { title: 'Newcomers.io', tags: ['social'] },
+      { title: 'Yrkesdörren', tags: ['education'] },
+      { title: 'Språkkraft', tags: ['language'] },
+      { title: 'Vårdguiden', tags: ['health'] },
+      { title: 'Kiron University', tags: ['education'] },
+      { title: '400 contacts', tags: ['employment'] },
+      { title: 'Novare Potential', tags: ['employment'] },
+      { title: 'Refugees Welcome', tags: ['housing'] },
+      { title: 'Welcome to Sweden', tags: ['information'] },
+      { title: 'Newbie guide to Sweden', tags: ['information'] }
     ]
 
     // Create the app modal that we will use later
