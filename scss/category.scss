@@ -1,0 +1,22 @@
+.img-rounded {
+  border-radius: 100%;
+}
+.img-responsive {
+  max-width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.category_description_container {
+  background: $light;
+  padding: $content-padding;
+  border-radius: 10px;
+
+  .card {
+    box-shadow: none;
+    padding: $content-padding;
+  }
+  .item {
+    border: none;
+  }
+}
