@@ -20,5 +20,9 @@
   }
   .item {
     border: none;
+
+    img {
+      object-fit: contain;
+    }
   }
 }

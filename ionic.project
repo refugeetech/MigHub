@@ -1,6 +1,6 @@
 {
   "name": "MigHub",
-  "app_id": "",
+  "app_id": "fe291fea",
   "gulpStartupTasks": [
     "sass",
     "watch"
