@@ -42,7 +42,7 @@
         //   .then(function(response) {
         //     resolve(response);
         //   });
-          $http({url: './data.json'})
+          $http({url: 'data.json'})
             .then(function(res) {
               resolve(res);
             });
