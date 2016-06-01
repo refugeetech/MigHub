@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+echo 'Installing dependencies..'
+npm install -g ionic
+npm install -g cordova
+npm install -g gulp-cli
+npm install
+gulp install
+echo 'All dependencies have been setup.'
+echo
+echo 'Run `$ script/server` to serve the app locally.'
