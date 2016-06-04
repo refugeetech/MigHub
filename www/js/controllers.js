@@ -34,21 +34,22 @@ angular.module('starter.controllers', [])
 
       $ionicActionSheet.show({
         buttons: buttons,
-        titleText: 'Change Language',
+        titleText: $translate.instant('choose_language'),
         cancelText: 'Cancel',
         cancel: function () {
           // add cancel code..
         },
         buttonClicked: function (index) {
-          setLocale(LOCALES[index].code)
+          var locale = Object.keys(LOCALES[index])[0]
+          setLocale(LOCALES[index][locale])
           return true
         }
       })
     }
 
     var setLocale = function (locale) {
-      $translate.use(locale)
       console.log('Set language: ', locale)
+      $translate.use(locale)
     }
 
     // root scope

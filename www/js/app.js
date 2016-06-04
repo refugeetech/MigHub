@@ -25,7 +25,7 @@ angular.module(
     })
   })
 
-  .config(function ($stateProvider, $urlRouterProvider, CacheFactoryProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, CacheFactoryProvider, $translateProvider) {
     angular.extend(CacheFactoryProvider.defaults, {
       maxAge: 15 * 60 * 1000, // 15 minutes
       deleteOnExpire: 'aggressive',
@@ -85,13 +85,13 @@ angular.module(
       })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/categories')
-  })
 
-angular.module('starter').config(function ($translateProvider) {
-  var availKeys = [
-    {'sv-se': 'se', label: 'Swedish'},
-    {'en-gb': 'en', label: 'English'},
-    {'*': 'en'}
-  ]
-  $translateProvider.registerAvailableLanguageKeys(availKeys)
-})
+    var availKeys = [
+      {'sv-se': 'sv', label: 'Swedish'},
+      {'en-gb': 'en', label: 'English'},
+      {'*': 'en'}
+    ]
+    $translateProvider.preferredLanguage('sv')
+    $translateProvider.registerAvailableLanguageKeys(availKeys)
+    $translateProvider.useSanitizeValueStrategy('sanitize')
+  })
