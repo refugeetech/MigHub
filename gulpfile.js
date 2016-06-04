@@ -48,7 +48,7 @@ gulp.task('localeapp', function (done) {
 
 gulp.task('translate', ['localeapp'], function () {
   return gulp.src('resources/translation/*.json')
-    .pipe(angularTranslate({ module: 'starter' }))
+    .pipe(angularTranslate({ module: 'localeapp.translations' }))
     .pipe(gulp.dest('www/js/configuration'))
 })
 

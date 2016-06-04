@@ -24,7 +24,7 @@
     <div class="category_description_container">
       <div class="card text-center">
         <h4>{{category.title}}</h4>
-        <p>{{ 'categories' | translate }}Squid intelligentsia yr gentrify, four dollar toast flexitarian blog narwhal 8-bit pour-over you probably haven't heard of them tilde tote bag truffaut brunch.</p>
+        <p>{{ category.slug + '_description' | translate }}</p>
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
