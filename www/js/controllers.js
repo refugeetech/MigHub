@@ -1,12 +1,12 @@
 angular.module('starter.controllers', [])
 
   .controller('AppCtrl', function (
-    $scope, 
-    $ionicModal, 
-    $timeout, 
-    API, 
-    $ionicActionSheet, 
-    LOCALES
+    $scope,
+    $ionicModal,
+    $timeout,
+    API,
+    $ionicActionSheet,
+    $translate
   ) {
     // With the new view caching in Ionic, Controllers are only called
     // when they are recreated or on app start, instead of every page change.
@@ -16,34 +16,41 @@ angular.module('starter.controllers', [])
     // })
 
     // Triggered on a button click, or some other target
-    $scope.show = function() {
+    $scope.show = function () {
+      // Show the action sheet
+      var LOCALES = $translate.getAvailableLanguageKeys()
 
-      console.log('LOCALES', LOCALES);
-     // Show the action sheet
-     var buttons = [];
-     for (var i = LOCALES.length - 1; i >= 0; i--) {
-       buttons.push({
-        text: LOCALES[i].label
-       });
-     }
+      var buttons = LOCALES
+        .filter(function (locale) {
+          return !locale['*']
+        })
+        .map(function (language) {
+          return {
+            text: language.label, // todo get translated language name
+            code: language
+          }
+        })
+      console.log('buttons', buttons, LOCALES)
 
-     var hideSheet = $ionicActionSheet.show({
-       buttons: buttons,
-       titleText: 'Change Language',
-       cancelText: 'Cancel',
-       cancel: function() {
-            // add cancel code..
+      $ionicActionSheet.show({
+        buttons: buttons,
+        titleText: $translate.instant('choose_language'),
+        cancelText: 'Cancel',
+        cancel: function () {
+          // add cancel code..
         },
-       buttonClicked: function(index) {
-         setLocale(LOCALES[index].code);
-         return true;
-       }
-     });
-    };
+        buttonClicked: function (index) {
+          var locale = Object.keys(LOCALES[index])[0]
+          setLocale(LOCALES[index][locale])
+          return true
+        }
+      })
+    }
 
     var setLocale = function (locale) {
-      console.log('Set language: ', locale);
-    };
+      console.log('Set language: ', locale)
+      $translate.use(locale)
+    }
 
     // root scope
     $scope.categories = [
@@ -58,12 +65,12 @@ angular.module('starter.controllers', [])
     ]
 
     $scope.apps = [
-      { title: 'Just Arrived', tags: ['employment'] , logo: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAO6AAAAJDcyOTNkMTY1LTU1NWYtNDg4NC05Mjk0LTYzN2UwYTBiZGQ1NA.png', description: 'We connect newly-arrived immigrants with Swedish companies who need help with day-to-day activities. Our digital platform enables companies to post simple tasks and services, and match them with new arrivals looking for work.'},
-      { title: 'WelcomeApp', tags: ['social'] , logo: 'https://pbs.twimg.com/profile_images/665584301996695552/Lv7jkDjx.jpg', description: 'Welcome! app makes it easier for newly arrived refugees and locals to connect. Through the app you can: - Reach out to others; - Create, host and join activities; - Chat with new interesting people: - Welcome! is translated to four languages: Arabic, Persian, Swedish and English. It enables people with different native languages to communicate through real time auto-translation. You can filter questions and activities based on popular categories, and you will see what is happening nearby.'},
+      { title: 'Just Arrived', tags: ['employment'],  logo: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAO6AAAAJDcyOTNkMTY1LTU1NWYtNDg4NC05Mjk0LTYzN2UwYTBiZGQ1NA.png', description: 'We connect newly-arrived immigrants with Swedish companies who need help with day-to-day activities. Our digital platform enables companies to post simple tasks and services, and match them with new arrivals looking for work.'},
+      { title: 'WelcomeApp', tags: ['social'],  logo: 'https://pbs.twimg.com/profile_images/665584301996695552/Lv7jkDjx.jpg', description: 'Welcome! app makes it easier for newly arrived refugees and locals to connect. Through the app you can: - Reach out to others; - Create, host and join activities; - Chat with new interesting people: - Welcome! is translated to four languages: Arabic, Persian, Swedish and English. It enables people with different native languages to communicate through real time auto-translation. You can filter questions and activities based on popular categories, and you will see what is happening nearby.'},
       // { title: 'Competency.se', tags: ['employment', 'information'], logo: '', description: '' },
       { title: 'Information Sverige', tags: ['information'], logo: 'https://www.informationsverige.se/Svenska/Arbete-och-utbildning/PublishingImages/informationsverige_icon_05.png', description: 'This portal is for anyone who is new to Sweden and wants to find information about Swedish society quickly and easily. It brings all the information, in several different languages, together in one place. It includes civic information and answers to questions about how housing, medical care and education work in Sweden. You will also find information about your rights and about the public authorities you will have contact with when you first arrive in Sweden. You can look for vacant jobs or check where the nearest medical care centre or school is located. Use informationsverige.se as your guide to Swedish society.' },
       { title: 'Kompisbyrån', tags: ['social'], logo: 'http://kompisbyran.se/images/logo.png', description: 'Buddy Office helps people to meet new friends with similar interests. We create contact between those who are new in Sweden and those who have lived in Sweden for a long time. You can get coffee Buddy or Buddy Music. As Coffee Mate, you will be matched with a person with similar interests as you have. You meet, have coffee and Practice Swedish! Together we can raise community in society. Become a Coffee Mate today!' },
-      { title: 'Lingio', tags: ['language'], logo: 'http://a4.mzstatic.com/eu/r30/Purple69/v4/84/91/41/849141d9-7332-d107-dddb-432cf5df9d5d/icon175x175.png', description: 'If you can spare just a few minutes a day you will expand your vocabulary while having lots of fun and best of all, it\'s completely free.Choose from English, Spanish, German, French, Italian, Portuguese, Swedish and Arabic. There are over 300 different topics to learn from. Select whether you want to learn by yourself, challenge a friend or play a random opponent. Find new people to chat with through our community of language enthusiasts.' },
+      { title: 'Lingio', tags: ['language'], logo: 'http://a4.mzstatic.com/eu/r30/Purple69/v4/84/91/41/849141d9-7332-d107-dddb-432cf5df9d5d/icon175x175.png', description: "If you can spare just a few minutes a day you will expand your vocabulary while having lots of fun and best of all, it's completely free.Choose from English, Spanish, German, French, Italian, Portuguese, Swedish and Arabic. There are over 300 different topics to learn from. Select whether you want to learn by yourself, challenge a friend or play a random opponent. Find new people to chat with through our community of language enthusiasts." },
       // { title: 'Newcomers.io', tags: ['social'], logo: '', description: 'A community of refugees, locals and professionals who connect and do projects together.' },
       { title: 'Yrkesdörren', tags: ['education'], logo: 'http://www.yrkesdorren.se/static/images/fb-share-image.png', description: 'Occupation door objective is to create networks between established and new Swedes. By yrkesdorren, you meet someone with a different background than your own to talk jobs and open the door to new contacts.' },
       { title: 'Språkkraft', tags: ['language'], logo: 'http://a4.mzstatic.com/eu/r30/Purple69/v4/5f/6d/68/5f6d6853-225c-e8bc-4bd1-0990048d2676/icon175x175.png', description: 'Language Power reading coach helps you quickly to learn Swedish and start reading news and books selected for you based on a number of selected personal categories and genres.' },
@@ -90,7 +97,7 @@ angular.module('starter.controllers', [])
 
     // Open the app modal
     $scope.showapp = function (app) {
-      $scope.app = app;
+      $scope.app = app
       $scope.modal.show()
     }
 
@@ -101,8 +108,8 @@ angular.module('starter.controllers', [])
   })
 
   .controller('CategoriesCtrl', function ($scope, API) {
-    API.categories().then(function(res) {
-      console.log('res', res);
+    API.categories().then(function (res) {
+      console.log('res', res)
     })
   })
 
