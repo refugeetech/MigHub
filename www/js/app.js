@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module(
   'starter', 
-    ['ionic', 'starter.controllers', 'mighub.services', 'angular-cache', 'mighub.constants']
+    ['ionic', 'starter.controllers', 'angular-cache', 'mighub.constants']
   )
 
 .run(function($ionicPlatform) {
