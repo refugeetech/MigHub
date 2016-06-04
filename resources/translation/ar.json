@@ -2,8 +2,7 @@
   "categories": " ",
   "category_social": "Soc",
   "choose_language": " ",
-  "employment_description": {
-    "interface_direction": "rtl",
-    "label": "اللغة العربية"
-  }
+  "employment_description": null,
+  "interface_direction": "rtl",
+  "label": "اللغة العربية"
 }
