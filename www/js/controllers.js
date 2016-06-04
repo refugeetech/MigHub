@@ -19,12 +19,18 @@ angular.module('starter.controllers', [])
     $scope.show = function () {
       // Show the action sheet
       var LOCALES = $translate.getAvailableLanguageKeys()
-      var buttons = LOCALES.map(function (key) {
-        return {
-          text: key, // todo get translated language name
-          code: key
-        }
-      })
+
+      var buttons = LOCALES
+        .filter(function (locale) {
+          return !locale['*']
+        })
+        .map(function (language) {
+          return {
+            text: language.label, // todo get translated language name
+            code: language
+          }
+        })
+      console.log('buttons', buttons, LOCALES)
 
       $ionicActionSheet.show({
         buttons: buttons,

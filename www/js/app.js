@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module(
   'starter',
-  ['ionic', 'starter.controllers', 'angular-cache', 'mighub.constants', 'mighub.services',  'pascalprecht.translate']
+  ['ionic', 'starter.controllers', 'angular-cache', 'mighub.constants', 'mighub.services', 'pascalprecht.translate']
 )
 
   .run(function ($ionicPlatform) {
@@ -88,5 +88,10 @@ angular.module(
   })
 
 angular.module('starter').config(function ($translateProvider) {
-  $translateProvider.preferredLanguage('en')
+  var availKeys = [
+    {'sv-se': 'se', label: 'Swedish'},
+    {'en-gb': 'en', label: 'English'},
+    {'*': 'en'}
+  ]
+  $translateProvider.registerAvailableLanguageKeys(availKeys)
 })
