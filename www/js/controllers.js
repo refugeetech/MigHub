@@ -18,19 +18,24 @@ angular.module('starter.controllers', [])
     // Triggered on a button click, or some other target
     $scope.show = function () {
       // Show the action sheet
-      var LOCALES = $translate.getAvailableLanguageKeys()
-
-      var buttons = LOCALES
-        .filter(function (locale) {
-          return !locale['*']
-        })
-        .map(function (language) {
-          return {
-            text: language.label, // todo get translated language name
-            code: language
-          }
-        })
-      console.log('buttons', buttons, LOCALES)
+      var buttons = [
+        {
+          text: 'Svenska',
+          code: 'sv'
+        },
+        {
+          text: 'English',
+          code: 'en'
+        },
+        {
+          text: 'زبان فارسي',
+          code: 'fa'
+        },
+        {
+          text: 'اللغة العربية',
+          code: 'ar'
+        },
+      ]
 
       $ionicActionSheet.show({
         buttons: buttons,
@@ -40,8 +45,7 @@ angular.module('starter.controllers', [])
           // add cancel code..
         },
         buttonClicked: function (index) {
-          var locale = Object.keys(LOCALES[index])[0]
-          setLocale(LOCALES[index][locale])
+          setLocale(buttons[index].code)
           return true
         }
       })

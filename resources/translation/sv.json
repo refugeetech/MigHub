@@ -1,7 +1,8 @@
 {
   "categories": "Kategorier",
-  "category_social": {
-    "choose_language": "Välj Språk",
-    "interface_direction": {}
-  }
+  "category_social": "Socialt",
+  "choose_language": "Välj Språk",
+  "employment_description": "Jobb beskrivning",
+  "interface_direction": "ltr",
+  "label": "Svenska"
 }

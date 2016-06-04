@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module(
   'starter',
-  ['ionic', 'starter.controllers', 'angular-cache', 'mighub.constants', 'mighub.services', 'pascalprecht.translate']
+  ['ionic', 'starter.controllers', 'angular-cache', 'mighub.constants', 'mighub.services', 'pascalprecht.translate', 'localeapp.translations']
 )
 
   .run(function ($ionicPlatform) {
@@ -86,12 +86,7 @@ angular.module(
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/categories')
 
-    var availKeys = [
-      {'sv-se': 'sv', label: 'Swedish'},
-      {'en-gb': 'en', label: 'English'},
-      {'*': 'en'}
-    ]
-    $translateProvider.preferredLanguage('sv')
-    $translateProvider.registerAvailableLanguageKeys(availKeys)
-    $translateProvider.useSanitizeValueStrategy('sanitize')
+    $translateProvider
+      .preferredLanguage('en')
+      //.useSanitizeValueStrategy('sanitize')
   })
