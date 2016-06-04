@@ -8,6 +8,7 @@ var rename = require('gulp-rename')
 var sh = require('shelljs')
 var yaml = require('gulp-yaml')
 var angularTranslate = require('gulp-angular-translate')
+var replacer = require('gulp-strip-line')
 
 var paths = {
   sass: ['./scss/**/*.scss']
@@ -39,13 +40,17 @@ gulp.task('install', ['git-check'], function () {
     })
 })
 
-gulp.task('translate', function () {
-  gulp.src('./translations/*.yml')
+gulp.task('json', function (done) {
+  return gulp.src('./resources/translation/*.yml')
+    .pipe(replacer([/^[^\s]{2}:/]))
     .pipe(yaml({ space: 2 }))
-    .pipe(gulp.dest('./translations/json/'))
-    .pipe(gulp.src('./translations/json/*.json'))
-    .pipe(angularTranslate())
-    .pipe(gulp.dest('./www/js/configuration/translations.js'))
+    .pipe(gulp.dest('./resources/translation/json/'))
+})
+
+gulp.task('translate', ['json'], function () {
+  return gulp.src('resources/translation/json/*.json')
+  .pipe(angularTranslate({ module: 'starter' }))
+  .pipe(gulp.dest('www/js/configuration'))
 })
 
 gulp.task('git-check', function (done) {
