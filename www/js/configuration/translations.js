@@ -8,6 +8,8 @@ $translateProvider.translations("en", {
 });
 
 $translateProvider.translations("fa", {
-  "category_social": "Soc"
+  "category_social": "Soc",
+  "interface_direction": "rtl",
+  "label'": "زبان فارسي"
 });
 }]);
