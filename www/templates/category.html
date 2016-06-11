@@ -23,14 +23,14 @@
     </div>
     <div class="category_description_container">
       <div class="card text-center">
-        <h4>{{category.title}}</h4>
+        <h4>{{ category.slug | translate }}</h4>
         <p>{{ category.slug + '_description' | translate }}</p>
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
             <img src="{{app.logo}}">
-            <h2>{{app.title}}</h2>
-            <p>{{app.description}}</p>
+            <h2>{{ app.title }}</h2>
+            <p>{{ app.title + '_description' | translate }}</p>
           </a>
       </ion-list>
     </div>
