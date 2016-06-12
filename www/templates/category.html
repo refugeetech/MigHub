@@ -28,7 +28,7 @@
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
-            <img src="{{app.logo}}">
+            <img ng-src="img/apps/{{app.logo}}">
             <h2>{{app.title}}</h2>
             <p>{{app.description}}</p>
           </a>
