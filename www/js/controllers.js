@@ -118,10 +118,10 @@ angular.module('starter.controllers', [])
   })
 
   .controller('CategoryCtrl', function ($scope, $state, $stateParams) {
-    var cat_length = $scope.categories.length,
+    var cat_len = $scope.categories.length,
         index = 0
 
-    for ( ;index<cat_length;index++ ) {
+    for (;index<cat_len;index++) {
         if ( $scope.categories[index].slug===$stateParams.categoryId ){
           break
         }
@@ -135,7 +135,7 @@ angular.module('starter.controllers', [])
 
     $scope.swipeLeft = function(){
 
-      if (index<cat_length) {
+      if (index<cat_len) {
         var next_category = $scope.categories[index+1]
         $state.go('app.single', {categoryId:next_category.slug})
       }
