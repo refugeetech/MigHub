@@ -117,12 +117,38 @@ angular.module('starter.controllers', [])
     })
   })
 
-  .controller('CategoryCtrl', function ($scope, $stateParams) {
-    $scope.category = $scope.categories.filter(function (category) {
-      return category.slug === $stateParams.categoryId
-    })[0]
+  .controller('CategoryCtrl', function ($scope, $state, $stateParams) {
+    var cat_length = $scope.categories.length,
+        index = 0
+
+    for ( ;index<cat_length;index++ ) {
+        if ( $scope.categories[index].slug===$stateParams.categoryId ){
+          break
+        }
+    }
+
+    $scope.category =  $scope.categories[index]
 
     $scope.apps = $scope.apps.filter(function (app) {
       return app.tags.indexOf($scope.category.slug) > -1
     })
+
+    $scope.swipeLeft = function(){
+
+      if (index<cat_length) {
+        var next_category = $scope.categories[index+1]
+        $state.go('app.single', {categoryId:next_category.slug})
+      }
+
+    }
+
+    $scope.swipeRight = function(){
+
+      if (index>0) {
+        var prev_category = $scope.categories[index-1]
+        $state.go('app.single', {categoryId:prev_category.slug})
+      }
+
+    }
+
   })
