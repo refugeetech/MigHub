@@ -117,7 +117,7 @@ angular.module('starter.controllers', [])
     })
   })
 
-  .controller('CategoryCtrl', function ($scope, $stateParams) {
+  .controller('CategoryCtrl', function ($scope, $stateParams,$ionicScrollDelegate) {
     $scope.category = $scope.categories.filter(function (category) {
       return category.slug === $stateParams.categoryId
     })[0]
@@ -125,4 +125,21 @@ angular.module('starter.controllers', [])
     $scope.apps = $scope.apps.filter(function (app) {
       return app.tags.indexOf($scope.category.slug) > -1
     })
+
+    $scope.getScrollPosition = function(){
+      
+       var catList = document.getElementById('categoryContainer').childNodes[0],
+           catContainer = document.getElementById('categoryContainer'),
+           catNavBar = document.getElementById('catNavBar')
+
+       if ($ionicScrollDelegate.getScrollPosition().top > 350){
+          catContainer.style.backgroundColor= '#FFF'
+          catList.style.padding = '0'
+          catNavBar.style.display = 'block'
+       } else {
+          catList.style.padding = '18px'
+          catNavBar.style.display = 'none'
+          catContainer.style.backgroundColor= $scope.category.color
+       }
+    }
   })

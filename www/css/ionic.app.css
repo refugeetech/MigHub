@@ -9874,3 +9874,14 @@ a {
     border: none; }
     .category_description_container .item img {
       object-fit: contain; }
+
+#categoryContainer.has-header {
+  top: 0; }
+
+.bar.bar-clear {
+  background-color: rgba(255, 255, 255, 0.9); }
+  .bar.bar-clear .title {
+    color: #666; }
+
+#catNavBar {
+  display: none; }
