@@ -1,20 +1,22 @@
-<ion-view view-title="Category" animation="slide-down-up">
-  <ion-nav-buttons side="left">
-    <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
-  </ion-nav-buttons>
-  <ion-nav-buttons side="right">
-<!--     <div class="input-label">
-      <label for="language">English</label>
-    </div>
-    <div class="item-input item-select">
-      <select id="language">
-        <option>Arabic</option>
-        <option selected>English</option>
-        <option>Farsi</option>
-      </select>
-    </div> -->
-  </ion-nav-buttons>
-  <ion-content style="background-color:{{category.color}};" padding="true">
+<ion-view view-title="{{category.title}}" animation="slide-down-up">
+<ion-nav-bar class="clear-bar" id="catNavBar">
+    <ion-nav-buttons side="left">
+      <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+  <!--     <div class="input-label">
+        <label for="language">English</label>
+      </div>
+      <div class="item-input item-select">
+        <select id="language">
+          <option>Arabic</option>
+          <option selected>English</option>
+          <option>Farsi</option>
+        </select>
+      </div> -->
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content style="background-color:{{category.color}};" padding="true" on-scroll="getScrollPosition()" id="categoryContainer">
 
     <div class="row text-center">
       <div class="col">
