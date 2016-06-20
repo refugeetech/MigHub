@@ -30,6 +30,7 @@
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
             <img ng-src="img/apps/{{app.logo}}">
             <h2>{{app.title}}</h2>
+            <!-- TODO load app description from translation insted -->
             <p>{{app.description}}</p>
           </a>
       </ion-list>

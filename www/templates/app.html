@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col">
           <div class="text-center">
-            <img style="border-radius: 10%" ng-src="{{ app.logo }}" height="45%" width="45%">
+            <img style="border-radius: 10%" ng-src="img/apps/{{app.logo}}" height="45%" width="45%">
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@
         <div class="col">
           <div class="text-center" style="padding: 25px" >
             <h2>{{app.title}}</h2>
-            <p>{{ app.title + '_description' | translate }}</p>
+            <p>{{ app.description }}</p>
             <button class="button button-stable">
               <i class="icon ion-social-apple"></i> IOS
             </button>
