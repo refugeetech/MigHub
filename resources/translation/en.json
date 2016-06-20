@@ -1,8 +1,18 @@
 {
   "categories": "Categories",
-  "category_social": "Social",
   "choose_language": "Choose Language",
-  "employment_description": "Let's vim it live!",
+  "education_description": null,
+  "education_title": "Education",
+  "employment_description": null,
+  "employment_title": "Employment",
+  "housing_description": null,
+  "housing_title": "Housing",
+  "information_description": null,
+  "information_title": "Information",
   "interface_direction": "ltr",
-  "label": "English"
+  "label": "English",
+  "language_description": null,
+  "language_title": "Language",
+  "social_description": null,
+  "social_title": "Social"
 }

@@ -1,8 +1,18 @@
 {
   "categories": "Kategorier",
-  "category_social": "Socialt",
   "choose_language": "Välj Språk",
+  "education_description": null,
+  "education_title": "Utbildning",
   "employment_description": "Jobb beskrivning",
+  "employment_title": "Arbete",
+  "housing_description": null,
+  "housing_title": "Boende",
+  "information_description": null,
+  "information_title": "Information",
   "interface_direction": "ltr",
-  "label": "Svenska"
+  "label": "Svenska",
+  "language_description": null,
+  "language_title": "Språk",
+  "social_description": null,
+  "social_title": "Socialt"
 }

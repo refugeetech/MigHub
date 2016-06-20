@@ -1,8 +1,18 @@
 {
-  "categories": " ",
-  "category_social": "Soc",
-  "choose_language": " ",
+  "categories": "الفئات",
+  "choose_language": "إختر اللغة",
+  "education_description": null,
+  "education_title": "التعليم",
   "employment_description": null,
+  "employment_title": "الشغل",
+  "housing_description": null,
+  "housing_title": "السكن",
+  "information_description": null,
+  "information_title": "معلومات",
   "interface_direction": "rtl",
-  "label": "اللغة العربية"
+  "label": "اللغة العربية",
+  "language_description": null,
+  "language_title": "لغات",
+  "social_description": null,
+  "social_title": "تواصل اجتماعي"
 }
