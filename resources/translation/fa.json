@@ -1,8 +1,18 @@
 {
   "categories": " ",
-  "category_social": "Soc",
   "choose_language": " ",
+  "education_description": null,
+  "education_title": null,
   "employment_description": null,
+  "employment_title": null,
+  "housing_description": null,
+  "housing_title": null,
+  "information_description": null,
+  "information_title": null,
   "interface_direction": "rtl",
-  "label": "زبان فارسي"
+  "label": "زبان فارسي",
+  "language_description": null,
+  "language_title": null,
+  "social_description": null,
+  "social_title": null
 }
