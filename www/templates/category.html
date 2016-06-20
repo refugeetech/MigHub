@@ -23,7 +23,7 @@
     </div>
     <div class="category_description_container">
       <div class="card text-center">
-        <h4>{{category.title}}</h4>
+        <h4>{{ category.slug + '_title' | translate }}</h4>
         <p>{{ category.slug + '_description' | translate }}</p>
       </div>
       <ion-list>
