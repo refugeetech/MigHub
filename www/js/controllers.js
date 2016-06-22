@@ -83,7 +83,12 @@ angular.module('starter.controllers', [])
           return project
         })
         .map(function (project) {
-          return { title: project.name, tags: project.tags, logo: project.logo, description: project.description }
+          return { 
+            title: project.name,
+            tags: project.tags,
+            logo: project.logo,
+            links: project.links.filter(function(a){return a.type !== 'logo' }),
+            description: project.description }
         })
 
       $scope.categories.forEach(function (category) {
