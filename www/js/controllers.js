@@ -132,7 +132,7 @@ angular.module('starter.controllers', [])
     })
 
   //STUB @TODO
-  .controller('Ct', function ($scope, API) {
+  .controller('CategoriesCtrl', function ($scope, API) {
       API.categories().then(function (res) {
         console.log('res ====> ', res.data)
       })

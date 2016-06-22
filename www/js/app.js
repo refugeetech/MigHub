@@ -88,5 +88,5 @@ angular.module(
 
     $translateProvider
       .preferredLanguage('en')
-      //.useSanitizeValueStrategy('sanitize')
+      .useSanitizeValueStrategy('escape')
   })
