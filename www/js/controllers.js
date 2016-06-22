@@ -68,6 +68,7 @@ angular.module('starter.controllers', [])
       { title: 'Text', slug: 'text', color: '#ffdd00' }
     ]
 
+    //@TODO : Replace with Cache : getAllProjects
     $scope.apps = [
       // { title: 'Vårdguiden', tags: ['health'], logo: 'vardguiden.png', description: '' },
       // { title: 'Competency.se', tags: ['employment', 'information'], logo: '', description: '' },
@@ -110,33 +111,46 @@ angular.module('starter.controllers', [])
       $scope.closeapp()
     }
 
-    // $scope.http = function() {
-    //   var http = require('http')
-    //   return http
-    // }
-
   })
-
-  .controller('CategoriesCtrl', function ($scope, API) {
+  //STUB @TODO
+  .controller('getAllProjects', function ($scope, API) {
     API.categories().then(function (res) {
-      console.log('res', res.data)
+      console.log('res ====> ', res.data)
+    })
+  })
+  //STUB @TODO
+  .controller('getAllCategories', function ($scope, API) {
+    API.categories().then(function (res) {
+      console.log('res ====> ', res.data)
+    })
+  })
+  //STUB @TODO
+  .controller('getProjectsByCategory', function ($scope, API) {
+      API.categories().then(function (res) {
+        console.log('res ====> ', res.data)
+      })
     })
 
-    // var options = { 'content-type':'application/json;charset=UTF-8',
-    //                 'host':'http://refugeetech-projecthub-cms.meteorapp.com/api/v01/projects'}
-    //
-
-    var url = '/projects'
-
-    // API.httpRequest(url, '').then(function (res) {
-    //     console.log('NEW  ---', res)
-    // })
-
-    API.getCategoriesJson()
-
-
+  //STUB @TODO
+  .controller('Ct', function ($scope, API) {
+      API.categories().then(function (res) {
+        console.log('res ====> ', res.data)
+      })
+    })
+  
+  
+  //STUB @TODO
+  .controller('ProjectCtrl', function ($scope, $stateParams) {
+    $scope.projects = $scope.projects.filter(function (project) {
+      return project.slug === $stateParams.projectId
+    })[0]
+    
+    $scope.apps = $scope.apps.filter(function (app) {
+      return app.tags.indexOf($scope.category.slug) > -1
+    })
   })
-
+  
+  
   .controller('CategoryCtrl', function ($scope, $stateParams) {
     $scope.category = $scope.categories.filter(function (category) {
       return category.slug === $stateParams.categoryId
