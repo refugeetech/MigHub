@@ -109,12 +109,32 @@ angular.module('starter.controllers', [])
     $scope.doapp = function () {
       $scope.closeapp()
     }
+
+    // $scope.http = function() {
+    //   var http = require('http')
+    //   return http
+    // }
+
   })
 
   .controller('CategoriesCtrl', function ($scope, API) {
     API.categories().then(function (res) {
-      console.log('res', res)
+      console.log('res', res.data)
     })
+
+    // var options = { 'content-type':'application/json;charset=UTF-8',
+    //                 'host':'http://refugeetech-projecthub-cms.meteorapp.com/api/v01/projects'}
+    //
+
+    var url = '/projects'
+
+    // API.httpRequest(url, '').then(function (res) {
+    //     console.log('NEW  ---', res)
+    // })
+
+    API.getCategoriesJson()
+
+
   })
 
   .controller('CategoryCtrl', function ($scope, $stateParams) {
