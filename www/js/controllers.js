@@ -117,12 +117,47 @@ angular.module('starter.controllers', [])
     $scope.doapp = function () {
       $scope.closeapp()
     }
-  })
 
+  })
+  //STUB @TODO
+  .controller('getAllProjects', function ($scope, API) {
+    API.categories().then(function (res) {
+      console.log('res ====> ', res.data)
+    })
+  })
+  //STUB @TODO
+  .controller('getAllCategories', function ($scope, API) {
+    API.categories().then(function (res) {
+      console.log('res ====> ', res.data)
+    })
+  })
+  //STUB @TODO
+  .controller('getProjectsByCategory', function ($scope, API) {
+      API.categories().then(function (res) {
+        console.log('res ====> ', res.data)
+      })
+    })
+
+  //STUB @TODO
   .controller('CategoriesCtrl', function ($scope, API) {
+      API.categories().then(function (res) {
+        console.log('res ====> ', res.data)
+      })
+    })
   
+  
+  //STUB @TODO
+  .controller('ProjectCtrl', function ($scope, $stateParams) {
+    $scope.projects = $scope.projects.filter(function (project) {
+      return project.slug === $stateParams.projectId
+    })[0]
+    
+    $scope.apps = $scope.apps.filter(function (app) {
+      return app.tags.indexOf($scope.category.slug) > -1
+    })
   })
-
+  
+  
   .controller('CategoryCtrl', function ($scope, $stateParams) {
     $scope.category = $scope.categories.filter(function (category) {
       return category.slug === $stateParams.categoryId

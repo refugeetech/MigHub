@@ -14,7 +14,7 @@
             <svg class="icon" style="background-color:{{category.color}}">
               <image href="img/categories-{{category.slug}}.svg" />
             </svg>
-            <span class="title">{{category.title}}</span>
+            <span class="title">{{ category.slug + '_title' | translate }}</span>
           </a>
         </div>
       </div>
