@@ -119,31 +119,9 @@ angular.module('starter.controllers', [])
     }
 
   })
-  //STUB @TODO
-  .controller('getAllProjects', function ($scope, API) {
-    API.categories().then(function (res) {
-      console.log('res ====> ', res.data)
-    })
-  })
-  //STUB @TODO
-  .controller('getAllCategories', function ($scope, API) {
-    API.categories().then(function (res) {
-      console.log('res ====> ', res.data)
-    })
-  })
-  //STUB @TODO
-  .controller('getProjectsByCategory', function ($scope, API) {
-      API.categories().then(function (res) {
-        console.log('res ====> ', res.data)
-      })
-    })
 
-  //STUB @TODO
   .controller('CategoriesCtrl', function ($scope, API) {
-      API.categories().then(function (res) {
-        console.log('res ====> ', res.data)
-      })
-    })
+  })
   
   
   //STUB @TODO

@@ -20,12 +20,9 @@
           <div class="text-center" style="padding: 25px" >
             <h2>{{app.title}}</h2>
             <p>{{ app.description }}</p>
-            <button class="button button-stable">
-              <i class="icon ion-social-apple"></i> IOS
-            </button>
-            <button class="button button-stable">
-              <i class="icon ion-social-android"></i> Android
-            </button>
+            <a class="button button-stable" ng-repeat="link in app.links" href="{{link.url}}">
+              <i class="icon ion-social-{{link.type}}"></i> {{link.name}}
+            </a>
           </div>
         </div>
       </div>
