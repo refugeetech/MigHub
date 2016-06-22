@@ -1,4 +1,4 @@
-<ion-view view-title="Category" animation="slide-down-up">
+<ion-view view-title="{{category.title}}" animation="slide-down-up">
   <ion-nav-buttons side="left">
     <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
   </ion-nav-buttons>
@@ -24,11 +24,10 @@
     <div class="category_description_container">
       <div class="card text-center">
         <h4>{{category.title}}</h4>
-        <p>{{ category.slug + '_description' | translate }}</p>
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
-            <img ng-src="img/apps/{{app.logo}}">
+            <img ng-src="{{app.logo}}">
             <h2>{{app.title}}</h2>
             <p>{{app.description}}</p>
           </a>

@@ -12,10 +12,10 @@
 
   function API ($resource) {
     var endpoint = 'http://refugeetech-projecthub-cms.meteorapp.com/api/v01/projects/:projectId'
-    var Project = $resource(endpoint, {projectId: '@id'})
+    var Project = $resource(endpoint, {projectId: '@id'}, {list: {method: 'GET', params: {projectId: null}}})
 
     return {
-      projects: Project.fetch
+      projects: _ => Project.list()
     }
 
   }

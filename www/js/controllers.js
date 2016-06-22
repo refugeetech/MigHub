@@ -68,9 +68,31 @@ angular.module('starter.controllers', [])
       { title: 'Text', slug: 'text', color: '#ffdd00' }
     ]
 
-    var endpoint = 'http://refugeetech-projecthub-cms.meteorapp.com/api/v01/projects/:projectId'
-    $scope.apps = $http.get(endpoint).then(function(apps){
-      console.log(apps)
+    $scope.apps = []
+
+    var projects = API.projects()
+    projects.$promise
+    .then(function (result) { return result.data })
+    .then(function (projects) {
+      $scope.apps = projects
+        .map(function (project) {
+          project.logo = project.links.reduce(function (a, b) {
+            if (b.type === 'logo') return b.url
+            return a
+          }, '')
+          return project
+        })
+        .map(function (project) {
+          return { title: project.name, tags: project.tags, logo: project.logo, description: project.description }
+        })
+
+      $scope.categories.forEach(function (category) {
+        category.projects = projects.filter(function (project) {
+          return project.tags.indexOf(category.slug)
+        })
+      })
+
+      console.log('projects', projects)
     })
 
     // Create the app modal that we will use later
@@ -98,7 +120,7 @@ angular.module('starter.controllers', [])
   })
 
   .controller('CategoriesCtrl', function ($scope, API) {
-
+  
   })
 
   .controller('CategoryCtrl', function ($scope, $stateParams) {
