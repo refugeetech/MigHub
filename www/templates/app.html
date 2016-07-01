@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col">
           <div class="text-center">
-            <img style="border-radius: 10%" ng-src="{{ app.logo }}" height="45%" width="45%">
+            <img style="border-radius: 10%" ng-src="{{ search('logo',app.links).url }}" height="45%" width="45%">
           </div>
         </div>
       </div>
@@ -18,14 +18,51 @@
       <div class="row">
         <div class="col">
           <div class="text-center" style="padding: 25px" >
-            <h2>{{app.title}}</h2>
+            <h2>{{app.name}}</h2>
             <p>{{ app.description }}</p>
-            <button class="button button-stable">
-              <i class="icon ion-social-apple"></i> IOS
-            </button>
-            <button class="button button-stable">
-              <i class="icon ion-social-android"></i> Android
-            </button>
+
+            <div ng-repeat="platform in app.targetPlatforms">
+
+              <a class="button button-stable" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
+                <i  class="icon ion-home"></i> 
+
+                {{ platform }}
+              </a>
+
+              <a class="button button-stable" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
+                <i class="icon ion-social-ios"></i> 
+
+                {{ platform }}
+              </a>
+
+              <a class="button button-stable" href="{{ search('googlePlay',app.links).url }}"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
+                <i class="icon ion-social-android"></i>
+
+                {{ platform }}
+              </a> 
+
+              <a class="button button-stable" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
+                <i class="icon ion-social-windows"></i>
+
+                {{ platform }}
+              </a> 
+
+              <a class="button button-stable" ng-if= "platform==='other'">               
+                <i class="icon ion-asterisk"></i> 
+
+                {{ platform }}
+              </a>
+
+
+
+              <!-- more to add according to schema
+
+              https://github.com/refugeetech/platform/blob/develop/projects/collections/schema.js
+
+              -->
+              
+            </div>
+
           </div>
         </div>
       </div>

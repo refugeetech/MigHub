@@ -1,4 +1,4 @@
-<ion-view view-title="{{category.title}}" animation="slide-down-up">
+ö<ion-view view-title="{{category.title}}" animation="slide-down-up">
 <ion-nav-bar class="clear-bar" id="catNavBar">
     <ion-nav-buttons side="left">
       <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
@@ -30,8 +30,8 @@
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
-            <img ng-src="img/apps/{{app.logo}}">
-            <h2>{{app.title}}</h2>
+            <img ng-src="{{ app.links[1].url }}">
+            <h2>{{app.name}}</h2>
             <p>{{app.description}}</p>
           </a>
       </ion-list>
