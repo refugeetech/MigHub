@@ -102,11 +102,6 @@ angular.module('starter.controllers', [])
 
 
 
-    API.projects().then(function (res) {
-      console.log('res', res)
-      $scope.apps = res.data
-    })
-
 
     // Create the app modal that we will use later
     $ionicModal.fromTemplateUrl('templates/app.html', {
@@ -134,19 +129,33 @@ angular.module('starter.controllers', [])
 
   .controller('CategoriesCtrl', function ($scope, API) {
     API.categories().then(function (res) {
-      console.log('res', res)
+      //console.log('res', res)
     })
   })
 
-  .controller('CategoryCtrl', function ($scope, $stateParams,$ionicScrollDelegate, API) {
-    $scope.category = $scope.categories.filter(function (category) {
-      return category.slug === $stateParams.categoryId
-    })[0]
+  .controller('CategoryCtrl', function ($scope, $state, $stateParams, $ionicScrollDelegate, API) {
 
-    $scope.apps = $scope.apps.filter(function (app) {
-      return app.tags.indexOf($scope.category.slug) > -1
+    var cat_len = $scope.categories.length,
+        index = 0
+
+    for (;index<cat_len;index++) {
+        if ( $scope.categories[index].slug===$stateParams.categoryId ){
+          break
+        }
+    }
+
+    $scope.category =  $scope.categories[index]
+
+    $scope.apps = []
+
+
+
+    API.projects().then(function (res) {
+     // console.log('res', res)
+      $scope.apps = res.data.filter(function (app) {
+        return app.tags.indexOf($scope.category.slug) > -1
+      })
     })
-
 
 
     $scope.getScrollPosition = function(){
@@ -155,7 +164,7 @@ angular.module('starter.controllers', [])
            catContainer = document.getElementById('categoryContainer'),
            catNavBar = document.getElementById('catNavBar')
 
-       if ($ionicScrollDelegate.getScrollPosition().top > 350){
+       if ($ionicScrollDelegate.$getByHandle('handler').getScrollPosition().top > 350){
           catContainer.style.backgroundColor= '#FFF'
           catList.style.padding = '0'
           catNavBar.style.display = 'block'
@@ -164,5 +173,23 @@ angular.module('starter.controllers', [])
           catNavBar.style.display = 'none'
           catContainer.style.backgroundColor= $scope.category.color
        }
+    }
+
+    $scope.swipeLeft = function(){
+
+      if (index<cat_len) {
+        var next_category = $scope.categories[index+1]
+        $state.go('app.single', {categoryId:next_category.slug})
+      }
+
+    }
+
+    $scope.swipeRight = function(){
+
+      if (index>0) {
+        var prev_category = $scope.categories[index-1]
+        $state.go('app.single', {categoryId:prev_category.slug})
+      }
+
     }
   })
