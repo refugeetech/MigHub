@@ -56,6 +56,19 @@ angular.module('starter.controllers', [])
       $translate.use(locale)
     }
 
+    $scope.search = function(typeKey, myArray){
+
+      if (myArray) {        
+        for (var i=0; i < myArray.length; i++) {
+            if (myArray[i].type === typeKey) {
+                return myArray[i];
+            }
+        }
+      } else {
+        return false;
+      }
+    }
+
     // root scope
     $scope.categories = [
       { title: 'Employment', slug: 'employment', color: '#fe5504' },
@@ -68,7 +81,7 @@ angular.module('starter.controllers', [])
       { title: 'Text', slug: 'text', color: '#ffdd00' }
     ]
 
-    $scope.apps = [
+   /* $scope.apps = [
       // { title: 'Vårdguiden', tags: ['health'], logo: 'vardguiden.png', description: '' },
       // { title: 'Competency.se', tags: ['employment', 'information'], logo: '', description: '' },
       // { title: 'Newcomers.io', tags: ['social'], logo: '', description: 'A community of refugees, locals and professionals who connect and do projects together.' },
@@ -85,7 +98,10 @@ angular.module('starter.controllers', [])
       { title: 'Refugees Welcome', tags: ['housing'], logo: 'refugee-welcome.png', description: 'Refugees-welcome.se run by the NGO Refugees Welcome Sweden (org.nr 802497-4514). We are a politically and religiously independent association that started in autumn 2015 with a purpose: to provide more housing for newly arrived refugees throughout Sweden.' },
       { title: 'Welcome to Sweden', tags: ['information'], logo: 'welcome-to-sweden.png', description: 'Welcome to Sweden is an initiative under development that aims to provide information to those who come as refugees or asylum seekers to Sweden to work as a volunteer and to all who want to be involved and make a contribution.' },
       { title: 'Newbie guide to Sweden', tags: ['information'], logo: 'newbie-guide.png', description: 'We are community of people who feel devoted towards the idea of creating a guide for all those brave ones who come to Sweden every year to start a life here. We know that the process of settling in Sweden comes with a bunch of questions. We hope that this guide will offer your guidance and give you the opportunity to bound with other Newbies and Oldbies.' }
-    ]
+    ]*/
+
+
+
 
     // Create the app modal that we will use later
     $ionicModal.fromTemplateUrl('templates/app.html', {
@@ -113,16 +129,67 @@ angular.module('starter.controllers', [])
 
   .controller('CategoriesCtrl', function ($scope, API) {
     API.categories().then(function (res) {
-      console.log('res', res)
+      //console.log('res', res)
     })
   })
 
-  .controller('CategoryCtrl', function ($scope, $stateParams) {
-    $scope.category = $scope.categories.filter(function (category) {
-      return category.slug === $stateParams.categoryId
-    })[0]
+  .controller('CategoryCtrl', function ($scope, $state, $stateParams, $ionicScrollDelegate, API) {
 
-    $scope.apps = $scope.apps.filter(function (app) {
-      return app.tags.indexOf($scope.category.slug) > -1
+    var cat_len = $scope.categories.length,
+        index = 0
+
+    for (;index<cat_len;index++) {
+        if ( $scope.categories[index].slug===$stateParams.categoryId ){
+          break
+        }
+    }
+
+    $scope.category =  $scope.categories[index]
+
+    $scope.apps = []
+
+
+
+    API.projects().then(function (res) {
+     // console.log('res', res)
+      $scope.apps = res.data.filter(function (app) {
+        return app.tags.indexOf($scope.category.slug) > -1
+      })
     })
+
+
+    $scope.getScrollPosition = function(){
+      
+       var catList = document.getElementById('categoryContainer').childNodes[0],
+           catContainer = document.getElementById('categoryContainer'),
+           catNavBar = document.getElementById('catNavBar')
+
+       if ($ionicScrollDelegate.$getByHandle('handler').getScrollPosition().top > 350){
+          catContainer.style.backgroundColor= '#FFF'
+          catList.style.padding = '0'
+          catNavBar.style.display = 'block'
+       } else {
+          catList.style.padding = '18px'
+          catNavBar.style.display = 'none'
+          catContainer.style.backgroundColor= $scope.category.color
+       }
+    }
+
+    $scope.swipeLeft = function(){
+
+      if (index<cat_len) {
+        var next_category = $scope.categories[index+1]
+        $state.go('app.single', {categoryId:next_category.slug})
+      }
+
+    }
+
+    $scope.swipeRight = function(){
+
+      if (index>0) {
+        var prev_category = $scope.categories[index-1]
+        $state.go('app.single', {categoryId:prev_category.slug})
+      }
+
+    }
   })

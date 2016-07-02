@@ -16,7 +16,9 @@
 
   function API($http, $q, CacheFactory, $httpParamSerializer) {
 
-    var endpoint = 'https://projecthub-leosa83.c9users.io';
+    //var endpoint = 'https://projecthub-leosa83.c9users.io';
+
+    var endpoint = 'http://refugeetech-projecthub-cms.meteorapp.com/api/v01';
 
     // Check to make sure the cache doesn't already exist
     if (!CacheFactory.get('categoriesDataCache')) {
@@ -48,6 +50,18 @@
             });
         });
     }
+
+
+
+    var getProjects = function (projectId) {
+      return $q(function(resolve, reject) {
+        httpRequest('/projects')
+          .then(function(response) {
+            resolve(response);
+          });
+        });
+    }
+
 
     var getProjectById = function (projectId) {
       return $q(function(resolve, reject) {
@@ -82,7 +96,8 @@
 
     return {
        categories: getCategories,
-       projectById: getProjectById
+       projects: getProjects,
+       projectById: getProjectById,
     };
 
   }
