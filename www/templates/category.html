@@ -1,7 +1,7 @@
 <ion-view view-title="{{category.title}}" animation="slide-down-up">
 <ion-nav-bar class="clear-bar" id="catNavBar">
     <ion-nav-buttons side="left">
-      <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
+       <a class="button ion-icon ion-chevron-left" ui-sref="app.categories">Back</a>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
   <!--     <div class="input-label">
@@ -33,6 +33,12 @@
             <img ng-src="{{ app.links[1].url }}">
             <h2>{{app.name}}</h2>
             <p>{{app.description}}</p>
+            <p>{{app.upvotes}} likes</p>
+            <p>
+            	<span ng-repeat="platform in app.targetPlatforms">
+                {{ platform }}
+              	</span>
+            </p>
           </a>
       </ion-list>
     </div>
