@@ -32,13 +32,13 @@
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
             <img ng-src="{{ app.links[1].url }}">
             <h2>{{app.name}}</h2>
-            <p>{{app.description}}</p>
-            <p>{{app.upvotes}} likes</p>
-            <p>
+            <p class="app-desc">{{app.description}}</p>
+            <p class="like-num">{{app.upvotes}} likes</p>
+          <!--  <p>
             	<span ng-repeat="platform in app.targetPlatforms">
                 {{ platform }}
               	</span>
-            </p>
+            </p>-->
           </a>
       </ion-list>
     </div>
