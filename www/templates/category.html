@@ -1,7 +1,7 @@
 <ion-view view-title="{{category.title}}" animation="slide-down-up">
 <ion-nav-bar class="clear-bar" id="catNavBar">
     <ion-nav-buttons side="left">
-      <!-- <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a> -->
+      <a ui-sref="app.categories" class="button ion-chevron-left button-clear button-dark"></a>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
   <!--     <div class="input-label">
@@ -17,6 +17,9 @@
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content style="background-color:{{category.color}};" padding="true" on-scroll="getScrollPosition()" on-swipe-left="swipeLeft()" on-swipe-right="swipeRight()" id="categoryContainer" delegate-handle="handler">
+
+    <a id="bgBackBtn" ui-sref="app.categories" class="button ion-chevron-left button-clear"></a>
+
 
     <div class="row text-center">
       <div class="col">
