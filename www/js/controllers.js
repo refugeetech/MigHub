@@ -151,7 +151,6 @@ angular.module('starter.controllers', [])
 
 
     API.projects().then(function (res) {
-     // console.log('res', res)
       $scope.apps = res.data.filter(function (app) {
         //console.log(app);
         return app.tags.indexOf($scope.category.slug) > -1
