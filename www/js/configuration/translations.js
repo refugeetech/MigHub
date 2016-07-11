@@ -15,7 +15,17 @@ $translateProvider.translations("ar", {
   "language_description": "",
   "language_title": "لغات",
   "social_description": "",
-  "social_title": "تواصل اجتماعي"
+  "social_title": "تواصل اجتماعي",
+  "category": {
+    "employment":"توظيف",
+    "housing":"الإسكان",
+    "coordination":"تنسيق",
+    "information":"معلومات",
+    "education":"التعليم",
+    "language":"لغة",
+    "social":"اجتماعي",
+    "text":"نص",
+  }
 });
 
 $translateProvider.translations("en", {
@@ -35,10 +45,20 @@ $translateProvider.translations("en", {
   "language_title": "Language",
   "social_description": "",
   "social_title": "Social",
+  "category": {
+    "employment":"Employment",
+    "housing":"Housing",
+    "coordination":"Coordination",
+    "information":"Information",
+    "education":"Education",
+    "language":"Language",
+    "social":"Social",
+    "text":"Text",
+  }
 });
 
 $translateProvider.translations("fa", {
-  "categories": " ",
+  "categories": "دسته بندی ها",
   "choose_language": "زبان را انتخاب کنید",
   "education_description": "",
   "education_title": "",
@@ -53,7 +73,17 @@ $translateProvider.translations("fa", {
   "language_description": "",
   "language_title": "",
   "social_description": "",
-  "social_title": ""
+  "social_title": "",
+  "category": {
+    "employment":"استخدام",
+    "housing":"مسکن",
+    "coordination":"هماهنگی",
+    "information":"اطلاعات",
+    "education":"تحصیلات",
+    "language":"زبان",
+    "social":"اجتماعی",
+    "text":"متن",
+  }
 });
 
 $translateProvider.translations("sv", {
@@ -72,6 +102,16 @@ $translateProvider.translations("sv", {
   "language_description": "",
   "language_title": "Språk",
   "social_description": "",
-  "social_title": "Socialt"
+  "social_title": "Socialt",
+  "category": {
+    "employment":"Sysselsättning",
+    "housing":"Hus",
+    "coordination":"Samordning",
+    "information":"Information",
+    "education":"Utbildning",
+    "language":"Språk",
+    "social":"Social",
+    "text":"Text",
+  }
 });
 }]);

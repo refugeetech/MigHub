@@ -1,4 +1,4 @@
-<ion-view view-title="Categories" hide-back-button="true">
+<ion-view view-title="{{ 'categories' | translate }}" hide-back-button="true">
 
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear" ng-click="show();">
@@ -15,7 +15,7 @@
             <svg class="icon" style="background-color:{{category.color}}">
               <image href="img/categories-{{category.slug}}.svg" />
             </svg>
-            <span class="title">{{category.title}}</span>
+            <span class="title">{{ 'category.' + category.slug | translate }}</span>
           </a>
         </div>
       </div>
