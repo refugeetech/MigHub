@@ -9889,6 +9889,15 @@ a {
 #catNavBar {
   display: none; }
 
+.item p.app-desc {
+  color: #333; }
+
+.item p.like-num {
+  margin-top: 6px; }
+
+.item h2 {
+  margin: 8px 0 6px; }
+
 #bgBackBtn {
   color: #FFF;
   position: absolute;
