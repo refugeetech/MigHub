@@ -1,7 +1,7 @@
 <ion-view view-title="{{category.title}}" animation="slide-down-up">
 <ion-nav-bar class="clear-bar" id="catNavBar">
     <ion-nav-buttons side="left">
-       <a class="button ion-icon ion-chevron-left" ui-sref="app.categories">Back</a>
+      <a ui-sref="app.categories" class="button ion-chevron-left button-clear button-dark"></a>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
   <!--     <div class="input-label">
@@ -18,6 +18,9 @@
   </ion-nav-bar>
   <ion-content style="background-color:{{category.color}};" padding="true" on-scroll="getScrollPosition()" on-swipe-left="swipeLeft()" on-swipe-right="swipeRight()" id="categoryContainer" delegate-handle="handler">
 
+    <a id="bgBackBtn" ui-sref="app.categories" class="button ion-chevron-left button-clear"></a>
+
+
     <div class="row text-center">
       <div class="col">
         <img class="img-responsive" src="img/categories-{{category.slug}}.svg">
@@ -25,7 +28,7 @@
     </div>
     <div class="category_description_container">
       <div class="card text-center">
-        <h4>{{category.title}}</h4>
+        <h4>{{ 'category.' + category.slug | translate }}</h4>
         <p>{{ category.slug + '_description' | translate }}</p>
       </div>
       <ion-list>

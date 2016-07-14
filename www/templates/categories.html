@@ -1,8 +1,9 @@
-<ion-view view-title="Categories" >
+<ion-view view-title="{{ 'categories' | translate }}" hide-back-button="true">
 
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear" ng-click="show();">
-      {{ 'choose_language' | translate }}
+      <!--{{ 'choose_language' | translate }}-->
+      <i class="icon ion-gear-b"></i>
     </button>
   </ion-nav-buttons>
   <ion-content>
@@ -13,9 +14,9 @@
             <!-- <div class="circle" style="background-color: rgb(255, 221, 0); border-radius: 50%;"></div> -->
             <!-- <img style="border-radius: 100%; margin: 5px;" src="http://lorempixel.com/150/150/people/{{category.id}}"> -->
             <svg class="icon" style="background-color:{{category.color}}">
-              <image href="img/categories-{{category.slug}}.svg" />
+              <image x="0" y="0" width="100%" height="100%" xlink:href="" ng-href="img/categories-{{category.slug}}.svg" />
             </svg>
-            <span class="title">{{category.title}}</span>
+            <span class="title">{{ 'category.' + category.slug | translate }}</span>
           </a>
         </div>
       </div>
