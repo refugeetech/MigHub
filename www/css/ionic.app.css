@@ -9851,6 +9851,9 @@ a {
         .categories .category .title {
           margin-top: 7px; } }
 
+.icon.ion-gear-b:before {
+  font-size: 24px !important; }
+
 .img-rounded {
   border-radius: 100%; }
 
