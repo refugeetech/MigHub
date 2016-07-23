@@ -9861,6 +9861,9 @@ a {
     margin-top: 7px;
     padding-left: 56px; } }
 
+.icon.ion-gear-b:before {
+  font-size: 10px !important; }
+
 .img-rounded {
   border-radius: 100%; }
 
@@ -9895,6 +9898,15 @@ a {
 
 #catNavBar {
   display: none; }
+
+.item p.app-desc {
+  color: #333; }
+
+.item p.like-num {
+  margin-top: 6px; }
+
+.item h2 {
+  margin: 8px 0 6px; }
 
 #bgBackBtn {
   color: #FFF;
