@@ -5,6 +5,8 @@
   "education_title": null,
   "employment_description": null,
   "employment_title": null,
+  "health_description": null,
+  "health_title": null,
   "housing_description": null,
   "housing_title": null,
   "information_description": null,
@@ -13,6 +15,12 @@
   "label": "زبان فارسي",
   "language_description": null,
   "language_title": null,
+  "media_comunication_description": null,
+  "media_comunication_title": null,
+  "refugee_tech_info": null,
+  "setelin_description": null,
+  "setelin_footer": null,
+  "setelin_header": null,
   "social_description": null,
   "social_title": null
 }

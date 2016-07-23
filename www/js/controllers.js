@@ -58,7 +58,7 @@ angular.module('starter.controllers', [])
 
     $scope.search = function(typeKey, myArray){
 
-      if (myArray) {        
+      if (myArray) {
         for (var i=0; i < myArray.length; i++) {
             if (myArray[i].type === typeKey) {
                 return myArray[i];
@@ -71,14 +71,14 @@ angular.module('starter.controllers', [])
 
     // root scope
     $scope.categories = [
-      { title: 'Employment', slug: 'employment', color: '#fe5504' },
-      { title: 'Housing', slug: 'housing', color: '#00ddff' },
-      { title: 'Coordination', slug: 'coordination', color: '#ffdd00' },
-      { title: 'Information', slug: 'information', color: '#000055' },
-      { title: 'Education', slug: 'education', color: '#ff9966' },
-      { title: 'Language', slug: 'language', color: '#55ddb0' },
-      { title: 'Social', slug: 'social', color: ' #00ddff' },
-      { title: 'Text', slug: 'text', color: '#ffdd00' }
+      { title: 'employment', slug: 'employment', color: '#FFCE6B', icon_color: '#83671E' },
+      { title: 'housing', slug: 'housing', color: '#EE88B5', icon_color: '#611E3E' },
+      { title: 'media & comunication', slug: 'media_comunication', color: '#D94D5B', icon_color: '#6F2028' },
+      { title: 'information', slug: 'information', color: '#50C1A9', icon_color: '#1E6653' },
+      { title: 'education', slug: 'education', color: '#5C92D9', icon_color: '#214073' },
+      { title: 'language', slug: 'language', color: '#55ddb0', icon_color: '#5A261C' },
+      { title: 'social', slug: 'social', color: '#5C92D9', icon_color: '#611E3E' },
+      { title: 'health', slug: 'health', color: '#ffdd00', icon_color: '#611E3E' }
     ]
 
    /* $scope.apps = [
@@ -159,7 +159,7 @@ angular.module('starter.controllers', [])
 
 
     $scope.getScrollPosition = function(){
-      
+
        var catList = document.getElementById('categoryContainer').childNodes[0],
            catContainer = document.getElementById('categoryContainer'),
            catNavBar = document.getElementById('catNavBar')
