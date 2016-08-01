@@ -175,18 +175,27 @@ angular.module('starter.controllers', [])
     }
 
     $scope.swipeLeft = function(){
-
-      if (index<cat_len) {
+      console.log(index)
+      if (index  < cat_len - 1 ) {
+        console.log(index)
+        console.log(cat_len)
         var next_category = $scope.categories[index+1]
         $state.go('app.single', {categoryId:next_category.slug})
       }
-
+      if (index == cat_len -1) {
+        var next_category = $scope.categories[0]
+        $state.go('app.single', {categoryId:next_category.slug})
+      }
     }
 
     $scope.swipeRight = function(){
 
-      if (index>0) {
+      if (index > 0) {
         var prev_category = $scope.categories[index-1]
+        $state.go('app.single', {categoryId:prev_category.slug})
+      }
+      if (index == 0) {
+        var prev_category = $scope.categories[cat_len-1]
         $state.go('app.single', {categoryId:prev_category.slug})
       }
 
