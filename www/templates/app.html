@@ -1,36 +1,50 @@
 <ion-modal-view>
-  <ion-header-bar>
+  <!-- <ion-header-bar>
     <h1 class="title">{{app.title}}</h1>
     <div class="buttons">
       <button class="button" ng-click="closeapp()">Close</button>
     </div>
-  </ion-header-bar>
+  </ion-header-bar> -->
   <ion-content>
     <form ng-submit="doapp()">
       <div class="row">
+
         <div class="col">
-          <div class="text-center">
-            <img style="border-radius: 10%" ng-src="{{ search('logo',app.links).url }}" height="45%" width="45%">
-          </div>
+          <button class="button" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
         </div>
+
+        <div class="col">
+          <h1 class="detailed title" style="font-size: 16px; font-size: 3.8vw;">{{app.name}}</h1>
+        </div>
+
+        <div class="col" style="text-align:right;">
+          <button class="button" ng-click="">  <i class="icon ion-ios-heart-outline"></i> </button>
+        </div>
+
       </div>
 
       <div class="row">
         <div class="col">
-          <div class="text-center" style="padding: 25px" >
-            <h2>{{app.name}}</h2>
-            <p>{{ app.description }}</p>
+          <div class="text-left" style="padding: 25px" >
+            <div class="row">
+              <img style="border-radius: 30%" ng-src="{{ search('logo',app.links).url }}" height="40%" width="40%">
+              <p>{{ app.description }}</p>
+            </div>
+
+            <a class="button button-stable" href="">
+              {{ app.tags.label }}
+            </a>
 
             <div ng-repeat="platform in app.targetPlatforms">
 
               <a class="button button-stable" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
-                <i  class="icon ion-home"></i> 
+                <i  class="icon ion-home"></i>
 
                 {{ platform }}
               </a>
 
               <a class="button button-stable" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
-                <i class="icon ion-social-ios"></i> 
+                <i class="icon ion-social-ios"></i>
 
                 {{ platform }}
               </a>
@@ -39,16 +53,16 @@
                 <i class="icon ion-social-android"></i>
 
                 {{ platform }}
-              </a> 
+              </a>
 
               <a class="button button-stable" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
                 <i class="icon ion-social-windows"></i>
 
                 {{ platform }}
-              </a> 
+              </a>
 
-              <a class="button button-stable" ng-if= "platform==='other'">               
-                <i class="icon ion-asterisk"></i> 
+              <a class="button button-stable" ng-if= "platform==='other'">
+                <i class="icon ion-asterisk"></i>
 
                 {{ platform }}
               </a>
@@ -58,7 +72,7 @@
               https://github.com/refugeetech/platform/blob/develop/projects/collections/schema.js
 
               -->
-              
+
             </div>
 
           </div>
