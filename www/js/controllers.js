@@ -177,8 +177,6 @@ angular.module('starter.controllers', [])
     $scope.swipeLeft = function(){
       console.log(index)
       if (index  < cat_len - 1 ) {
-        console.log(index)
-        console.log(cat_len)
         var next_category = $scope.categories[index+1]
         $state.go('app.single', {categoryId:next_category.slug})
       }

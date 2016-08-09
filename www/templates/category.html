@@ -33,7 +33,7 @@
       </div>
       <ion-list>
           <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
-            <img ng-src="{{ app.links[1].url }}">
+            <img ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
             <h2>{{app.name}}</h2>
             <p class="app-desc">{{app.description}}</p>
             <p class="like-num">{{app.upvotes}} likes</p>
