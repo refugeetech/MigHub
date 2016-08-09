@@ -65,7 +65,7 @@
 
     var getProjectById = function (projectId) {
       return $q(function(resolve, reject) {
-        httpRequest('/projects/' + projectId + '/ratings/json')
+        httpRequest('/projects/' + projectId + '/ratings')
           .then(function(response) {
             resolve(response);
           });

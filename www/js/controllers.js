@@ -153,7 +153,7 @@ angular.module('starter.controllers', [])
     API.projects().then(function (res) {
       $scope.apps = res.data.filter(function (app) {
         //console.log(app);
-        return app.challengeCategories.indexOf($scope.category.slug) > -1
+        return app.challengeCategories.indexOf($scope.category.slug) > -1 && app.migHubComplete //mighubcomplete
       })
     })
 
