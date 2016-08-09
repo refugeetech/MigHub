@@ -38,6 +38,7 @@
       });    
     }
 
+
     var getCategories = function () {
       return $q(function(resolve, reject) {
         // httpRequest('/projects/json')
@@ -51,26 +52,6 @@
         });
     }
 
-
-
-    var getProjects = function (projectId) {
-      return $q(function(resolve, reject) {
-        httpRequest('/projects/ratings')
-          .then(function(response) {
-            resolve(response);
-          });
-        });
-    }
-
-
-    var getProjectById = function (projectId) {
-      return $q(function(resolve, reject) {
-        httpRequest('/projects/' + projectId + '/ratings/json')
-          .then(function(response) {
-            resolve(response);
-          });
-        });
-    }
 
     var httpRequest = function (url, params) {
       return $q(function(resolve, reject) {
