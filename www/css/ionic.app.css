@@ -9914,5 +9914,8 @@ a {
   left: 0;
   font-size: 20px; }
 
-.app .detailed .title {
-  font-size: 10px; }
+.tags {
+  border-radius: 500px; }
+
+.likes {
+  color: #ADADAD; }
