@@ -9919,3 +9919,8 @@ a {
 
 .likes {
   color: #ADADAD; }
+
+.initiative-descrption {
+  background-color: #E7EBF0; }
+  .initiative-descrption .img {
+    padding: 20px; }
