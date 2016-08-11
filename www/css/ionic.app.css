@@ -9326,8 +9326,17 @@ a {
   display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 500px;
 }
+
+@media (min-width: 750px) {
+  .categories .category {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    width: 33.33%;
+  }
+}
+
 .categories .category .icon {
   width: 100%;
   height: 100%;
@@ -9443,5 +9452,5 @@ a {
   font-size: 1.8em;
   line-height: 25px;
   text-align: start;
-    margin: 27px;
+  margin: 27px;
 }
