@@ -9457,3 +9457,17 @@ a {
   text-align: start;
   margin: 27px;
 }
+.bar{
+    background-color: #E7EAF0 !important;
+    height: 45px;
+}
+.country{
+  margin-top: -30px;
+  margin-left: -67px;
+  margin-bottom: 22px !important;
+}
+.option{
+  text-decoration: none;
+  color:black;
+  text-decoration: underline;
+}
