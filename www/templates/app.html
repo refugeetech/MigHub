@@ -29,9 +29,9 @@
             <div class="row">
               <img style="border-radius: 30%" ng-src="{{ search('logo',app.links).url }}" height="40%" width="40%">
               <div class="col">
-                <p> Lorem Ipsum dorem al sumetorem Ipsum dorem al sumet</p>
+                <p> {{ app.shortDescription }} </p>
                 <!-- TODO -->
-                <p class="likes"> 240 Likes </p>
+                <p class="likes"> {{ app.upvotes }} Likes </p>
               </div>
             </div>
 
@@ -103,10 +103,22 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="col col-center initiative-descrption">
+            <div class="row footer">
+              <div class="col initiative-descrption">
                 <div class="row">
-                  <img class="image" ng-src="{{ search('logo',app.links).url }}"  height="80%" width="50%" >
+                  <div class="col">
+                    <ion-slide-box on-slide-changed="slideHasChanged($index)" style="width:350px;">
+                      <ion-slide>
+                        <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                      </ion-slide>
+                      <ion-slide>
+                        <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                      </ion-slide>
+                      <ion-slide>
+                        <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                      </ion-slide>
+                    </ion-slide-box>
+                  </div>
                 </div>
                 <div class="row">
                   <p>
