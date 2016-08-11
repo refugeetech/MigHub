@@ -9330,9 +9330,12 @@ a {
 
 @media (min-width: 750px) {
   .categories .category {
-    text-align: left;
-    display: inline-block;
-    position: relative;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .categories .category {
     width: 33.33%;
   }
 }
