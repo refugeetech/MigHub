@@ -9943,4 +9943,5 @@ a {
 
 .row.footer {
   width: 106%;
-  margin-left: -15px; }
+  margin-left: -15px;
+  text-alignment: center; }
