@@ -191,4 +191,22 @@ angular.module('starter.controllers', [])
       }
 
     }
+
   })
+
+  var slide = angular.module('SlideboxModule', ['ionic']);
+
+  slide.controller('SlideboxController', function($scope) {
+    $scope.options = {
+      slidesPerView: '2',
+      paginationClickable: true,
+      showNavButtons: false
+    };
+
+    $scope.data = {};
+
+    $scope.$watch('data.slider', function(slider) {
+      console.log('My slider object is ', slider);
+
+    });
+  });

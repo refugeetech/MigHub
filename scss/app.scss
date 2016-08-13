@@ -21,23 +21,19 @@
 
 }
 
-.slider {
-  height: 100%;
+.swiper-container{
+  padding-top: 15px;
+  height: 400px;
 }
 
-.slider-slide {
-  color: #000;
-  padding-right: 20px;
+.swiper-slide {
   background-color: #E7EBF0;
   text-align: center;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
   width:350px;
 }
 
 .image.slide{
     height: 100%;
-    width: 100%;
 
 }
 
