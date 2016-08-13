@@ -153,7 +153,7 @@ angular.module('starter.controllers', [])
     API.projects().then(function (res) {
       $scope.apps = res.data.filter(function (app) {
         //console.log(app);
-        return app.tags ? (app.tags.indexOf($scope.category.slug) > -1) : false
+        return app.challengeCategories.indexOf($scope.category.slug) > -1 && app.migHubComplete //mighubcomplete
       })
     })
 
@@ -175,18 +175,25 @@ angular.module('starter.controllers', [])
     }
 
     $scope.swipeLeft = function(){
-
-      if (index<cat_len) {
+      console.log(index)
+      if (index  < cat_len - 1 ) {
         var next_category = $scope.categories[index+1]
         $state.go('app.single', {categoryId:next_category.slug})
       }
-
+      if (index == cat_len -1) {
+        var next_category = $scope.categories[0]
+        $state.go('app.single', {categoryId:next_category.slug})
+      }
     }
 
     $scope.swipeRight = function(){
 
-      if (index>0) {
+      if (index > 0) {
         var prev_category = $scope.categories[index-1]
+        $state.go('app.single', {categoryId:prev_category.slug})
+      }
+      if (index == 0) {
+        var prev_category = $scope.categories[cat_len-1]
         $state.go('app.single', {categoryId:prev_category.slug})
       }
 

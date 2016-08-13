@@ -5,11 +5,11 @@
 Install.
 
 ```bash
-$ script/setup
+$ npm install
 ```
 
 run locally:
 
 ```bash
-$ script/server
+$ npm start
 ```

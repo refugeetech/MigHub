@@ -10,50 +10,52 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-        <div class="col col-center categories" style="max-width: 700px">
+      <div class="col col-center categories" style="padding: 0px;">
 
-            <div class="card" style="height: 400px; max-width:509px">
-              <div class="item item-text-wrap" style="background-color:#E7EAF0; height: 400px;">
-                  <img class="icon" src="img/logo.png"/>
-                  <p>{{ 'setelin_header' | translate }}</p>
-              </div>
-            </div>
-
-          <a class="category" ng-repeat="category in categories" href="#/app/categories/{{category.slug}}">
-
-              <div class="card" style="background-color:{{category.color}}">
-
-                <div class="item item-text-wrap" style="background-color:{{category.color}}">
-                  <span class="title">{{ category.slug + '_title' | translate }}</span>
-                  <span class="description" style="overflow:visible;">{{ category.slug + '_description' | translate }}</span>
-
-                  <svg class="icon" style="background-color:{{category.color}};">
-                    <image href="img/categories-{{category.slug}}.svg"  style="background-color:#611E3E" />
-                  </svg>
-                </div>
-
-              </div>
-          </a>
-          <a class="category">
-
-            <div class="card" style="height: 300px; max-width:509px">
-              <div class="item item-text-wrap" style="background-color:#E7EAF0; height: 400px;">
-                  <span class="" style="padding:15px;">{{ 'setelin_footer' | translate }}</span>
-                  <div class="row">
-                    <img class="" src="img/logo.png" style="height:50px;width:100px;margin-left:auto;margin-right:auto;margin-top:80px"/>
-                  </div>
-              </div>
-            </div>
-
-            <div class="card" style="height: 300px; max-width:509px">
-              <div class="item item-text-wrap" style="background-color:#000000; height: 400px;">
-                  <span class="title">Refugee Tech</span>
-                  <span class="description">{{ 'refugee_tech_info' | translate }}</span>
-              </div>
-            </div>
-
-          </a>
+        <div class="card" style="height: 285px;background-color:#E7EAF0;padding: 0px;margin: 0px;">
+          <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 20px;">
+            <img class="icon" src="img/logo.png" />
+            <p class="country">sweden</p>
+            <p><a class="option" href="">Change Country</a></p>
+            <p><a class="option" href="">Newsletter</a></p>
+            <p><a class="option" href="">About us</a></p>
+            <!-- <p>{{ 'setelin_header' | translate }}</p> -->
+          </div>
         </div>
+
+        <a class="category" ng-repeat="category in categories" href="#/app/categories/{{category.slug}}">
+          <div class="card" style="background-color:{{category.color}}">
+
+            <div class="item item-text-wrap" style="background-color:{{category.color}}">
+              <div class="item item-divider">{{ category.slug + '_title' | translate }}</div>
+              <div class="desc">{{ category.slug + '_description' | translate }}</div>
+
+              <svg class="icon" style="background-color:{{category.color}};">
+                <image href="img/categories-{{category.slug}}.svg" style="background-color:#611E3E" />
+              </svg>
+            </div>
+
+          </div>
+        </a>
+
+        <div class="card" style="height: 186px;background-color: #E7EAF0; margin-top: 2px;">
+          <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 15px;">
+            <span class="" style="padding:15px;">{{ 'setelin_footer' | translate }}</span>
+            <div class="row">
+              <img class="" src="img/logo.png" style="height:50px;width:125px;margin-left:auto;margin-right:auto;margin-top:15px;margin-bottom:20px;" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="height: 180px;background-color:#000000;">
+          <div class="item item-text-wrap" style="background-color:#000000;margin-top: 50px;">
+            <span class="title" style="padding:15px;">Refugee Tech</span>
+          </br>
+            <span class="description">{{ 'refugee_tech_info' | translate }}</span>
+          </div>
+        </div>
+
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>
