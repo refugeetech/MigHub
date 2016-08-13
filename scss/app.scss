@@ -3,7 +3,12 @@
 @import 'category';
 
 .tags{
-  border-radius: 500px;
+  border-radius: 300px;
+  margin: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  // font-size: 8px;
+  // max-height: 10px;
 }
 
 .likes{
@@ -14,19 +19,21 @@
   background-color: #E7EBF0;
 
   .img{
-
     padding: 20px;
-
   }
-
+  .description{
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px;
+  }
 }
 
 .swiper-container{
-  padding-top: 15px;
   height: 400px;
 }
 
 .swiper-slide {
+  padding: 15px;
   background-color: #E7EBF0;
   text-align: center;
   width:350px;
@@ -34,13 +41,10 @@
 
 .image.slide{
     height: 100%;
-
 }
 
 .row.footer{
   width: 106%;
   margin-left: -15px;
   text-alignment: center;
-
-
 }

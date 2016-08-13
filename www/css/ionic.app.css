@@ -9915,7 +9915,10 @@ a {
   font-size: 20px; }
 
 .tags {
-  border-radius: 500px; }
+  border-radius: 300px;
+  margin: 5px;
+  margin-left: 8px;
+  margin-right: 8px; }
 
 .likes {
   color: #ADADAD; }
@@ -9924,12 +9927,16 @@ a {
   background-color: #E7EBF0; }
   .initiative-descrption .img {
     padding: 20px; }
+  .initiative-descrption .description {
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px; }
 
 .swiper-container {
-  padding-top: 15px;
   height: 400px; }
 
 .swiper-slide {
+  padding: 15px;
   background-color: #E7EBF0;
   text-align: center;
   width: 350px; }

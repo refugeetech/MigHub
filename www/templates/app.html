@@ -18,7 +18,7 @@
         </div>
 
         <div class="col" style="text-align:right;">
-          <button class="button button-icon tags" ng-click="">  <i class="icon ion-ios-heart-outline"></i> </button>
+          <button class="button button-icon" ng-click="">  <i class="icon ion-ios-heart-outline"></i> </button>
         </div>
 
       </div>
@@ -37,8 +37,9 @@
 
           </div>
           <div class="row">
-            <a class="button button-stable" href="">
-              "Social"{{  }}""
+            <a class="button button-stable tags" href="">
+              <!-- TODO load the chosen category name from parent state -->
+              Social
             </a>
 
               <div ng-repeat="platform in app.targetPlatforms">
@@ -88,7 +89,7 @@
             </div>
 
             <div class="row">
-              <div class="col description">
+              <div class="col">
                 <button class="button button-outline button-dark button-block">
                   Get it
                 </button>
@@ -96,7 +97,7 @@
             </div>
 
             <div class="row">
-              <div class="col description">
+              <div class="col">
                 <button class="button button-clear button-dark button-block">
                   give feedback
                 </button>
@@ -105,39 +106,23 @@
 
             <div class="row footer">
               <div class="col initiative-descrption">
-
-                    <!-- <ion-slide-box on-slide-changed="slideHasChanged($index)" style="width:350px;">
-                      <ion-slide>
-                        <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
-                      </ion-slide>
-                      <ion-slide>
-                        <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
-                      </ion-slide>
-                      <ion-slide>
-                        <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
-                      </ion-slide>
-                    </ion-slide-box> -->
-
-
-
-                      <ion-slides  options="options" slider="data.slider">
-                        <ion-slide-page>
-                          <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
-                        </ion-slide-page>
-                        <ion-slide-page>
-                          <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
-                        </ion-slide-page>
-                        <ion-slide-page>
-                          <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
-                        </ion-slide-page>
-                      </ion-slides>
-
-
-
-
+                <div class="row">
+                  <ion-slides  options="options" slider="data.slider">
+                    <ion-slide-page>
+                      <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                    </ion-slide-page>
+                    <ion-slide-page>
+                      <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                    </ion-slide-page>
+                    <ion-slide-page>
+                      <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                    </ion-slide-page>
+                  </ion-slides>
+                </div>
 
                 <div class="row">
-                  <p>
+                  <p class="initiative-descrption description">
+                    <!-- TODO initiative description from app -->
                     App! was created in collaboration with this
                     and that date. It's an initiative around this
                     and that and that. App! Was created in collaboration
@@ -146,7 +131,10 @@
                   </p>
                 </div>
                 <div class="row">
-                  <strong>Email us at info@app.se</strong>
+                  <p class="initiative-descrption description">
+                    <!-- TODO Email from app -->
+                    <strong>Email us at info@app.se</strong>
+                  </p>
                 </div>
               </div>
             </div>
