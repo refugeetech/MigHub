@@ -71,13 +71,13 @@ angular.module('starter.controllers', [])
 
     // root scope
     $scope.categories = [
-      { title: 'employment', slug: 'employment', color: '#FFCE6B', icon_color: '#83671E' },
-      { title: 'housing', slug: 'housing', color: '#EE88B5', icon_color: '#611E3E' },
-      { title: 'media & comunication', slug: 'media_comunication', color: '#D94D5B', icon_color: '#6F2028' },
       { title: 'information', slug: 'information', color: '#50C1A9', icon_color: '#1E6653' },
-      { title: 'education', slug: 'education', color: '#5C92D9', icon_color: '#214073' },
-      { title: 'language', slug: 'language', color: '#55ddb0', icon_color: '#5A261C' },
       { title: 'social', slug: 'social', color: '#5C92D9', icon_color: '#611E3E' },
+      { title: 'employment', slug: 'employment', color: '#FFCE6B', icon_color: '#83671E' },
+      { title: 'language', slug: 'language', color: '#55ddb0', icon_color: '#5A261C' },
+      { title: 'education', slug: 'education', color: '#5C92D9', icon_color: '#214073' },
+      { title: 'media & comunication', slug: 'media_comunication', color: '#D94D5B', icon_color: '#6F2028' },
+      { title: 'housing', slug: 'housing', color: '#EE88B5', icon_color: '#611E3E' },
       { title: 'health', slug: 'health', color: '#ffdd00', icon_color: '#611E3E' }
     ]
 
