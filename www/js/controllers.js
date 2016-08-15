@@ -151,8 +151,11 @@ angular.module('starter.controllers', [])
       return API.favoriteStore.values();
     }
     
-    $scope.inFavorites = ()=> {
+    $scope.inFavorites = (project)=> {
       let app = $scope.app;
+      if(project) {
+        app = project;
+      }
       //console.log("inte the store",API.favoriteStore.get(app._id));
       return !(app === undefined) ? !(API.favoriteStore.get(app._id) === undefined) : false
     }
