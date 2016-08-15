@@ -18,7 +18,7 @@
         </div>
 
         <div class="col" style="text-align:right;">
-          <button class="button button-icon" ng-click="">  <i class="icon ion-ios-heart-outline"></i> </button>
+          <button class="button button-icon" ng-click="toggleFavorites()">  <i class="icon {{ inFavorites() ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i> </button>
         </div>
 
       </div>

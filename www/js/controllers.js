@@ -125,6 +125,43 @@ angular.module('starter.controllers', [])
     $scope.doapp = function () {
       $scope.closeapp()
     }
+  
+    /* Begin Favorite functions */
+  
+    $scope.toggleFavorites = ()=> {
+      let app = $scope.app;
+      if(!app) {
+        return;
+      }
+      let exists = API.favoriteStore.values().filter((p)=>{
+        return p._id == app._id;
+      }).length > 0
+      if(!exists) {
+        API.favoriteStore.put(app._id,app);  
+      }
+      else {
+        API.favoriteStore.remove(app._id);
+      }
+      // console.log("projects in favorites are now",API.favoriteStore.values());
+      // console.log("keys in favorites are now",API.favoriteStore.keySet());
+    }
+
+    //not currently used
+    $scope.getFavorites = ()=> {
+      return API.favoriteStore.values();
+    }
+    
+    $scope.inFavorites = (project)=> {
+      let app = $scope.app;
+      if(project) {
+        app = project;
+      }
+      //console.log("inte the store",API.favoriteStore.get(app._id));
+      return !(app === undefined) ? !(API.favoriteStore.get(app._id) === undefined) : false
+    }
+    
+    /* End Favorite functions */
+    
   })
 
   .controller('CategoriesCtrl', function ($scope, API) {
