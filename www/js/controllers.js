@@ -126,52 +126,40 @@ angular.module('starter.controllers', [])
       $scope.closeapp()
     }
   
-    $scope.toggleFavorites = (project)=> {
-      //adding the whole project object to the list
+    /* Begin Favorite functions */
+  
+    $scope.toggleFavorites = ()=> {
+      let app = $scope.app;
+      if(!app) {
+        return;
+      }
       let exists = API.favoriteStore.values().filter((p)=>{
-        return p._id == project._id;
+        return p._id == app._id;
       }).length > 0
       if(!exists) {
-        API.favoriteStore.put(project._id,project);  
+        API.favoriteStore.put(app._id,app);  
       }
       else {
-        API.favoriteStore.remove(project._id);
+        API.favoriteStore.remove(app._id);
       }
-      console.log("projects in favorites are now",API.favoriteStore.values());
-      console.log("keys in favorites are now",API.favoriteStore.keySet());
+      // console.log("projects in favorites are now",API.favoriteStore.values());
+      // console.log("keys in favorites are now",API.favoriteStore.keySet());
     }
 
+    //not currently used
     $scope.getFavorites = ()=> {
       return API.favoriteStore.values();
     }
     
+    $scope.inFavorites = ()=> {
+      let app = $scope.app;
+      //console.log("inte the store",API.favoriteStore.get(app._id));
+      return !(app === undefined) ? !(API.favoriteStore.get(app._id) === undefined) : false
+    }
+    
+    /* End Favorite functions */
+    
   })
-  
-  // .controller('FavoriteCtrl',($scope,API)=> {
-  //   //exposing the getItem function on the favorite store 
-  //   $scope.getFavorites = ()=> {
-  //     let favorites = API.favoriteStore.getItem('favorites');
-  //     if(!favorites) {
-  //       favorites = [];
-  //     }
-  //     return favorites;
-  //   }
-  //   $scope.addToFavorites = (project)=> {
-  //     //adding the whole project object to the list
-  //     let favorites = API.favoriteStore.getItem('favorites');
-  //     if(!favorites) {
-  //       favorites = [];
-  //     }
-  //     var exists = favorites.filter((p)=> {
-  //       return p._id == project._id
-  //     }).length>0
-  //     if(!exists) {
-  //       favorites.push(project)
-  //     }
-  //     API.favoriteStore.setItem('favorites',favorites);
-  //     console.log("projects in favorites are now",API.favoriteStore.getItem('favorites'));
-  //   }
-  // })
 
   .controller('CategoriesCtrl', function ($scope, API) {
     API.categories().then(function (res) {

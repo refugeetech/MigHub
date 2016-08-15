@@ -38,7 +38,7 @@
       options.storageImpl = localStoragePolyfill;
     }
     var favoriteStore = CacheFactory('favoriteStore', options);
-    //console.log("this is the favorite service",favoriteStore);
+    console.log("this is the favorite service",favoriteStore);
     /* End favoriteStore */
 
     //var endpoint = 'https://projecthub-leosa83.c9users.io';
