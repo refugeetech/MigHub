@@ -15,6 +15,31 @@
   API.$inject = ['$http', '$q', 'CacheFactory', '$httpParamSerializer'];
 
   function API($http, $q, CacheFactory, $httpParamSerializer) {
+    
+    /* Start favoriteStore */
+    /* Using Angular Chaches Local Storage impl to save favorites to localstorage */
+    
+    // use the localstoreagepolyfill as a fallback if window.localStorage object doesnt exist in browser
+    var localStoragePolyfill = {
+      getItem: function (key) { /* get something */ },
+      setItem: function (key, value) {/* set something */ },
+      removeItem: function (key) { /* remove something */ }
+    };
+    
+    // Conditionally use the polyfill
+    var options = {
+      //maxAge: 15 * 60 * 1000, //there is no max age 
+      // cacheFlushInterval: 60 * 60 * 1000, // the chache should should not clear
+      // deleteOnExpire: 'aggressive', // should never be deleted
+      storageMode: 'localStorage' // This cache will use `localStorage`.§
+    };
+    if (!window.localStorage) {
+      console.log("there is no window localstorage object! == > need to use the localStoragePolyfill")
+      options.storageImpl = localStoragePolyfill;
+    }
+    var favoriteStore = CacheFactory('favoriteStore', options);
+    console.log("this is the favorite service",favoriteStore);
+    /* End favoriteStore */
 
     //var endpoint = 'https://projecthub-leosa83.c9users.io';
 
@@ -95,6 +120,7 @@
     }
 
     return {
+       favoriteStore: favoriteStore,
        categories: getCategories,
        projects: getProjects,
        projectById: getProjectById,

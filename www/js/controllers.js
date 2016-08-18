@@ -71,13 +71,13 @@ angular.module('starter.controllers', [])
 
     // root scope
     $scope.categories = [
-      { title: 'employment', slug: 'employment', color: '#FFCE6B', icon_color: '#83671E' },
-      { title: 'housing', slug: 'housing', color: '#EE88B5', icon_color: '#611E3E' },
-      { title: 'media & comunication', slug: 'media_comunication', color: '#D94D5B', icon_color: '#6F2028' },
       { title: 'information', slug: 'information', color: '#50C1A9', icon_color: '#1E6653' },
-      { title: 'education', slug: 'education', color: '#5C92D9', icon_color: '#214073' },
-      { title: 'language', slug: 'language', color: '#55ddb0', icon_color: '#5A261C' },
       { title: 'social', slug: 'social', color: '#5C92D9', icon_color: '#611E3E' },
+      { title: 'employment', slug: 'employment', color: '#FFCE6B', icon_color: '#83671E' },
+      { title: 'language', slug: 'language', color: '#55ddb0', icon_color: '#5A261C' },
+      { title: 'education', slug: 'education', color: '#5C92D9', icon_color: '#214073' },
+      { title: 'media & comunication', slug: 'media_comunication', color: '#D94D5B', icon_color: '#6F2028' },
+      { title: 'housing', slug: 'housing', color: '#EE88B5', icon_color: '#611E3E' },
       { title: 'health', slug: 'health', color: '#ffdd00', icon_color: '#611E3E' }
     ]
 
@@ -125,6 +125,43 @@ angular.module('starter.controllers', [])
     $scope.doapp = function () {
       $scope.closeapp()
     }
+  
+    /* Begin Favorite functions */
+  
+    $scope.toggleFavorites = ()=> {
+      let app = $scope.app;
+      if(!app) {
+        return;
+      }
+      let exists = API.favoriteStore.values().filter((p)=>{
+        return p._id == app._id;
+      }).length > 0
+      if(!exists) {
+        API.favoriteStore.put(app._id,app);  
+      }
+      else {
+        API.favoriteStore.remove(app._id);
+      }
+      // console.log("projects in favorites are now",API.favoriteStore.values());
+      // console.log("keys in favorites are now",API.favoriteStore.keySet());
+    }
+
+    //not currently used
+    $scope.getFavorites = ()=> {
+      return API.favoriteStore.values();
+    }
+    
+    $scope.inFavorites = (project)=> {
+      let app = $scope.app;
+      if(project) {
+        app = project;
+      }
+      //console.log("inte the store",API.favoriteStore.get(app._id));
+      return !(app === undefined) ? !(API.favoriteStore.get(app._id) === undefined) : false
+    }
+    
+    /* End Favorite functions */
+    
   })
 
   .controller('CategoriesCtrl', function ($scope, API) {
@@ -198,4 +235,22 @@ angular.module('starter.controllers', [])
       }
 
     }
+
   })
+
+  var slide = angular.module('SlideboxModule', ['ionic']);
+
+  slide.controller('SlideboxController', function($scope) {
+    $scope.options = {
+      slidesPerView: '2',
+      paginationClickable: true,
+      showNavButtons: false
+    };
+
+    $scope.data = {};
+
+    $scope.$watch('data.slider', function(slider) {
+      console.log('My slider object is ', slider);
+
+    });
+  });

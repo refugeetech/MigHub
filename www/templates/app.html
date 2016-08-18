@@ -1,66 +1,145 @@
 <ion-modal-view>
-  <ion-header-bar>
+  <!-- <ion-header-bar>
     <h1 class="title">{{app.title}}</h1>
     <div class="buttons">
       <button class="button" ng-click="closeapp()">Close</button>
     </div>
-  </ion-header-bar>
+  </ion-header-bar> -->
   <ion-content>
     <form ng-submit="doapp()">
       <div class="row">
+
         <div class="col">
-          <div class="text-center">
-            <img style="border-radius: 10%" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="45%" width="45%"> <!-- ng-src="{{ search('logo',app.links).url }}" height="45%" width="45%"> -->
-            
-          </div>
+          <button class="button button-icon" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
         </div>
+
+        <div class="col">
+          <h1 class="detailed title" style="font-size: 16px; font-size: 3.8vw;">{{app.name}}</h1>
+        </div>
+
+        <div class="col" style="text-align:right;">
+          <button class="button button-icon" ng-click="toggleFavorites()">  <i class="icon {{ inFavorites() ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i> </button>
+        </div>
+
       </div>
 
       <div class="row">
         <div class="col">
-          <div class="text-center" style="padding: 25px" >
-            <h2>{{app.name}}</h2>
-            <p>{{ app.description }}</p>
+          <div class="text-left" style="padding: 25px" >
+            <div class="row">
+              <img style="border-radius: 30%" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%">
+              <div class="col">
+                <p> {{ app.shortDescription }} </p>
+                <!-- TODO -->
+                <p class="likes"> {{ app.upvotes }} Likes </p>
+              </div>
+            </div>
 
-            <div ng-repeat="platform in app.targetPlatforms">
+          </div>
+          <div class="row">
+            <a class="button button-stable tags" href="">
+              <!-- TODO load the chosen category name from parent state -->
+              Social
+            </a>
 
-              <a class="button button-stable" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
-                <i  class="icon ion-home"></i> 
+              <div ng-repeat="platform in app.targetPlatforms">
 
-                {{ platform }}
-              </a>
+                <a class="button button-stable tags" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
+                  <i  class="icon ion-home"></i>
 
-              <a class="button button-stable" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
-                <i class="icon ion-social-ios"></i> 
+                  {{ platform }}
+                </a>
 
-                {{ platform }}
-              </a>
+                <a class="button button-stable tags" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
+                  <i class="icon ion-social-ios"></i>
 
-              <a class="button button-stable" href="{{ search('googlePlay',app.links).url }}"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
-                <i class="icon ion-social-android"></i>
+                  {{ platform }}
+                </a>
 
-                {{ platform }}
-              </a> 
+                <a class="button button-stable tags" href="{{ search('googlePlay',app.links).url }}"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
+                  <i class="icon ion-social-android"></i>
 
-              <a class="button button-stable" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
-                <i class="icon ion-social-windows"></i>
+                  {{ platform }}
+                </a>
 
-                {{ platform }}
-              </a> 
+                <a class="button button-stable tags" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
+                  <i class="icon ion-social-windows"></i>
 
-              <a class="button button-stable" ng-if= "platform==='other'">               
-                <i class="icon ion-asterisk"></i> 
+                  {{ platform }}
+                </a>
 
-                {{ platform }}
-              </a>
+                <a class="button button-stable tags" ng-if= "platform==='other'">
+                  <i class="icon ion-asterisk"></i>
+
+                  {{ platform }}
+                </a>
+              </div>
 
               <!-- more to add according to schema
 
               https://github.com/refugeetech/platform/blob/develop/projects/collections/schema.js
 
               -->
-              
             </div>
+
+            <div class="row">
+              <div class="col description">
+                {{ app.description }}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <button class="button button-outline button-dark button-block">
+                  Get it
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <button class="button button-clear button-dark button-block">
+                  give feedback
+                </button>
+              </div>
+            </div>
+
+            <div class="row footer">
+              <div class="col initiative-descrption">
+                <div class="row">
+                  <ion-slides  options="options" slider="data.slider">
+                    <ion-slide-page>
+                      <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                    </ion-slide-page>
+                    <ion-slide-page>
+                      <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                    </ion-slide-page>
+                    <ion-slide-page>
+                      <img class="image slide" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.hb.aicdn.com%2F9592e985ea93253b6129cc201b3137f9e4c1ce18d2e6-EPJBix_fw236&f=1" >
+                    </ion-slide-page>
+                  </ion-slides>
+                </div>
+
+                <div class="row">
+                  <p class="initiative-descrption description">
+                    <!-- TODO initiative description from app -->
+                    App! was created in collaboration with this
+                    and that date. It's an initiative around this
+                    and that and that. App! Was created in collaboration
+                    with this and that date. it's and initiative around
+                    this and that and that
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="initiative-descrption description">
+                    <!-- TODO Email from app -->
+                    <strong>Email us at info@app.se</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
 
           </div>
         </div>
