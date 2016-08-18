@@ -1,97 +1,159 @@
 a {
 	text-decoration: none;
 }
-
-$query-break-1: 640px;
-$query-break-2: 860px;
-$query-break-3: 1100px;
-
-.categories {
-  .card {
-    text-align: center;
-    color: #fff;
-    margin: -5px;
-		border-radius: 0px;
-		height: 300px;
-    box-shadow: 0px, 0px, 0px, rgba(0, 0, 0, 1) !important;
-
-  }
-  .category {
-		text-align: left;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-		max-width: 500px;
-    .icon {
-      width: 100%;
-      height: 100%;
-      //border-radius: 0px;
-      image {
-        width: 450px;
-        height: 450px;
-        y: -140px;
-				overflow: visible;
-
-      }
-    }
-    .title {
-      position: relative;
-      width: 120%;
-      left: -10%;
-      text-align: left;
-      display: block;
-			padding-left: 60px;
-			padding-top: 50px;
-			padding-bottom: 25px;
-      color: #FFFFFF;
-      font-weight: 450;
-      font-size: 1.4em;
-    }
-		.description {
-      position: relative;
-      width: 300px;
-      left: -10%;
-      text-align: left;
-      display: block;
-			padding-left: 60px;
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 1.8em;
-			line-height: 25px;
-    }
-  }
+.categories .card {
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	height: 300px;
+	margin-bottom: -4px;
+	box-shadow: 0px, 0px, 0px, black !important;
 }
-
+.categories .category {
+	text-align: left;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+}
+@media (min-width: 750px) {
+	.categories .category {
+		width: 50%;
+	}
+}
+@media (min-width: 1020px) {
+	.categories .category {
+		width: 33.33%;
+	}
+}
+.categories .category .icon {
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	overflow: visible;
+	opacity: 0.7;
+	float: right;
+}
+.categories .category .icon image {
+	width: 450px;
+	height: 450px;
+	y: -140px;
+	overflow: visible;
+}
+.categories .category .title {
+	position: relative;
+	width: 120%;
+	left: -10%;
+	text-align: left;
+	display: block;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-bottom: 25px;
+	color: #FFFFFF;
+	font-weight: 450;
+	font-size: 1.4em;
+}
 @media all and (min-width: 860px) {
-  .categories {
-    font-size: 1.1em;
-  }
+	.categories {
+		font-size: 1.1em;
+	}
 }
-
 @media all and (min-width: 1100px) {
-  .categories {
-    font-size: 1.2em;
-  }
+	.categories {
+		font-size: 1.2em;
+	}
 }
-
-@media all and (min-width: 640px) {
-  .categories .category {
-    // height: 0;
-  }
-}
-
-@media all and (min-width: 1100px) {
-  .categories .category {
-    // height: 15px;
-  }
-}
-
 @media all and (min-width: 860px) {
-  .categories .category .title {
-    margin-top: 7px;
+	.categories .category .title {
+		margin-top: 7px;
 		padding-left: 56px;
-  }
+	}
 }
-
-
-.icon.ion-gear-b:before{font-size:10px !important;}
+.icon.ion-gear-b:before {
+	font-size: 10px !important;
+}
+.img-rounded {
+	border-radius: 100%;
+}
+.img-responsive {
+	max-width: 300px;
+	width: 100%;
+}
+.text-center {
+	text-align: center;
+}
+.category_description_container {
+	background: #fff;
+	padding: 18px;
+	border-radius: 10px;
+}
+.category_description_container .card {
+	box-shadow: none;
+	padding: 18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.category_description_container .item {
+	border: none;
+}
+.category_description_container .item img {
+	object-fit: contain;
+}
+#categoryContainer.has-header {
+	top: 0;
+}
+.bar.bar-clear {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+.bar.bar-clear .title {
+	color: #666;
+}
+#catNavBar {
+	display: none;
+}
+.item p.app-desc {
+	color: #333;
+}
+.item p.like-num {
+	margin-top: 6px;
+}
+.item h2 {
+	margin: 8px 0 6px;
+}
+#bgBackBtn {
+	color: #FFF;
+	position: absolute;
+	left: 0;
+	font-size: 20px;
+}
+.item .item-divider {
+	background-color: none;
+	background-color: unset;
+	color: white;
+	border: 0;
+	margin-top: 20px;
+	text-align: start;
+}
+.desc {
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 1.8em;
+	line-height: 25px;
+	text-align: start;
+	margin: 27px;
+}
+.bar {
+	background-color: #E7EAF0 !important;
+	height: 45px;
+}
+.country {
+	margin-top: -30px !important;
+	margin-left: -67px;
+	margin-bottom: 22px !important;
+}
+.option {
+	text-decoration: none;
+	color: black;
+	text-decoration: underline;
+}
