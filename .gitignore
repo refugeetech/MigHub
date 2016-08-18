@@ -7,3 +7,5 @@ plugins/
 node_modules
 .DS_Store
 npm-debug.log
+www/css/ionic.app.css
+www/css/ionic.app.min.css
