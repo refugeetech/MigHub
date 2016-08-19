@@ -7,13 +7,21 @@
   margin: 5px;
   margin-left: 8px;
   margin-right: 8px;
-  // font-size: 8px;
-  // max-height: 10px;
-}
+  min-width: 111px;
+  max-height: 10px;
+  min-height: 28px;
+  line-height: 28px;
 
-.likes{
-  color: #ADADAD;
-}
+    .icon{
+      font-size: 5em;
+      max-height: 10px;
+    }
+
+  }
+
+  .likes{
+    color: #ADADAD;
+  }
 
 .initiative-descrption{
   background-color: #E7EBF0;
