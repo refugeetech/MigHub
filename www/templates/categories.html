@@ -30,10 +30,13 @@
               <div class="item item-divider">{{ category.slug + '_title' | translate }}</div>
               <div class="desc">{{ category.slug + '_description' | translate }}</div>
 
-              <!-- <img class="icon" ng-src="img/categories-{{category.slug}}.svg"  /> -->
-              <svg class="icon" style="background-color:{{category.color}};">
-                <image href="img/categories-{{category.slug}}.svg" style="background-color:#611E3E" />
-              </svg>
+              <div >
+                <object class="icon" align="top" data="img/categories-{{category.slug}}.svg" type="image/svg+xml">
+                </object>
+              </div>
+              <!-- <svg class="icon" style="background-color:{{category.color}};">
+                <image href="img/categories-{{category.slug}}.svg" preserveAspectRatio="xMinYMin slice" style="background-color:#611E3E" />
+              </svg> -->
             </div>
 
           </div>
@@ -51,7 +54,7 @@
         <div class="card" style="height: 180px;background-color:#000000;">
           <div class="item item-text-wrap" style="background-color:#000000;margin-top: 50px;">
             <span class="title" style="padding:15px;">Refugee Tech</span>
-          </br>
+            </br>
             <span class="description">{{ 'refugee_tech_info' | translate }}</span>
           </div>
         </div>
