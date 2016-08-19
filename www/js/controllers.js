@@ -133,7 +133,7 @@ angular.module('starter.controllers', [])
       if(!app) {
         return;
       }
-      var exists = API.favoriteStore.values().filter((p)= function(){
+      var exists = API.favoriteStore.values().filter(function(p){
         return p._id == app._id;
       }).length > 0
       if(!exists) {
