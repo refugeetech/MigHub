@@ -8,7 +8,6 @@ a {
 	padding: 0;
 	border-radius: 0;
 	height: 300px;
-	margin-bottom: -4px;
 	box-shadow: 0px, 0px, 0px, black !important;
 }
 .categories .category {
@@ -16,6 +15,7 @@ a {
 	display: inline-block;
 	position: relative;
 	width: 100%;
+	vertical-align: top;
 }
 @media (min-width: 750px) {
 	.categories .category {
@@ -28,12 +28,10 @@ a {
 	}
 }
 .categories .category .icon {
-	width: 100%;
-	height: 100%;
-	margin-top: 20px;
+	width: 340px;
+	margin-top: 0px;
 	overflow: visible;
 	opacity: 0.7;
-	float: right;
 }
 .categories .category .icon image {
 	width: 450px;
@@ -130,6 +128,7 @@ a {
 .item .item-divider {
 	background-color: none;
 	background-color: unset;
+	background: none;
 	color: white;
 	border: 0;
 	margin-top: 20px;
