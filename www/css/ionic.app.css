@@ -9923,11 +9923,8 @@ a {
   max-height: 10px;
   min-height: 28px;
   line-height: 28px; }
-  .tags .icon {
-    font-size: 5em;
-    max-height: 10px; }
   .tags.highlight {
-    background-color: #D9350E; }
+    background-color: #EC4A59; }
 
 .likes {
   color: #ADADAD; }
