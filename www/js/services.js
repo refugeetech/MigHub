@@ -41,9 +41,7 @@
     console.log("this is the favorite service",favoriteStore);
     /* End favoriteStore */
 
-    //var endpoint = 'https://projecthub-leosa83.c9users.io';
-
-    var endpoint = 'http://refugeetech-projecthub-cms.meteorapp.com/api/v01';
+    var endpoint = 'https://refugeetech-projecthub-cms.meteorapp.com/api/v02';
 
     // Check to make sure the cache doesn't already exist
     if (!CacheFactory.get('categoriesDataCache')) {
@@ -80,7 +78,7 @@
 
     var getProjects = function (projectId) {
       return $q(function(resolve, reject) {
-        httpRequest('/projects/ratings')
+        httpRequest('/projects')
           .then(function(response) {
             resolve(response);
           });
@@ -90,7 +88,7 @@
 
     var getProjectById = function (projectId) {
       return $q(function(resolve, reject) {
-        httpRequest('/projects/' + projectId + '/ratings')
+        httpRequest('/projects/' + projectId)
           .then(function(response) {
             resolve(response);
           });
