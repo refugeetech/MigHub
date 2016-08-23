@@ -9830,7 +9830,8 @@ a {
   width: 340px;
   margin-top: 0px;
   overflow: visible;
-  opacity: 0.7; }
+  opacity: 0.8;
+  mix-blend-mode: exclusion; }
 
 .categories .category .icon image {
   width: 450px;
@@ -9931,12 +9932,20 @@ a {
   text-align: start; }
 
 .desc {
-  color: #FFFFFF;
+  color: #000;
   font-weight: 700;
-  font-size: 1.8em;
-  line-height: 25px;
+  font-size: 2.2em;
+  letter-spacing: -0.4px;
+  line-height: 1.1em;
   text-align: start;
-  margin: 27px; }
+  margin: 20px;
+  margin-top: 10px; }
+
+.category .category-label {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #000;
+  margin-left: 5px; }
 
 .bar {
   background-color: #E7EAF0 !important;

@@ -1,6 +1,6 @@
 <ion-view hide-back-button="true">
   <ion-nav-buttons side="left">
-    <!-- <img src="img/logo.png"/ style="height:40px;"> -->
+    <a href="/#categories"><img src="img/logo.png" style="height:40px;"></a>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear" ng-click="show();">
@@ -16,21 +16,21 @@
           <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 20px;">
             <img class="icon" src="img/logo.png" />
             <p class="country">sweden</p>
-            <p><a class="option" href="">Change Country</a></p>
+            <!-- <p><a class="option" href="">Change Country</a></p>
             <p><a class="option" href="">Newsletter</a></p>
-            <p><a class="option" href="">About us</a></p>
+            <p><a class="option" href="">About us</a></p> -->
             <!-- <p>{{ 'setelin_header' | translate }}</p> -->
           </div>
         </div>
 
-        <a class="category" ng-repeat="category in categories" href="#/app/categories/{{category.slug}}">
+        <a class="category" ng-repeat="category in categories" ng-href="#/app/categories/{{category.slug}}">
           <div class="card" style="background-color:{{category.color}}">
 
             <div class="item item-text-wrap" style="background-color:{{category.color}}">
-              <div class="item item-divider">{{ category.slug + '_title' | translate }}</div>
+              <div class="item item-divider category-label">{{ category.slug + '_title' | translate }}</div>
               <div class="desc">{{ category.slug + '_description' | translate }}</div>
 
-              <img class="icon" src="img/categories-{{category.slug}}.png" />
+              <img class="icon" ng-src="img/categories-{{category.slug}}.png" />
 
             </div>
 
