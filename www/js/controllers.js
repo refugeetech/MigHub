@@ -202,6 +202,7 @@ angular.module('starter.controllers', [])
     $scope.swipeRight = function () {
       var index = $scope.categories.indexOf($scope.category) - 1
       var next = $scope.categories[index]
+      if (!next) return $state.go('app.categories')
       $state.go('app.single', {categoryId: next.slug})
     }
 
