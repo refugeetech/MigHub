@@ -3,7 +3,6 @@ angular.module('starter.controllers', [])
   .controller('AppCtrl', function (
     $scope,
     $ionicModal,
-    $timeout,
     API,
     $ionicActionSheet,
     $translate
@@ -159,8 +158,10 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('CategoriesCtrl', function ($scope, API) {
-    $scope.categories = API.categories()
+  .controller('CategoriesCtrl', function ($rootScope, API) {
+    var categories = API.categories().$promise.then(function (){
+      $rootScope.categories = categories
+    })
   })
 
   .controller('CategoryCtrl', function ($scope, $state, $stateParams, $ionicScrollDelegate, API) {
@@ -172,7 +173,7 @@ angular.module('starter.controllers', [])
 
     API.projects().$promise.then(function (res) {
       $scope.apps = res.data.filter(function (app) {
-        return app.migHubComplete ? (app.mainCategory ? app.mainCategory == $scope.category.slug : false) : false // app.migHubComplete ? (app.mainCategory ? app.mainCategory== $scope.category.slug : /* fallback */ (app.challengeCategories ? (app.challengeCategories.indexOf($scope.category.slug) > -1 && app.migHubComplete) : false)) : false //mighubcomplete
+        return app.migHubComplete && app.mainCategory === $scope.category.slug
       })
     })
 
@@ -193,15 +194,15 @@ angular.module('starter.controllers', [])
     }
 
     $scope.swipeLeft = function () {
-      var index = $scope.categories.indexOf($scope.category) + 1 % $scope.categories.length
-      var next_category = $scope.categories[index]
-      $state.go('app.single', {categoryId: next_category.slug})
+      var index = Math.min($scope.categories.indexOf($scope.category) + 1, $scope.categories.length)
+      var next = $scope.categories[index]
+      $state.go('app.single', {categoryId: next.slug})
     }
 
     $scope.swipeRight = function () {
       var index = $scope.categories.indexOf($scope.category) - 1
-      var next_category = $scope.categories[index]
-      $state.go('app.single', {categoryId: next_category.slug})
+      var next = $scope.categories[index]
+      $state.go('app.single', {categoryId: next.slug})
     }
 
   })
