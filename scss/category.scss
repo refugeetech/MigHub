@@ -57,6 +57,9 @@
 }
 .line-separator {
   height: 2px;
-  width: 100%;
   background: #e7eaf0;
+  position:absolute;
+  left: 0;
+  right:0;
+  margin:12px;
 }
