@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module(
   'starter',
-  ['ionic', 'starter.controllers', 'angular-cache', 'mighub.constants', 'mighub.services', 'pascalprecht.translate', 'localeapp.translations']
+  ['ionic', 'starter.controllers', 'ngResource', 'mighub.constants', 'mighub.services', 'pascalprecht.translate', 'localeapp.translations']
 )
 
   .run(function ($ionicPlatform) {
@@ -25,20 +25,9 @@ angular.module(
     })
   })
 
-  .config(function ($stateProvider, $urlRouterProvider, CacheFactoryProvider, $translateProvider) {
-    angular.extend(CacheFactoryProvider.defaults, {
-      maxAge: 15 * 60 * 1000, // 15 minutes
-      deleteOnExpire: 'aggressive',
-      onExpire: function (key, value) {
-        var _this = this; // "this" is the cache in which the item expired
-        angular.injector(['ng']).get('$http').get(key).success(function (data) {
-          _this.put(key, data)
-        })
-      }
-    })
+  .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
 
     $stateProvider
-
       .state('app', {
         url: '/app',
         abstract: true,
