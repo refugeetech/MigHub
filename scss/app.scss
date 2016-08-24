@@ -1,6 +1,11 @@
 @import 'variables';
 @import 'categories';
 @import 'category';
+@import 'fonts';
+
+body{
+  font-family: 'Siri Core Regular', 'sans-serif';
+}
 
 .tags{
   border-radius: 300px;
