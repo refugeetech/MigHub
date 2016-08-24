@@ -9933,6 +9933,7 @@ a {
   text-align: start; }
 
 .desc {
+  font-family: 'Siri Core Bold', 'sans-serif';
   color: #000;
   font-weight: 700;
   font-size: 2.2em;
@@ -10012,6 +10013,9 @@ a {
   position: absolute;
   left: 0;
   font-size: 20px; }
+
+.item-separator {
+  border-bottom: 4px solid #e7eaf0; }
 
 /* Webfonts: Copyright © 2011 by Letters From Sweden. All rights reserved. To obtain a license, please see: http://lettersfromsweden.se/webfonts */
 @font-face {
