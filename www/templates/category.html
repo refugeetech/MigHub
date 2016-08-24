@@ -32,7 +32,8 @@
         <p>{{ category.slug + '_description' | translate }}</p>
       </div>
       <ion-list>
-          <a class="item item-thumbnail-left" ng-click="showapp(app)" ng-repeat="app in apps">
+        <div class="item-separator" ng-repeat="app in apps">
+          <a class="item item-thumbnail-left" ng-click="showapp(app)">
             <img ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
             <h2>{{app.name}}</h2>
             <p class="app-desc">{{app.shortDescription}}</p>
@@ -44,6 +45,7 @@
               	</span>
             </p>-->
           </a>
+        </div>
       </ion-list>
     </div>
   </ion-content>
