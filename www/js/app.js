@@ -64,7 +64,7 @@ angular.module(
 
       .state('app.single', {
         url: '/categories/:categoryId',
-        animate: 'slide-in-up',
+        animate: 'slide-in-right',
         views: {
           'menuContent': {
             templateUrl: 'templates/category.html',
