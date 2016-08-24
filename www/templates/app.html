@@ -27,7 +27,7 @@
         <div class="col">
           <div class="text-left" style="padding: 25px" >
             <div class="row">
-              <img style="border-radius: 30%" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%">
+              <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%">
               <div class="col">
                 <p> {{ app.shortDescription }} </p>
                 <!-- TODO -->
