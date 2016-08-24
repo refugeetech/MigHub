@@ -55,11 +55,6 @@
   left: 0;
   font-size: 20px;
 }
-.line-separator {
-  height: 2px;
-  background: #e7eaf0;
-  position:absolute;
-  left: 0;
-  right:0;
-  margin:12px;
+.item-separator {
+border-bottom: 4px solid #e7eaf0;
 }
