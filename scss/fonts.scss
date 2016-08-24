@@ -1,0 +1,65 @@
+/* Webfonts: Copyright © 2011 by Letters From Sweden. All rights reserved. To obtain a license, please see: http://lettersfromsweden.se/webfonts */
+
+@font-face {
+    font-family: 'Siri Core Regular';
+    src: url('/fonts/SiriCore-Regular.eot');
+    src: url('/fonts/SiriCore-Regular.eot?') format('embedded-opentype'),
+    url('/fonts/SiriCore-Regular.woff') format('woff'),
+    url('/fonts/SiriCore-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Siri Core Italic';
+    src: url('/fonts/SiriCore-Italic.eot');
+    src: url('/fonts/SiriCore-Italic.eot?') format('embedded-opentype'),
+    url('/fonts/SiriCore-Italic.woff') format('woff'),
+    url('/fonts/SiriCore-Italic.ttf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Siri Core Bold';
+    src: url('/fonts/SiriCore-Bold.eot');
+    src: url('/fonts/SiriCore-Bold.eot?') format('embedded-opentype'),
+    url('/fonts/SiriCore-Bold.woff') format('woff'),
+    url('/fonts/SiriCore-Bold.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Siri Core Bold Italic';
+    src: url('/fonts/SiriCore-BoldItalic.eot');
+    src: url('/fonts/SiriCore-BoldItalic.eot?') format('embedded-opentype'),
+    url('/fonts/SiriCore-BoldItalic.woff') format('woff'),
+    url('/fonts/SiriCore-BoldItalic.ttf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.siricoreregular {
+    font-family: 'Siri Core Regular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.siricoreitalic {
+    font-family: 'Siri Core Italic';
+    font-weight: normal;
+    font-style: italic;
+}
+
+.siricorebold {
+    font-family: 'Siri Core Bold';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.siricorebolditalic {
+    font-family: 'Siri Core Bold Italic';
+    font-weight: bold;
+    font-style: italic;
+}
