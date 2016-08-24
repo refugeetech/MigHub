@@ -10069,6 +10069,9 @@ a {
 body {
   font-family: 'Siri Core Regular', 'sans-serif'; }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Siri Core Bold'; }
+
 .tags {
   border-radius: 300px;
   margin: 5px;
