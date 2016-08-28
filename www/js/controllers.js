@@ -190,14 +190,16 @@ angular.module('starter.controllers', [])
   });
 
   $scope.getScrollPosition = function() {
-    var navBar = document.getElementById('navBar');
+    var topLogo = document.getElementById('topLogo');
 
-    if ($ionicScrollDelegate.getScrollPosition().top > 285) {
-      navBar.style.backgroundColor = "transparent"
+    console.log(">>>>>>",$ionicScrollDelegate.getScrollPosition().top);
+
+    if ($ionicScrollDelegate.getScrollPosition().top > 277) {
+      topLogo.style.visibility = "visible"
       console.log(">>>>>>");
     } else {
-      navBar.style.backgroundColor = "transparent"
-      console.log("<<<<<<");
+      topLogo.style.visibility = "hidden"
+      console.log(">>>>>>");
     }
   }
 

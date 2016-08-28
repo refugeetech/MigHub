@@ -1,6 +1,6 @@
 <ion-view hide-back-button="true">
   <ion-nav-buttons side="left">
-    <a href="/#categories"><img src="img/logo.png" style="height:40px;"></a>
+    <a href="/#categories" ><img src="img/logoEmptyBg.png" id="topLogo" style="height:40px;"></a>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear" ng-click="show();">
@@ -8,38 +8,23 @@
       <i class="icon ion-chevron-down"></i>
     </button>
   </ion-nav-buttons>
-  <ion-content on-scroll="getScrollPosition()" id="categoriesContainer" >
-    <script type="text/javascript">
-      $(window).scroll(function() {
-        var a = 285;
-        var pos = $(window).scrollTop();
-        if (pos > a) {
-          $(".bar").css({
-            background-color: 'transparent'
-          });
-        } else {
-          $(".bar").css({
-            background-color: '#E7EAF0'
-          });
-        }
-      });
-    </script>
+  <ion-content on-scroll="getScrollPosition()" >
     <ion-list>
-      <div id="categories" class="col col-center categories" style="padding: 0px;">
+      <div class="col col-center categories" style="padding: 0px;">
 
-        <div class="card" style="height: 285px;background-color:#E7EAF0;padding: 0px;margin: 0px;">
+        <div class="card" style="height: 320px;background-color:#E7EAF0;padding: 0px;margin: -44px;">
           <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 20px;height: initial;">
-            <img class="icon" src="img/logo.png" />
+            <img class="icon logo" src="img/logo.png" />
             <p class="slogan">Great resources when you settle in Sweden</p>
             <!-- <p><a class="option" href="">Change Country</a></p>
-            <p><a class="option" href="">Newsletter</a></p>
-            <p><a class="option" href="">About us</a></p> -->
+            <p><a class="option" href="">Newsletter</a></p> -->
+            <p class="option" ><a href="">About us</a></p>
             <!-- <p>{{ 'setelin_header' | translate }}</p> -->
           </div>
         </div>
 
         <a class="category" ng-repeat="category in categories" ng-href="#/app/categories/{{category.slug}}">
-          <div class="card" style="background-color:{{category.color}};background-image:url('img/categories-{{category.slug}}.png')">
+          <div class="card" style="background-color:{{category.color}};background-image:url('img/categories-{{category.slug}}-black.png')">
 
             <div class="item item-text-wrap">
               <div class="item item-divider category-label">{{ category.slug + '_title' | translate }}</div>
