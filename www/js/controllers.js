@@ -46,8 +46,8 @@ angular.module('starter.controllers', [])
   }
 
   var setLocale = function(locale) {
-    console.log('Set language: ', locale)
-    $translate.use(locale)
+    console.log('Set language: ', locale);
+    $translate.use(locale);
   }
 
   $scope.search = function(typeKey, myArray) {
