@@ -9,7 +9,7 @@
   margin:10px;
 }
 .text-center {
-  text-align: center;
+  //text-align: center;
 }
 .category_description_container {
   background: $light;
@@ -53,10 +53,10 @@
   color: #FFF;
   position: absolute;
   left: 0;
-  font-size: 20px;
+  font-size: 40px;
 }
 .item-separator {
-border-bottom: 4px solid #e7eaf0;
+//border-bottom: 4px solid #e7eaf0;
 }
 
 .modal {
@@ -67,4 +67,37 @@ border-bottom: 4px solid #e7eaf0;
   bottom: 0;
   min-height: 240px;
   border-radius: 10px 10px 0 0;
+}
+#slug{
+  color:white;
+  font-size:60px;
+}
+#slugDesc{
+  color:white;
+  font-size:35px;
+}
+#name{
+  font-size:30px;
+}
+#shortdesc{
+font-size:20px;
+white-space: pre-wrap;
+}
+
+#rcorners2 {
+  border-radius: 25px;
+     background: #9370DB;
+     padding: 20px;
+     width: 200px;
+     height: 150px;
+}
+#resize{
+  width: 100px;
+  height: auto;
+}
+
+
+#hr{
+  border-bottom: 4px  #e7eaf0;
+  background-color: #333;
 }
