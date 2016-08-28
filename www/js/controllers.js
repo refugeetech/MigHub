@@ -66,43 +66,43 @@ angular.module('starter.controllers', [])
   $scope.categories = [{
     title: 'information',
     slug: 'information',
-    color: '#50C1A9',
-    icon_color: '#1E6653'
+    color: '#69c1a7',
+    icon_color: '#488674'
   }, {
     title: 'social',
     slug: 'social',
-    color: '#5C92D9',
-    icon_color: '#611E3E'
+    color: '#6791e2',
+    icon_color: '#4765a0'
   }, {
     title: 'employment',
     slug: 'employment',
-    color: '#FFCE6B',
-    icon_color: '#83671E'
+    color: '#face4a',
+    icon_color: '#af9034'
   }, {
     title: 'language',
     slug: 'language',
-    color: '#55ddb0',
-    icon_color: '#5A261C'
+    color: '#ea6d4e',
+    icon_color: '#ae5540'
   }, {
     title: 'education',
     slug: 'education',
-    color: '#5C92D9',
-    icon_color: '#214073'
+    color: '#6791e2',
+    icon_color: '#4e6ba4'
   }, {
     title: 'media & comunication',
     slug: 'media_comunication',
-    color: '#D94D5B',
-    icon_color: '#6F2028'
+    color: '#e55262',
+    icon_color: '#a6404b'
   }, {
     title: 'housing',
     slug: 'housing',
-    color: '#EE88B5',
-    icon_color: '#611E3E'
+    color: '#e388b9',
+    icon_color: '#9e5e81'
   }, {
     title: 'health',
     slug: 'health',
-    color: '#ffdd00',
-    icon_color: '#611E3E'
+    color: '#e55262',
+    icon_color: '#ad4550'
   }]
 
   /* $scope.apps = [
@@ -192,14 +192,10 @@ angular.module('starter.controllers', [])
   $scope.getScrollPosition = function() {
     var topLogo = document.getElementById('topLogo');
 
-    console.log(">>>>>>",$ionicScrollDelegate.getScrollPosition().top);
-
     if ($ionicScrollDelegate.getScrollPosition().top > 277) {
       topLogo.style.visibility = "visible"
-      console.log(">>>>>>");
     } else {
       topLogo.style.visibility = "hidden"
-      console.log(">>>>>>");
     }
   }
 

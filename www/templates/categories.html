@@ -12,7 +12,7 @@
     <ion-list>
       <div class="col col-center categories" style="padding: 0px;">
 
-        <div class="card" style="height: 320px;background-color:#E7EAF0;padding: 0px;margin: -44px;">
+        <div class="card" style="height: 445px;background-color:#E7EAF0;padding: 0px;margin: -44px;">
           <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 20px;height: initial;">
             <img class="icon logo" src="img/logo.png" />
             <p class="slogan">Great resources when you settle in Sweden</p>
@@ -24,7 +24,7 @@
         </div>
 
         <a class="category" ng-repeat="category in categories" ng-href="#/app/categories/{{category.slug}}">
-          <div class="card" style="background-color:{{category.color}};background-image:url('img/categories-{{category.slug}}-black.png')">
+          <div class="card" style="background-color:{{category.color}};background-image:url('img/categories-{{category.slug}}-colored.png')">
 
             <div class="item item-text-wrap">
               <div class="item item-divider category-label">{{ category.slug + '_title' | translate }}</div>
@@ -37,20 +37,22 @@
 
         <div class="card" style="height: 186px;background-color: #E7EAF0; margin-top: 2px;">
           <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 15px;height: initial;">
-            <span class="" style="padding:15px;">{{ 'setelin_footer' | translate }}</span>
+
             <div class="row">
-              <img class="" src="img/logo.png" style="height:50px;width:125px;margin-left:auto;margin-right:auto;margin-top:15px;margin-bottom:20px;" />
+              <i class="icon ion-ios-heart-outline" style="margin:auto;font-size: 44px;" ></i>
             </div>
+            <span class="footerTitle" >likes</span>
+            <div class="desc" style="color:black" >these are the apps you liked so far</div>
           </div>
         </div>
 
-        <div class="card" style="height: 180px;background-color:#000000;">
+        <!-- <div class="card" style="height: 180px;background-color:#000000;">
           <div class="item item-text-wrap" style="background-color:#000000;margin-top: 50px;">
             <span class="title" style="padding:15px;">Refugee Tech</span>
             </br>
             <span class="description">{{ 'refugee_tech_info' | translate }}</span>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </ion-list>

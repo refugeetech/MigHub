@@ -10,7 +10,6 @@ a {
 	border-radius: 0;
 	height: 300px;
 	box-shadow: 0px, 0px, 0px, black !important;
-	background-blend-mode: soft-light;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position-x: 253px;
@@ -41,7 +40,6 @@ a {
 	margin-left: 30%;
 	overflow: visible;
 	opacity: 0.8;
-	mix-blend-mode: exclusion;
 }
 
 .categories .category .icon image {
@@ -265,7 +263,6 @@ a {
 }
 
 #categories .category:nth-of-type(8) .card {
-	background-blend-mode: overlay;
 	background-position-x: 238px;
 	background-position-y: 95px;
 }
@@ -287,9 +284,14 @@ a {
 
 .logo {
 	width: 300px;
-	margin-top: 35px;
+	margin-top: 90px;
 }
 
 #topLogo {
 	visibility: hidden;
+}
+
+.footerTitle {
+	margin: auto;
+	
 }

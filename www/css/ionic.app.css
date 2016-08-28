@@ -9810,7 +9810,6 @@ a {
   border-radius: 0;
   height: 300px;
   box-shadow: 0px, 0px, 0px, black !important;
-  background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 253px;
@@ -9836,8 +9835,7 @@ a {
   margin-top: -5%;
   margin-left: 30%;
   overflow: visible;
-  opacity: 0.8;
-  mix-blend-mode: exclusion; }
+  opacity: 0.8; }
 
 .categories .category .icon image {
   width: 450px;
@@ -9968,7 +9966,8 @@ a {
 
 .option a {
   text-decoration: none;
-  color: black; }
+  color: black;
+  font-family: 'Siri Core Bold'; }
 
 .option {
   margin-top: 18px; }
@@ -10022,7 +10021,6 @@ a {
   background-position-y: 56px; }
 
 #categories .category:nth-of-type(8) .card {
-  background-blend-mode: overlay;
   background-position-x: 238px;
   background-position-y: 95px; }
 
@@ -10040,10 +10038,13 @@ a {
 
 .logo {
   width: 300px;
-  margin-top: 35px; }
+  margin-top: 90px; }
 
 #topLogo {
   visibility: hidden; }
+
+.footerTitle {
+  margin: auto; }
 
 .img-rounded {
   border-radius: 100%; }
