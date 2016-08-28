@@ -57,3 +57,19 @@ h1, h2, h3, h4, h5 {
   margin-left: -15px;
   text-alignment: center;
 }
+
+@media only screen
+and (max-device-width : 480px) {
+
+/* Styles */
+
+  .modal{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+}
