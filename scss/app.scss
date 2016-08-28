@@ -13,11 +13,19 @@ h1, h2, h3, h4, h5 {
 
 .tags{
   border-radius: 300px;
-  margin: 5px;
-  margin-left: 8px;
-  margin-right: 8px;
-  // font-size: 8px;
-  // max-height: 10px;
+  margin: 5px 4px 20px 4px;
+  padding: 0px 15px 0px 15px;
+  max-height: 10px;
+  min-height: 28px;
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: 100;
+
+  &.highlight{
+    background-color: #EC4A59;
+    color: #FDFDFD;
+  }
+
 }
 
 .likes{
