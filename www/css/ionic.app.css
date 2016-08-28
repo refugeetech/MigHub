@@ -9955,8 +9955,8 @@ a {
 
 .country {
   margin-top: -30px !important;
-  margin-left: -67px;
-  margin-bottom: 22px !important; }
+  margin-bottom: 22px !important;
+  text-align: center; }
 
 .option {
   text-decoration: none;
