@@ -8,7 +8,7 @@
       <i class="icon ion-chevron-down"></i>
     </button>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content on-scroll="getScrollPosition()" id="categoriesContainer" >
     <script type="text/javascript">
       $(window).scroll(function() {
         var a = 285;
