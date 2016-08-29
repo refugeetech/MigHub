@@ -1,6 +1,7 @@
 a {
 	text-decoration: none;
 }
+
 .categories .card {
 	text-align: center;
 	color: #fff;
@@ -9,9 +10,14 @@ a {
 	border-radius: 0;
 	height: 300px;
 	box-shadow: 0px, 0px, 0px, black !important;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: 253px;
+	background-position-y: 128px;
 }
+
 .categories .category {
-	text-align: left;
+	text-align: center;
 	display: inline-block;
 	position: relative;
 	width: 100%;
@@ -27,20 +33,22 @@ a {
 		width: 33.33%;
 	}
 }
+
 .categories .category .icon {
 	width: 130%;
 	margin-top: -5%;
 	margin-left: 30%;
 	overflow: visible;
 	opacity: 0.8;
-	mix-blend-mode: exclusion;
 }
+
 .categories .category .icon image {
 	width: 450px;
 	height: 450px;
 	y: -140px;
 	overflow: visible;
 }
+
 .categories .category .title {
 	position: relative;
 	width: 120%;
@@ -70,63 +78,80 @@ a {
 		padding-left: 56px;
 	}
 }
+
 .icon.ion-gear-b:before {
 	font-size: 10px !important;
 }
+
 .img-rounded {
 	border-radius: 100%;
 }
+
 .img-responsive {
 	max-width: 300px;
 	width: 100%;
 }
+
 .text-center {
 	text-align: center;
 }
+
 .category_description_container {
 	background: #fff;
 	padding: 18px;
 	border-radius: 10px;
 }
+
 .category_description_container .card {
 	box-shadow: none;
 	padding: 18px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
 .category_description_container .item {
 	border: none;
 }
+
 .category_description_container .item img {
 	object-fit: contain;
 }
+
 #categoryContainer.has-header {
 	top: 0;
 }
+
 .bar.bar-clear {
 	background-color: rgba(255, 255, 255, 0.9);
 }
+
 .bar.bar-clear .title {
 	color: #666;
 }
+
 #catNavBar {
 	display: none;
 }
+
 .item p.app-desc {
 	color: #333;
 }
+
 .item p.like-num {
 	margin-top: 6px;
 }
+
 .item h2 {
 	margin: 8px 0 6px;
 }
+
 #bgBackBtn {
 	color: #FFF;
 	position: absolute;
 	left: 0;
 	font-size: 20px;
 }
+
 .item .item-divider {
 	background-color: none;
 	background-color: unset;
@@ -136,36 +161,140 @@ a {
 	margin-top: 20px;
 	text-align: start;
 }
+
 .desc {
-  font-family: 'Siri Core Bold', 'sans-serif';
-	color: #000;
+	font-family: 'Siri Core Bold', 'sans-serif';
+	color: white;
 	font-weight: 700;
 	font-size: 2.2em;
 	letter-spacing: -0.4px;
 	line-height: 1.1em;
-	text-align: start;
-	margin: 20px;
-	margin-top: 10px;
+	text-align: center;
+	margin: 10px 20px 20px;
 }
 
 .category .category-label {
 	font-size: 1.3em;
 	font-weight: 300;
-	color: #000;
-	margin-left:5px;
+	color: white;
+	margin-left: 5px;
 }
 
 .bar {
 	background-color: #E7EAF0 !important;
 	height: 45px;
 }
+
+.slogan {
+	margin-left: 15px !important;
+	margin-top: -2px !important;
+}
+
 .country {
 	margin-top: -30px !important;
 	margin-left: -67px;
 	margin-bottom: 22px !important;
 }
-.option {
+
+.option a {
 	text-decoration: none;
 	color: black;
-	text-decoration: underline;
+	font-family: 'Siri Core Bold';
+}
+
+.option {
+	margin-top: 18px
+}
+
+.item-text-wrap {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 300px;
+	background-color: transparent;
+}
+
+.category-label {
+	color: white;
+}
+/* set background position individually for every project */
+#categories .category:nth-of-type(1) .card {
+	background-size: initial;
+	background-position-x: 269px;
+	background-position-y: 67px;
+}
+
+#categories .category:nth-of-type(2) .card {
+	background-size: 246px 246px;
+	background-position-x: 248px;
+	background-position-y: 45px;
+	background-size: contain;
+}
+
+#categories .category:nth-of-type(3) .card {
+	background-size: initial;
+	background-position-x: 187px;
+	background-position-y: 43px;
+}
+
+#categories .category:nth-of-type(4) .card {
+	background-size: initial;
+	background-position-x: 190px;
+	background-position-y: 126px;
+}
+
+#categories .category:nth-of-type(5) .card {
+	background-size: initial;
+	background-position-x: 184px;
+	background-position-y: 128px;
+}
+
+#categories .category:nth-of-type(6) .card {
+	background-size: initial;
+	background-position-x: 159px;
+	background-position-y: 128px;
+}
+
+#categories .category:nth-of-type(7) .card {
+	background-size: contain;
+	background-position-x: 234px;
+	background-position-y: 56px;
+}
+
+#categories .category:nth-of-type(8) .card {
+	background-position-x: 238px;
+	background-position-y: 95px;
+}
+//nav bar transparency
+.bar,
+.bar-header,
+.bar-stable .title-center .header-item {
+	background-color: transparent !important;
+	border: 0 !important;
+	border-bottom-color: transparent !important;
+	background-image: none !important;
+	border-bottom: none !important;
+}
+
+.scroll-content {
+	overflow: visible !important;
+}
+//end
+
+.logo {
+	width: 300px;
+	margin-top: 90px;
+}
+
+#topLogo {
+	visibility: hidden;
+}
+
+.footerTitle {
+	margin: auto;
+}
+
+.button {
+    font-family: 'Siri Core Bold', 'sans-serif';
 }

@@ -28,9 +28,15 @@
     }
   }
 }
-#categoryContainer.has-header {
-  top: 0;
+
+
+#categoryContainer{
+  background-size: cover; background-repeat: no-repeat;
+  .has-header {
+    top: 0;
+  }
 }
+
 .bar.bar-clear {
   background-color: rgba(255,255,255,0.9);
   .title {
