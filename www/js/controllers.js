@@ -156,24 +156,26 @@ angular.module('starter.controllers', [])
     }
 
     var exists;
-
-    if(API.favoriteStore.get(app._id)!==undefined){
+    var favorites = API.favoriteStore.get("favorites");
+    if(favorites.indexOf(app)>=0){
       exists=true;
     }else{
       exists=false;
     }
 
     if (!exists) {
-      API.favoriteStore.put(app._id, app)
+      favorites.push(app)
+      API.favoriteStore.put("favorites", favorites)
     } else {
-      API.favoriteStore.remove(app._id)
+      favorites.splice(favorites.indexOf(app),1)
+      API.favoriteStore.put("favorites", favorites)
     }
 
   }
 
   // not currently used
   $scope.getFavorites = function() {
-    return API.favoriteStore.values()
+    return API.favoriteStore.get("favorites");
   }
 
   $scope.inFavorites = function(project) {
@@ -186,7 +188,17 @@ angular.module('starter.controllers', [])
       return
     }
 
-    return !(app === undefined) ? !(API.favoriteStore.get(app._id) === undefined) : false
+    var exists;
+    var favorites = API.favoriteStore.get("favorites");
+    if(favorites.indexOf(app)>=0){
+      exists=true;
+    }else{
+      exists=false;
+    }
+
+    // console.log("favorites",favorites);
+
+    return exists
   }
 
   /* End Favorite functions */
@@ -207,6 +219,33 @@ angular.module('starter.controllers', [])
       topLogo.style.visibility = "hidden"
     }
   }
+
+})
+
+.controller('FavoritesCtrl', function($rootScope, API, $scope) {
+
+      //get favorite apps ids
+      $scope.favorites = API.favoriteStore.get("favorites");
+      // $scope.favorites = [];
+      // console.log(">>>favorite apps ids: ",favoritesIds);
+
+      //get the actual app objects
+
+      // favorites.push(API.projectById(favoritesIds[i]))
+      // API.projects().$promise.then(function(res) {
+      //     res.data;
+      //     for (var i = 0; i < data.length; i++) {
+      //       for (var j = 0; j < favoritesIds.length; j++) {
+      //         if(data[i]._id===favoritesIds[j]._id){
+      //           $scope.favorites.push
+      //         }
+      //       }
+      //     }
+      // })
+
+
+      //$scope.favorites=favorites
+      console.log(">>>favorite apps: ",$scope.favorites);
 
 })
 

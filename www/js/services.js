@@ -35,6 +35,9 @@
     }
     // var favoriteStore = CacheFactory('favoriteStore', options);
     var favoriteStore = $cacheFactory('favoriteStore', options);
+    //init
+    var favorites = []
+    favoriteStore.put("favorites", favorites)
     //console.log("this is the favorite service",favoriteStore);
     /* End favoriteStore */
 

@@ -1,0 +1,39 @@
+<ion-view animation="slide-down-up">
+  <ion-nav-bar class="clear-bar" id="catNavBar">
+    <ion-nav-buttons side="left">
+      <a ui-sref="app.categories" class="button ion-chevron-left button-clear button-dark"></a>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content style="background-color:#E7EBF0;" padding="true" on-scroll="getScrollPosition()" delegate-handle="handler">
+
+    <a id="bgBackBtn" ui-sref="app.categories" class="button ion-chevron-left button-clear"></a>
+
+    <div class="row text-center">
+      <div class="col">
+        <i class="icon ion-ios-heart-outline" style="margin:auto;font-size: 94px;margin-top: 90px;display: block;"></i>
+      </div>
+    </div>
+    <div class="category_description_container">
+      <div class="card text-center">
+        <h4 class="test">favorites</h4>
+        <p>These are your most liked apps so far.</p>
+      </div>
+      <ion-list>
+        <div class="item-separator" ng-repeat="app in favorites">
+          <a class="item item-thumbnail-left" ng-click="showapp(app)">
+            <img ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
+            <h2>{{app.name}}</h2>
+            <p class="app-desc">{{app.shortDescription}}</p>
+            <!-- <p class="like-num">{{app.upvotes}} likes</p> -->
+            <!-- This will not currently be implemented -->
+            <!--  <p>
+            	<span ng-repeat="platform in app.targetPlatforms">
+                {{ platform }}
+              	</span>
+            </p>-->
+          </a>
+        </div>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
