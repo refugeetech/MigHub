@@ -26,16 +26,18 @@
         <img class="img-responsive" src="img/categories-{{category.slug}}.png">
       </div>
     </div>
-    <div class="category_description_container">
-      <div class="card text-center">
-        <h4>{{ category.slug + "_title" | translate }}</h4>
-        <p>{{ category.slug + '_description_long' | translate }}</p>
+    <div class="row text-center">
+      <div class="col">
+      <h4>{{ category.slug + "_title" | translate }}</h4>
+      <p>{{ category.slug + '_description_long' | translate }}</p>
       </div>
+    </div>
+    <div class="category_description_container">
       <ion-list>
         <div class="item-separator" ng-repeat="app in apps">
           <a class="item item-thumbnail-left" ng-click="showapp(app)">
             <img ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
-            <h2>{{app.name}}</h2>
+            <h2 class="app-title" >{{app.name}}</h2>
             <p class="app-desc">{{app.shortDescription}}</p>
             <!-- <p class="like-num">{{app.upvotes}} likes</p> --> <!-- This will not currently be implemented -->
             <p class="like-num"><i class="icon {{ inFavorites(app) ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i></p>

@@ -9977,7 +9977,8 @@ a {
 .category_description_container {
   background: #fff;
   padding: 18px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  margin-top: 50px; }
   .category_description_container .card {
     box-shadow: none;
     padding: 18px;
@@ -10026,6 +10027,34 @@ a {
   min-height: 240px;
   border-radius: 10px 10px 0 0; }
 
+.text-center .col img {
+  max-width: 160px;
+  max-height: 160px;
+  margin-top: 50px; }
+
+.text-center .col h4 {
+  color: white;
+  font-size: 24pt;
+  font-family: 'Siri Web SemiBold'; }
+
+.text-center .col p {
+  color: white;
+  font-size: 16pt;
+  font-family: 'Siri Web Light'; }
+
+.app-title {
+  font-family: 'Siri Web SemiBold';
+  font-size: 14pt !important; }
+
+.app-desc {
+  font-family: 'Siri Web Light';
+  font-size: 12pt !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal !important; }
+
 /* Webfonts: Copyright © 2011 by Letters From Sweden. All rights reserved. To obtain a license, please see: http://lettersfromsweden.se/webfonts */
 @font-face {
   font-family: 'Siri Core Regular';
@@ -10054,6 +10083,20 @@ a {
   src: url("/fonts/SiriCore-BoldItalic.eot?") format("embedded-opentype"), url("/fonts/SiriCore-BoldItalic.woff") format("woff"), url("/fonts/SiriCore-BoldItalic.ttf") format("opentype");
   font-weight: bold;
   font-style: italic; }
+
+@font-face {
+  font-family: 'Siri Web SemiBold';
+  src: url("/fonts/SiriWeb-SemiBold.eot");
+  src: url("/fonts/SiriWeb-SemiBold.eot?") format("embedded-opentype"), url("/fonts/SiriWeb-SemiBold.woff") format("woff"), url("/fonts/SiriWeb-SemiBold.ttf") format("opentype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Siri Web Light';
+  src: url("/fonts/SiriWeb-Light.eot");
+  src: url("/fonts/SiriWeb-Light.eot?") format("embedded-opentype"), url("/fonts/SiriWeb-Light.woff") format("woff"), url("/fonts/SiriWeb-Light.ttf") format("opentype");
+  font-weight: lighter;
+  font-style: normal; }
 
 .siricoreregular {
   font-family: 'Siri Core Regular';
