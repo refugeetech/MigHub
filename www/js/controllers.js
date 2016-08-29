@@ -154,16 +154,21 @@ angular.module('starter.controllers', [])
     if (!app) {
       return
     }
-    var exists = API.favoriteStore.values().filter(function(p) {
-      return p._id == app._id
-    }).length > 0
+
+    var exists;
+
+    if(API.favoriteStore.get(app._id)!==undefined){
+      exists=true;
+    }else{
+      exists=false;
+    }
+
     if (!exists) {
       API.favoriteStore.put(app._id, app)
     } else {
       API.favoriteStore.remove(app._id)
     }
-    // console.log("projects in favorites are now",API.favoriteStore.values())
-    // console.log("keys in favorites are now",API.favoriteStore.keySet())
+
   }
 
   // not currently used
@@ -176,7 +181,11 @@ angular.module('starter.controllers', [])
     if (project) {
       app = project
     }
-    // console.log("inte the store",API.favoriteStore.get(app._id))
+
+    if(app===undefined){
+      return
+    }
+
     return !(app === undefined) ? !(API.favoriteStore.get(app._id) === undefined) : false
   }
 
