@@ -9988,8 +9988,11 @@ a {
     .category_description_container .item img {
       object-fit: contain; }
 
-#categoryContainer.has-header {
-  top: 0; }
+#categoryContainer {
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #categoryContainer .has-header {
+    top: 0; }
 
 .bar.bar-clear {
   background-color: rgba(255, 255, 255, 0.9); }
@@ -10080,6 +10083,10 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Siri Core Bold'; }
+
+.row.buttons {
+  white-space: nowrap;
+  flex-wrap: wrap; }
 
 .tags {
   border-radius: 300px;
