@@ -30,46 +30,45 @@
               <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%">
               <div class="col">
                 <p> {{ app.shortDescription }} </p>
-                <!-- TODO -->
                 <p class="likes"> {{ app.upvotes }} Likes </p>
               </div>
             </div>
 
           </div>
-          <div class="row buttons">
-            <a class="button button-stable tags" href="">
-              <!-- TODO load the chosen category name from parent state -->
-              Social
+          <div class="row">
+
+            <a class="button tags highlight">
+              {{ app.mainCategory }}
             </a>
 
               <div ng-repeat="platform in app.targetPlatforms">
 
                 <a class="button button-stable tags" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
-                  <i  class="icon ion-home"></i>
+                  <i  class="ion-home"></i>
 
                   {{ platform }}
                 </a>
 
                 <a class="button button-stable tags" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
-                  <i class="icon ion-social-ios"></i>
+                  <i class="ion-social-apple"></i>
 
                   {{ platform }}
                 </a>
 
                 <a class="button button-stable tags" href="{{ search('googlePlay',app.links).url }}"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
-                  <i class="icon ion-social-android"></i>
+                  <i class="ion-social-android"></i>
 
                   {{ platform }}
                 </a>
 
                 <a class="button button-stable tags" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
-                  <i class="icon ion-social-windows"></i>
+                  <i class="ion-social-windows"></i>
 
                   {{ platform }}
                 </a>
 
                 <a class="button button-stable tags" ng-if= "platform==='other'">
-                  <i class="icon ion-asterisk"></i>
+                  <i class="ion-asterisk"></i>
 
                   {{ platform }}
                 </a>
