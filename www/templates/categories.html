@@ -1,6 +1,6 @@
 <ion-view hide-back-button="true">
   <ion-nav-buttons side="left">
-    <a href="/#categories"><img src="img/logo.png" style="height:40px;"></a>
+    <a href="/#categories" ><img src="img/logoEmptyBg.png" id="topLogo" style="height:40px;"></a>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear" ng-click="show();">
@@ -8,50 +8,48 @@
       <i class="icon ion-chevron-down"></i>
     </button>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content on-scroll="getScrollPosition()" >
     <ion-list>
       <div class="col col-center categories" style="padding: 0px;">
 
-        <div class="card" style="height: 285px;background-color:#E7EAF0;padding: 0px;margin: 0px;">
-          <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 20px;">
-            <img class="icon" src="img/logo.png" />
-            <p class="country">Great resources when you settle in Sweden</p>
+        <div class="card" style="height: 445px;background-color:#E7EAF0;padding: 0px;margin: -44px;">
+          <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 20px;height: initial;">
+            <img class="icon logo" src="img/logo.png" />
+            <p class="slogan">Great resources when you settle in Sweden</p>
             <!-- <p><a class="option" href="">Change Country</a></p>
-            <p><a class="option" href="">Newsletter</a></p>
-            <p><a class="option" href="">About us</a></p> -->
+            <p><a class="option" href="">Newsletter</a></p> -->
             <!-- <p>{{ 'setelin_header' | translate }}</p> -->
             <button class="button button-icon" ng-click="showAbout();">About us</button>
           </div>
         </div>
 
         <a class="category" ng-repeat="category in categories" ng-href="#/app/categories/{{category.slug}}">
-          <div class="card" style="background-color:{{category.color}}">
+          <div class="card" style="background-color:{{category.color}};background-image:url('img/categories-{{category.slug}}-colored.png')">
 
-            <div class="item item-text-wrap" style="background-color:{{category.color}}">
+            <div class="item item-text-wrap">
               <div class="item item-divider category-label">{{ category.slug + '_title' | translate }}</div>
               <div class="desc">{{ category.slug + '_description' | translate }}</div>
-              <img class="icon" ng-src="img/categories-{{category.slug}}.png" />
+              <!-- <img class="icon" ng-src="img/categories-{{category.slug}}.png" /> -->
             </div>
 
           </div>
         </a>
 
-        <div class="card" style="height: 186px;background-color: #E7EAF0; margin-top: 2px;">
-          <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 15px;">
-            <span class="" style="padding:15px;">{{ 'setelin_footer' | translate }}</span>
-            <div class="row">
-              <img class="" src="img/logo.png" style="height:50px;width:125px;margin-left:auto;margin-right:auto;margin-top:15px;margin-bottom:20px;" />
-            </div>
+        <div class="card" style="height: 400px;background-color: #E7EAF0; margin-top: 2px;">
+          <div class="item item-text-wrap" style="background-color:#E7EAF0;margin-top: 15px;height: initial;">
+            <i class="icon ion-ios-heart-outline" style="margin:auto;font-size: 44px;margin-top: 90px;display: block;" ></i>
+            <span class="footerTitle" >likes</span>
+            <div class="desc" style="color:black" >these are the apps you liked so far</div>
           </div>
         </div>
 
-        <div class="card" style="height: 180px;background-color:#000000;">
+        <!-- <div class="card" style="height: 180px;background-color:#000000;">
           <div class="item item-text-wrap" style="background-color:#000000;margin-top: 50px;">
             <span class="title" style="padding:15px;">Refugee Tech</span>
             </br>
             <span class="description">{{ 'refugee_tech_info' | translate }}</span>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </ion-list>

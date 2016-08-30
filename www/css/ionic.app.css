@@ -9809,10 +9809,14 @@ a {
   padding: 0;
   border-radius: 0;
   height: 300px;
-  box-shadow: 0px, 0px, 0px, black !important; }
+  box-shadow: 0px, 0px, 0px, black !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 253px;
+  background-position-y: 128px; }
 
 .categories .category {
-  text-align: left;
+  text-align: center;
   display: inline-block;
   position: relative;
   width: 100%;
@@ -9831,8 +9835,7 @@ a {
   margin-top: -5%;
   margin-left: 30%;
   overflow: visible;
-  opacity: 0.8;
-  mix-blend-mode: exclusion; }
+  opacity: 0.8; }
 
 .categories .category .icon image {
   width: 450px;
@@ -9934,34 +9937,117 @@ a {
 
 .desc {
   font-family: 'Siri Core Bold', 'sans-serif';
-  color: #000;
+  color: white;
   font-weight: 700;
   font-size: 2.2em;
   letter-spacing: -0.4px;
   line-height: 1.1em;
-  text-align: start;
-  margin: 20px;
-  margin-top: 10px; }
+  text-align: center;
+  margin: 10px 20px 20px; }
 
 .category .category-label {
   font-size: 1.3em;
   font-weight: 300;
-  color: #000;
+  color: white;
   margin-left: 5px; }
 
 .bar {
   background-color: #E7EAF0 !important;
   height: 45px; }
 
+.slogan {
+  margin-left: 15px !important;
+  margin-top: -2px !important; }
+
 .country {
   margin-top: -30px !important;
   margin-left: -67px;
   margin-bottom: 22px !important; }
 
-.option {
+.option a {
   text-decoration: none;
   color: black;
-  text-decoration: underline; }
+  font-family: 'Siri Core Bold'; }
+
+.option {
+  margin-top: 18px; }
+
+.item-text-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  background-color: transparent; }
+
+.category-label {
+  color: white; }
+
+/* set background position individually for every project */
+#categories .category:nth-of-type(1) .card {
+  background-size: initial;
+  background-position-x: 269px;
+  background-position-y: 67px; }
+
+#categories .category:nth-of-type(2) .card {
+  background-size: 246px 246px;
+  background-position-x: 248px;
+  background-position-y: 45px;
+  background-size: contain; }
+
+#categories .category:nth-of-type(3) .card {
+  background-size: initial;
+  background-position-x: 187px;
+  background-position-y: 43px; }
+
+#categories .category:nth-of-type(4) .card {
+  background-size: initial;
+  background-position-x: 190px;
+  background-position-y: 126px; }
+
+#categories .category:nth-of-type(5) .card {
+  background-size: initial;
+  background-position-x: 184px;
+  background-position-y: 128px; }
+
+#categories .category:nth-of-type(6) .card {
+  background-size: initial;
+  background-position-x: 159px;
+  background-position-y: 128px; }
+
+#categories .category:nth-of-type(7) .card {
+  background-size: contain;
+  background-position-x: 234px;
+  background-position-y: 56px; }
+
+#categories .category:nth-of-type(8) .card {
+  background-position-x: 238px;
+  background-position-y: 95px; }
+
+.bar,
+.bar-header,
+.bar-stable .title-center .header-item {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-bottom-color: transparent !important;
+  background-image: none !important;
+  border-bottom: none !important; }
+
+.scroll-content {
+  overflow: visible !important; }
+
+.logo {
+  width: 300px;
+  margin-top: 90px; }
+
+#topLogo {
+  visibility: hidden; }
+
+.footerTitle {
+  margin: auto; }
+
+.button {
+  font-family: 'Siri Core Bold', 'sans-serif'; }
 
 .img-rounded {
   border-radius: 100%; }
@@ -9988,8 +10074,11 @@ a {
     .category_description_container .item img {
       object-fit: contain; }
 
-#categoryContainer.has-header {
-  top: 0; }
+#categoryContainer {
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #categoryContainer .has-header {
+    top: 0; }
 
 .bar.bar-clear {
   background-color: rgba(255, 255, 255, 0.9); }
@@ -10106,9 +10195,16 @@ h1, h2, h3, h4, h5 {
 
 .tags {
   border-radius: 300px;
-  margin: 5px;
-  margin-left: 8px;
-  margin-right: 8px; }
+  margin: 5px 4px 20px 4px;
+  padding: 0px 15px 0px 15px;
+  max-height: 10px;
+  min-height: 28px;
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: 100; }
+  .tags.highlight {
+    background-color: #EC4A59;
+    color: #FDFDFD; }
 
 .likes {
   color: #ADADAD; }
@@ -10138,3 +10234,13 @@ h1, h2, h3, h4, h5 {
   width: 106%;
   margin-left: -15px;
   text-alignment: center; }
+
+@media only screen and (max-device-width: 480px) {
+  /* Styles */
+  .modal {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0px; } }

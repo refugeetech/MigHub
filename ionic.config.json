@@ -1,0 +1,13 @@
+{
+  "name": "MigHub",
+  "app_id": "fe291fea",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "scss/**/*",
+    "!www/lib/**/*"
+  ]
+}

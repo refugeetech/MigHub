@@ -14,11 +14,19 @@ h1, h2, h3, h4, h5 {
 
 .tags{
   border-radius: 300px;
-  margin: 5px;
-  margin-left: 8px;
-  margin-right: 8px;
-  // font-size: 8px;
-  // max-height: 10px;
+  margin: 5px 4px 20px 4px;
+  padding: 0px 15px 0px 15px;
+  max-height: 10px;
+  min-height: 28px;
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: 100;
+
+  &.highlight{
+    background-color: #EC4A59;
+    color: #FDFDFD;
+  }
+
 }
 
 .likes{
@@ -57,4 +65,20 @@ h1, h2, h3, h4, h5 {
   width: 106%;
   margin-left: -15px;
   text-alignment: center;
+}
+
+@media only screen
+and (max-device-width : 480px) {
+
+/* Styles */
+
+  .modal{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0px;
+  }
+
 }
