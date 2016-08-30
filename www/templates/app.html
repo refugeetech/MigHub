@@ -11,9 +11,10 @@
 
         <div class="col">
           <button class="button button-icon" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
+          <!-- <img class="img-responsive" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}"> -->
         </div>
 
-        <div class="col">
+        <div class="col" style="display: flex;justify-content: center;align-content: center;flex-direction: column;">
           <h1 class="detailed title" style="font-size: 16px; font-size: 3.8vw;">{{app.name}}</h1>
         </div>
 
@@ -27,7 +28,8 @@
         <div class="col">
           <div class="text-left" style="padding: 25px" >
             <div class="row">
-              <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%">
+              <!-- <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%"> -->
+              <img class="img-responsive" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
               <div class="col">
                 <p> {{ app.shortDescription }} </p>
                 <p class="likes"> {{ app.upvotes }} Likes </p>
@@ -102,7 +104,7 @@
                 </button>
               </div>
             </div>
-
+<!--
             <div class="row footer">
               <div class="col initiative-descrption">
                 <div class="row">
@@ -120,9 +122,9 @@
                 </div>
 
                 <div class="row">
-                  <p class="initiative-descrption description">
+                  <p class="initiative-descrption description"> -->
                     <!-- TODO initiative description from app -->
-                    App! was created in collaboration with this
+                    <!-- App! was created in collaboration with this
                     and that date. It's an initiative around this
                     and that and that. App! Was created in collaboration
                     with this and that date. it's and initiative around
@@ -130,13 +132,13 @@
                   </p>
                 </div>
                 <div class="row">
-                  <p class="initiative-descrption description">
+                  <p class="initiative-descrption description"> -->
                     <!-- TODO Email from app -->
-                    <strong>Email us at info@app.se</strong>
+                    <!-- <strong>Email us at info@app.se</strong>
                   </p>
                 </div>
               </div>
-            </div>
+            </div> -->
 
 
 

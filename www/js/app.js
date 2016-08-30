@@ -52,6 +52,7 @@ angular.module(
           }
         }
       })
+
       .state('app.categories', {
         url: '/categories',
         views: {
@@ -72,6 +73,17 @@ angular.module(
           }
         }
       })
+
+      .state('app.favorites', {
+        url: '/favorites',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/favorites.html',
+            controller: 'FavoritesCtrl'
+          }
+        }
+      })
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/categories')
 
