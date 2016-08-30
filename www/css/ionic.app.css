@@ -10115,6 +10115,29 @@ a {
   min-height: 240px;
   border-radius: 10px 10px 0 0; }
 
+.col.setelin {
+  background-color: #E7EBF0;
+  padding: 10px; }
+  .col.setelin .description {
+    font-family: 'Siri Core', 'sans-serif';
+    color: #000;
+    font-weight: 100;
+    font-size: 1.2em;
+    margin: 10px;
+    line-height: 1.6em;
+    text-align: left; }
+  .col.setelin .feedback {
+    font-weight: 900; }
+  .col.setelin .collaborators {
+    font-size: 1.4em;
+    font-weight: 800;
+    line-height: 1.8em;
+    text-align: left; }
+    .col.setelin .collaborators .title {
+      font-weight: normal; }
+  .col.setelin .refugee_tech {
+    font-size: 1.2em; }
+
 /* Webfonts: Copyright © 2011 by Letters From Sweden. All rights reserved. To obtain a license, please see: http://lettersfromsweden.se/webfonts */
 @font-face {
   font-family: 'Siri Core Regular';
