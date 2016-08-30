@@ -147,7 +147,29 @@ angular.module('starter.controllers', [])
     $scope.closeapp()
   }
 
-  /* Begin Favorite functions */
+    $ionicModal.fromTemplateUrl('templates/about.html', {
+      scope: $scope
+    }).then(function (modal) {
+      $scope.aboutModal = modal
+    })
+
+    // Triggered in the about modal to close it
+    $scope.closeAbout = function () {
+      $scope.aboutModal.hide()
+    }
+
+    // Open the about aboutModal
+    $scope.showAbout = function () {
+      $scope.aboutModal.show()
+    }
+
+    // Perform the about action when the user submits the app form
+    $scope.doapp = function () {
+      $scope.closeapp()
+    }
+
+
+    /* Begin Favorite functions */
 
   $scope.toggleFavorites = function() {
     var app = $scope.app

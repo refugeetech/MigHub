@@ -1,0 +1,39 @@
+.col.setelin {
+
+  background-color: #E7EBF0;
+  padding: 10px;
+
+  .description {
+    font-family: 'Siri Core', 'sans-serif';
+  	color: #000;
+  	font-weight: 100;
+  	font-size: 1.2em;
+    margin: 10px;
+    line-height: 1.6em;
+    text-align: left;
+
+  }
+
+  .feedback {
+    font-weight: 900;
+  }
+
+  .collaborators {
+    font-size: 1.4em;
+    font-weight: 800;
+    line-height: 1.8em;
+    text-align: left;
+    .title{
+      font-weight: normal;
+    }
+  }
+
+  .refugee_tech {
+
+      font-size: 1.2em;
+
+
+  }
+
+
+}
