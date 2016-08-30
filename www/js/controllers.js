@@ -98,7 +98,7 @@ angular.module('starter.controllers', [])
        { title: 'Newbie guide to Sweden', tags: ['information'], logo: 'newbie-guide.png', description: 'We are community of people who feel devoted towards the idea of creating a guide for all those brave ones who come to Sweden every year to start a life here. We know that the process of settling in Sweden comes with a bunch of questions. We hope that this guide will offer your guidance and give you the opportunity to bound with other Newbies and Oldbies.' }
      ]*/
 
-    // Create the app app that we will use later
+    // Create the app modal that we will use later
     $ionicModal.fromTemplateUrl('templates/app.html', {
       scope: $scope
     }).then(function (modal) {
