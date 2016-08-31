@@ -115,3 +115,6 @@ border-bottom: 4px solid #e7eaf0;
   -webkit-box-orient: vertical;
   white-space: normal !important;
 }
+.item-separator:last-child {
+    border: 0px;
+}
