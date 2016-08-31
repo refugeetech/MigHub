@@ -1,17 +1,17 @@
-.col.setelin {
+.setelin, .refugeetech{
 
-  background-color: #E7EBF0;
   padding: 10px;
 
-  .description {
+  h1{margin-bottom:20px;}
+
+  p {
     font-family: 'Siri Core', 'sans-serif';
   	color: #000;
   	font-weight: 100;
-  	font-size: 1.2em;
+  	font-size: 14pt;
     margin: 10px;
-    line-height: 1.6em;
+    line-height: 1.6;
     text-align: left;
-
   }
 
   .feedback {
@@ -19,21 +19,17 @@
   }
 
   .collaborators {
-    font-size: 1.4em;
+    margin:10px;
+    font-size: 14pt;
     font-weight: 800;
-    line-height: 1.8em;
+    line-height: 1.8;
     text-align: left;
     .title{
       font-weight: normal;
     }
   }
+}
 
-  .refugee_tech {
-
-      font-size: 1.2em;
-
-
-  }
-
-
+.setelin{
+  background-color: #E7EBF0;
 }
