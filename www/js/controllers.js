@@ -190,21 +190,21 @@ angular.module('starter.controllers', [])
       if(app.upvotes!==undefined){
         app.upvotes++;
       }
-      //update vote on the server side
-      API.upVote(app._id)
       //update localstorage favorites
       favorites.push(app)
       API.favoriteStore.put("favorites", favorites)
+      //update vote on the server side
+      API.upVote(app._id)
     } else {
       //update project upvotes
       if(app.upvotes!==undefined){
         app.upvotes--;
       }
-      //update vote on the server side
-      API.downVote(app._id)
       //update localstorage favorites
       favorites.splice(favorites.indexOf(app),1)
       API.favoriteStore.put("favorites", favorites)
+      //update vote on the server side
+      API.downVote(app._id)
     }
 
   }
