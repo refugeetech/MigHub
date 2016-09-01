@@ -46,7 +46,9 @@
       'query': {method: 'GET', cache: true}
     })
     // var projects = $resource('http://localhost:3000/api/v02/projects/:id', {id: '@id'})
-    var categories = $resource('data.json')
+    var categories = $resource('data.json', {}, {
+      'get': {method: 'GET', cache: true}
+    })
 
     var getCategories = function () {
       return categories.query()
