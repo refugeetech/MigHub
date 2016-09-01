@@ -45,25 +45,25 @@
 
               <div ng-repeat="platform in app.targetPlatforms">
 
-                <a class="button button-stable tags" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
                   <i  class="ion-home"></i>
 
                   {{ platform }}
                 </a>
 
-                <a class="button button-stable tags" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
                   <i class="ion-social-apple"></i>
 
                   {{ platform }}
                 </a>
 
-                <a class="button button-stable tags" href="{{ search('googlePlay',app.links).url }}"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
                   <i class="ion-social-android"></i>
 
                   {{ platform }}
                 </a>
 
-                <a class="button button-stable tags" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
                   <i class="ion-social-windows"></i>
 
                   {{ platform }}
