@@ -91,17 +91,14 @@
 
             <div class="row">
               <div class="col">
-                <button class="button button-outline button-dark button-block">
-                  Get it
-                </button>
+                <a ng-if="devicePlatform.isIOS() && hasPlatform('ios') && search('appStore',app.links)" href="{{ search('appStore',app.links).url }}" target="_blank" class="button button-outline button-dark button-block">Get the App</a>
+                <a ng-if="devicePlatform.isAndroid() && hasPlatform('android') && search('googlePlay',app.links)" href="{{ search('googlePlay',app.links).url }}" target="_blank" class="button button-outline button-dark button-block">Get the App</a>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row" ng-if="hasPlatform('web') && search('home',app.links)">
               <div class="col">
-                <button class="button button-clear button-dark button-block">
-                  give feedback
-                </button>
+                <a href="{{ search('home',app.links).url }}" target="_blank" class="button button-clear button-dark button-block">Visit Webpage</a>
               </div>
             </div>
 <!--
