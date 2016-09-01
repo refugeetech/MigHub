@@ -1,68 +1,57 @@
 <ion-modal-view>
   <ion-content>
-    <div class="col setelin">
-      <div class="row">
-        <div class="col">
-          <button class="button button-icon" ng-click="closeAbout()">  <i class="icon ion-chevron-left"></i> </button>
-        </div>
-
-        <div class="col text-center">
-          <h1 class="detailed title" style="font-size: 16px; font-size: 3.8vw;">about</h1>
-        </div>
-
-        <div class="col">
-        </div>
-      </div>
+    <div class="setelin">
 
       <div class="row">
-        <div class="col description">
+
+          <button style="position:absolute;left:10px;top:17px;" class="button button-icon" ng-click="closeAbout()">  <i class="icon ion-chevron-left"></i> </button>
+
+        <div class="col">
+          <h1 class="text-center">about</h1>
           <p> Setelin was initiated during a hackathon in a collaboration between Refugee Tech,
               STHM TECH and Migrationsverket the 29th of May. Its an historical event where an
               government agency reaches out and collaborates with a tech community. </p>
         </div>
       </div>
 
-      <div class="row">
+ <!--     <div class="row">
         <div class="col feedback">
           <button class="button button-clear button-dark">
             feedback
           </button>
         </div>
-      </div>
+      </div>-->
 
-      <div class="row">
-        <div class="col collaborators">
+      <div class="row" style="margin-top:20px;">
+        <div class="col">
           <!-- Img, border rounded -->
-          <h3 class="text-center">contributors</h3>
-          <p class="title">
+          <h1 class="text-center">contributors</h1>
+          <p>
             These are the volonteers that contributed in this great initiative
           </p>
-          <div class="col-50">
-            Aldin Galgic <br/>
-            Ali Zamli <br/>
-            Arsham Afrhari <br/>
-            Christian Landgren <br/>
-            David Tobar Herrera <br/>
-            Elhabib Moustaid <br/>
-            Leop Salmonsson <br/>
-            Leonard Pauli <br/>
-            Mikael Ribbenvik <br/>
-            Milad Fallah <br/>
-            Nin-Jing <br/>
-            Oscar Haglind <br/>
-            Shahin Baharan <br/>
-            Susanne Najfi <br/>
-            Tobias Rosman <br/>
-            Tyler Crowley <br/>
-            Vitali Poluzhnikov <br/>
-          </div>
-          <div class="col-50">
-
-          </div>
+          <ul class="collaborators">
+            <li>Aldin Galgic</li><li>
+            Ali Zamli </li><li>
+            Arsham Afrhari </li><li>
+            Christian Landgren </li><li>
+            David Tobar Herrera </li><li>
+            Elhabib Moustaid </li><li>
+            Leop Salmonsson </li><li>
+            Leonard Pauli </li><li>
+            Mikael Ribbenvik </li><li>
+            Milad Fallah </li><li>
+            Ningjing Chen </li><li>
+            Oscar Haglind </li><li>
+            Shahin Baharan </li><li>
+            Susanne Najfi </li><li>
+            Tobias Rosman </li><li>
+            Tyler Crowley </li><li>
+            Vitali Poluzhnikov </li>
+          </ul>
         </div>
       </div>
 
-      <div class="row">
+     <!-- <div class="row">
         <div class="col social">
           <h3 class="text-center" style="margin-top: 8px;">follow us</h3>
           <div class="row">
@@ -81,40 +70,45 @@
             </button>
           </div>
         </div>
-      </div>
+      </div>-->
 
     </div> <!-- End setelin part -->
 
-    <div class="col refugee_tech">
-      <div class="row">
+    <div class="refugeetech">
+      <div class="row" style="text-align: center">
         <!-- Logo -->
-        <img ng-src="{{ '/img/refugee_tech.png' }}" height="40%" width="40%">
+        <img style="margin:0 auto;height:75px;" ng-src="{{ '/img/refugee_tech.png' }}">
       </div>
 
       <div class="row">
-        <div class="col" style="font-size: 1.2em;">
+        <div class="col">
           <p>We build bridges between all parts of society to enable refugees’ potential,
              relying on efficiently designed and developed technology solutions.</p>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" style="margin-top:20px;">
         <div class="col links">
-          <h3 class="text-center" style="margin-top: 8px;">follow us</h3>
+          <h1 class="text-center">follow us</h1>
           <div class="row">
-            <button class="button button-clear button-dark" href="http://refugeetech.com/">
+            <a class="button button-clear button-dark" href="http://refugeetech.com/" target="_blank">
               visit us
-            </button>
+            </a>
           </div>
           <div class="row">
-            <button class="button button-clear button-dark">
+            <a class="button button-clear button-dark" href="https://www.facebook.com/refugeetech/" target="_blank">
+              Facebook
+            </a>
+          </div>
+          <div class="row">
+            <a class="button button-clear button-dark" href="https://refugee1.typeform.com/to/WLYvfG" target="_blank">
               add your app in Setelin
-            </button>
+            </a>
           </div>
           <div class="row">
-            <button class="button button-clear button-dark">
+            <a class="button button-clear button-dark" href="emailto: info@refugeetech.com" target="_blank">
               contact
-            </button>
+            </a>
           </div>
         </div>
       </div>

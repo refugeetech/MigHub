@@ -19,7 +19,7 @@
         </div>
 
         <div class="col" style="text-align:right;">
-          <button class="button button-icon" ng-click="toggleFavorites()">  <i class="icon {{ inFavorites() ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i> </button>
+          <!-- <button class="button button-icon" ng-click="toggleFavorites()">  <i class="icon {{ inFavorites() ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i> </button> -->
         </div>
 
       </div>
@@ -32,7 +32,7 @@
               <img class="img-responsive" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
               <div class="col">
                 <p> {{ app.shortDescription }} </p>
-                <p class="likes"> {{ app.upvotes }} Likes </p>
+                <!-- <p class="likes"> {{ app.upvotes }} Likes </p> -->
               </div>
             </div>
 
@@ -45,25 +45,25 @@
 
               <div ng-repeat="platform in app.targetPlatforms">
 
-                <a class="button button-stable tags" href="{{ search('home',app.links).url }}"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
                   <i  class="ion-home"></i>
 
                   {{ platform }}
                 </a>
 
-                <a class="button button-stable tags" href="{{ search('appStore',app.links).url }}"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='ios' && search('appStore',app.links)">
                   <i class="ion-social-apple"></i>
 
                   {{ platform }}
                 </a>
 
-                <a class="button button-stable tags" href="{{ search('googlePlay',app.links).url }}"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='android' && search('googlePlay',app.links)">
                   <i class="ion-social-android"></i>
 
                   {{ platform }}
                 </a>
 
-                <a class="button button-stable tags" href="{{ search('windowsStore',app.links).url }}"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
+                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
                   <i class="ion-social-windows"></i>
 
                   {{ platform }}
@@ -91,17 +91,14 @@
 
             <div class="row">
               <div class="col">
-                <button class="button button-outline button-dark button-block">
-                  Get it
-                </button>
+                <a ng-if="devicePlatform.isIOS() && hasPlatform('ios') && search('appStore',app.links)" href="{{ search('appStore',app.links).url }}" target="_blank" class="button button-outline button-dark button-block">Get the App</a>
+                <a ng-if="devicePlatform.isAndroid() && hasPlatform('android') && search('googlePlay',app.links)" href="{{ search('googlePlay',app.links).url }}" target="_blank" class="button button-outline button-dark button-block">Get the App</a>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row" ng-if="hasPlatform('web') && search('home',app.links)">
               <div class="col">
-                <button class="button button-clear button-dark button-block">
-                  give feedback
-                </button>
+                <a href="{{ search('home',app.links).url }}" target="_blank" class="button button-clear button-dark button-block">Visit Webpage</a>
               </div>
             </div>
 <!--
