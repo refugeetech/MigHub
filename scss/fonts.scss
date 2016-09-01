@@ -21,6 +21,26 @@
 }
 
 @font-face {
+    font-family: 'Siri Web SemiBold';
+    src: url('/fonts/SiriWeb-SemiBold.eot');
+    src: url('/fonts/SiriWeb-SemiBold.eot?') format('embedded-opentype'),
+    url('/fonts/SiriWeb-SemiBold.woff') format('woff'),
+    url('/fonts/SiriWeb-SemiBold.ttf') format('opentype');
+    font-weight: bold;;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Siri Web Light';
+    src: url('/fonts/SiriWeb-Light.eot');
+    src: url('/fonts/SiriWeb-Light.eot?') format('embedded-opentype'),
+    url('/fonts/SiriWeb-Light.woff') format('woff'),
+    url('/fonts/SiriWeb-Light.ttf') format('opentype');
+    font-weight: lighter;;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Siri Core Bold';
     src: url('/fonts/SiriCore-Bold.eot');
     src: url('/fonts/SiriCore-Bold.eot?') format('embedded-opentype'),

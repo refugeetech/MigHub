@@ -215,9 +215,26 @@ angular.module('starter.controllers', [])
 
     }
 
-    // not currently used
-    $scope.getFavorites = function() {
-        return API.favoriteStore.get("favorites");
+    if (!exists) {
+      //update project upvotes
+      if(app.upvotes!==undefined){
+        app.upvotes++;
+      }
+      //update localstorage favorites
+      favorites.push(app)
+      API.favoriteStore.put("favorites", favorites)
+      //update vote on the server side
+      API.upVote(app._id)
+    } else {
+      //update project upvotes
+      if(app.upvotes!==undefined){
+        app.upvotes--;
+      }
+      //update localstorage favorites
+      favorites.splice(favorites.indexOf(app),1)
+      API.favoriteStore.put("favorites", favorites)
+      //update vote on the server side
+      API.downVote(app._id)
     }
 
     $scope.inFavorites = function(project) {
