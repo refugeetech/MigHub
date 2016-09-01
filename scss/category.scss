@@ -61,10 +61,14 @@
   left: 0;
   font-size: 20px;
 }
+
 .item-separator {
-border-bottom: 4px solid #e7eaf0;
+  border-bottom: 4px solid #e7eaf0;
 }
 
+.item-separator:last-child {
+    border: 0px;
+}
 .modal {
   top: 1%;
   left: 10%;

@@ -41,9 +41,14 @@
     //console.log("this is the favorite service",favoriteStore);
     /* End favoriteStore */
 
-    var projects = $resource('https://refugeetech-projecthub-cms.meteorapp.com/api/v02/projects/:id', {id: '@id'})
+    var projects = $resource('https://refugeetech-projecthub-cms.meteorapp.com/api/v02/projects/:id', {id: '@id'}, {
+      'get': {method: 'GET', cache: true},
+      'query': {method: 'GET', cache: true}
+    })
     // var projects = $resource('http://localhost:3000/api/v02/projects/:id', {id: '@id'})
-    var categories = $resource('data.json')
+    var categories = $resource('data.json', {}, {
+      'get': {method: 'GET', cache: true}
+    })
 
     var getCategories = function () {
       return categories.query()
@@ -63,11 +68,11 @@
     var downv = $resource('https://refugeetech-projecthub-cms.meteorapp.com/api/v02/projects/:id/downvote', {id: '@id'})
 
     var upVote = function (projectId) {
-      upv.get({id:projectId})
+      upv.get({id: projectId})
     }
 
     var downVote = function (projectId) {
-      downv.get({id:projectId})
+      downv.get({id: projectId})
     }
 
     return {
@@ -76,7 +81,7 @@
       projects: getProjects,
       projectById: getProjectById,
       upVote: upVote,
-      downVote,downVote
+      downVote: downVote
     }
 
   }
