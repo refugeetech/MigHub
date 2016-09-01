@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5 {
   font-family: 'Siri Core Bold';
 }
 
+h1.detail{font-size:16pt; text-align: center; margin-top:18px;margin-left:10%;width:90%;}
+span.tags.button{cursor:default;}
+
 .tags{
   border-radius: 300px;
   margin: 5px 4px 20px 4px;
@@ -83,3 +86,22 @@ and (max-width : 480px) {
   }
 
 }
+
+.list .item-separator:last-child {
+  border-bottom: none;
+}
+
+.app-detail{
+
+  p.desc{
+    font-family: 'Siri Core', 'sans-serif';
+    color: #000;
+    font-weight: 100;
+    font-size: 12pt;
+    margin: 0 10px;
+    line-height: 1.6;
+    text-align: left;
+}
+  
+}
+

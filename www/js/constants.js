@@ -3,12 +3,14 @@ angular.module('mighub.constants', [])
     {
       'code': 'en',
       'id': 'en',
-      'label': 'English'
+      'label': 'English',
+      'direction': 'ltr'
     },
     {
       'code': 'sv',
       'id': 'sv',
-      'label': 'Svenska'
+      'label': 'Svenska',
+      'direction': 'ltr'
     },
     {
       'code': 'fa',

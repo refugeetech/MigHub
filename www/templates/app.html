@@ -6,46 +6,46 @@
     </div>
   </ion-header-bar> -->
   <ion-content>
-    <form ng-submit="doapp()">
+    <form ng-submit="doapp()" class="app-detail">
       <div class="row">
 
-        <div class="col">
-          <button class="button button-icon" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
-          <!-- <img class="img-responsive" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}"> -->
-        </div>
+
+          <button style="position:absolute;left:10px;top:17px;" class="button button-icon" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
+
 
         <div class="col" style="display: flex;justify-content: center;align-content: center;flex-direction: column;">
-          <h1 class="detailed title" style="font-size: 16px; font-size: 3.8vw;">{{app.name}}</h1>
+          <h1 class="detail">{{app.name}}</h1>
         </div>
 
-        <div class="col" style="text-align:right;">
-          <!-- <button class="button button-icon" ng-click="toggleFavorites()">  <i class="icon {{ inFavorites() ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i> </button> -->
-        </div>
+          <!--  <div class="col" style="text-align:right;">
+       <button class="button button-icon" ng-click="toggleFavorites()">  <i class="icon {{ inFavorites() ? 'ion-ios-heart' : 'ion-ios-heart-outline'}}"></i> </button>
+        </div> -->
 
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="text-left" style="padding: 25px" >
-            <div class="row">
-              <!-- <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%"> -->
-              <img class="img-responsive" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}">
-              <div class="col">
-                <p> {{ app.shortDescription }} </p>
-                <!-- <p class="likes"> {{ app.upvotes }} Likes </p> -->
-              </div>
-            </div>
-
+      <div class="row" style="width: 98%;margin: 0 1%;">
+        <div class="col col-40">
+          
+          <!-- <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%"> -->
+          <img class="img-responsive" ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" style="width:100%;">
           </div>
+          <div class="col">
+            <p style="margin:8px 5px 10px 20px;"> {{ app.shortDescription }} </p>
+            <!-- <p class="likes"> {{ app.upvotes }} Likes </p> -->
+          </div>
+
+      </div>
+
           <div class="row">
+          <div class="col">
 
-            <a class="button tags highlight">
+            <span class="button tags highlight">
               {{ app.mainCategory }}
-            </a>
+            </span>
 
-              <div ng-repeat="platform in app.targetPlatforms">
+            <span ng-repeat="platform in app.targetPlatforms">
 
-                <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
+         <!--       <a class="button button-stable tags" href="javascript:;"  target="_blank" ng-if= "platform==='web' && search('home',app.links)">
                   <i  class="ion-home"></i>
 
                   {{ platform }}
@@ -73,19 +73,51 @@
                   <i class="ion-asterisk"></i>
 
                   {{ platform }}
-                </a>
-              </div>
+                </a>-->
+
+                <span class="button button-stable tags" ng-if= "platform==='web' && search('home',app.links)">
+                  <i  class="ion-home"></i>
+
+                  {{ platform }}
+                </span>
+
+                <span class="button button-stable tags" ng-if= "platform==='ios' && search('appStore',app.links)">
+                  <i class="ion-social-apple"></i>
+
+                  {{ platform }}
+                </span>
+
+                <span class="button button-stable tags" ng-if= "platform==='android' && search('googlePlay',app.links)">
+                  <i class="ion-social-android"></i>
+
+                  {{ platform }}
+                </span>
+
+                <span class="button button-stable tags" ng-if= "platform==='windows-phone' && search('windowsStore',app.links)">
+                  <i class="ion-social-windows"></i>
+
+                  {{ platform }}
+                </span>
+
+                <span class="button button-stable tags" ng-if= "platform==='other'">
+                  <i class="ion-asterisk"></i>
+
+                  {{ platform }}
+                </span>
+
+              </span>
 
               <!-- more to add according to schema
 
               https://github.com/refugeetech/platform/blob/develop/projects/collections/schema.js
 
               -->
-            </div>
+            </div></div>
 
             <div class="row">
-              <div class="col description">
-                {{ app.description }}
+              <div class="col">
+              <p class="desc">
+                {{ app.description }}</p>
               </div>
             </div>
 
