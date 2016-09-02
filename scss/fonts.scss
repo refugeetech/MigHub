@@ -26,7 +26,7 @@
     src: url('/fonts/SiriCore-Bold.eot?') format('embedded-opentype'),
     url('/fonts/SiriCore-Bold.woff') format('woff'),
     url('/fonts/SiriCore-Bold.ttf') format('opentype');
-    font-weight: normal;
+    font-weight: 800;
     font-style: normal;
 }
 
@@ -36,8 +36,8 @@
     src: url('/fonts/SiriCore-BoldItalic.eot?') format('embedded-opentype'),
     url('/fonts/SiriCore-BoldItalic.woff') format('woff'),
     url('/fonts/SiriCore-BoldItalic.ttf') format('opentype');
-    font-weight: bold;
-    font-style: italic;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .siricoreregular {

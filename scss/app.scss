@@ -1,9 +1,9 @@
+@import 'fonts';
 @import 'variables';
 @import 'categories';
 @import 'category';
 @import 'favorites';
 @import 'about';
-@import 'fonts';
 
 body{
   font-family: 'Siri Core Regular', 'sans-serif';
@@ -93,15 +93,15 @@ and (max-width : 480px) {
 
 .app-detail{
 
-  p.desc{
-    font-family: 'Siri Core', 'sans-serif';
-    color: #000;
-    font-weight: 100;
-    font-size: 12pt;
-    margin: 0 10px;
-    line-height: 1.6;
-    text-align: left;
-}
+    p.desc{
+      font-family: 'Siri Core', 'sans-serif';
+      color: #000;
+      font-weight: 100;
+      font-size: 12pt;
+      margin: 0 10px;
+      line-height: 1.6;
+      text-align: left;
+  }
   
 }
 
