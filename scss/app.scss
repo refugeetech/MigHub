@@ -13,6 +13,11 @@ h1, h2, h3, h4, h5 {
   font-family: 'Siri Core Bold';
 }
 
+/** To fix empty page issue in rtl. **/
+.rtl .click-block-hide {
+  @include translate3d(9999px, 0, 0);
+}
+
 h1.detail{font-size:16pt; text-align: center; margin-top:18px;margin-left:10%;width:90%;}
 span.tags.button{cursor:default;}
 
