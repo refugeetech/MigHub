@@ -16,7 +16,7 @@
       </div> -->
     </ion-nav-buttons>
   </ion-nav-bar>
-  <ion-content style="background-color:{{category.color}}; background-image:url(img/category/{{category.slug}}.jpg); " padding="true" on-scroll="getScrollPosition()" on-swipe-left="swipeLeft()" on-swipe-right="swipeRight()" id="categoryContainer" delegate-handle="handler">
+  <ion-content style="direction:{{ 'interface_direction' | translate }};background-color:{{category.color}}; background-image:url(img/category/{{category.slug}}.jpg); " padding="true" on-scroll="getScrollPosition()" on-swipe-left="swipeLeft()" on-swipe-right="swipeRight()" id="categoryContainer" delegate-handle="handler">
 
     <a id="bgBackBtn" ui-sref="app.categories" class="button ion-chevron-left button-clear"></a>
 

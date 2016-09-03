@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view style="direction:{{ 'interface_direction' | translate }}" >
   <!-- <ion-header-bar>
     <h1 class="title">{{app.title}}</h1>
     <div class="buttons">
@@ -8,7 +8,7 @@
   <ion-content>
     <form ng-submit="doapp()" class="app-detail">
       <div class="row">
-      
+
           <button style="position:absolute;left:10px;top:17px;" class="button button-icon" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
 
 
@@ -24,7 +24,7 @@
 
       <div class="row" style="width: 98%;margin: 0 1%;">
         <div class="col col-40">
-          
+
           <!-- <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%"> -->
           <img class="img-responsive" ng-src="{{ 'img/apps/logo_'+app._id+'.png' }}" style="width:100%;">
           </div>
