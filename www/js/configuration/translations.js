@@ -9,7 +9,7 @@ $translateProvider.translations("ar", {
 "health_description": "العقل السليم في الجسم السليم، صحتك امانة عليك",
 "health_title": " صحة",
 "housing_description": " المنزل في الغربة وطن. إبحث عن بيتك في السويد ",
-"housing_title": "سكن", 
+"housing_title": "سكن",
 "information_description": " تعرف على العادات، التقاليد و القوانين السويدية و أكثر من ذلك",
 "information_title": "معلومات",
 "learnMore":"أعرف أكثر",
@@ -24,7 +24,8 @@ $translateProvider.translations("ar", {
 "setelin_footer": " ",
 "setelin_header": " ",
 "social_description": " قل لي من تعاشر، أقول لك من أنت. تعرف على أناس جدد و ابدأ صداقات جديدة",
-"social_title": "تواصل اجتماعي"
+"social_title": "تواصل اجتماعي",
+"about_us": " "
 });
 
 $translateProvider.translations("en", {
@@ -37,7 +38,7 @@ $translateProvider.translations("en", {
 "health_description": "Your body is your temple. Find the care you need to stay healthy.",
 "health_title": " Healthcare",
 "housing_description": "Get a home in your new homeland.",
-"housing_title": "Accommodation", 
+"housing_title": "Accommodation",
 "information_description": " Learn all about Sweden and Swedes, from Bureaucracy to Fikas",
 "information_title": "Information",
 "learnMore":"Learn More",
@@ -50,7 +51,8 @@ $translateProvider.translations("en", {
 "refugee_tech_info": " We build bridges between parts of the society to enable newcomers potential relying on efficiently designed and developed solutions",
 "setelin_description": " Setelin was created as a result of a hackathon that was organised by Refugee Tech, together with Migrationsverket and STHLM TECH. The hackathon joined forces of Swedish tech initiatives who deal with social topics. Refugee Tech has taken the burden of the development of the Setelin platform, together with the help of several volunteers and contributors.",
 "social_description": " Friends make us who we are, find new friends and meet new folks",
-"social_title": "Social"
+"social_title": "Social",
+"about_us": "About us"
 });
 
 $translateProvider.translations("fa", {
@@ -63,7 +65,7 @@ $translateProvider.translations("fa", {
 "health_description": "عقل سالم در بدن سالم، باید ازش مراقبت کرد",
 "health_title": "سلامت",
 "housing_description": "خانه ای برای زیستن در کشور جدیدتان بیابید",
-"housing_title": "مسکن", 
+"housing_title": "مسکن",
 "information_description": "با آداب و رسوم و قوانین سوئد بیشتر آشنا شوید",
 "information_title": "اطلاعات",
 "learnMore":"بیشتربدانید",
@@ -78,7 +80,8 @@ $translateProvider.translations("fa", {
 "setelin_footer": " حول setelin ، لوقا، و انهم عائدون في أسرع بكثير هذه المرة . أنا لا يمكن أن تعقد لهم! Artoo ، ومحاولة زيادة القوة ! عجلوا ، لوقا ! انتظر! أنا على الزعيم. تشبث ، Artoo ! استخدم القوه يا لوك. ترك، لوقا . مشاركة أو زيارة ؟ ",
 "setelin_header": " جلة من امرنا، لوقا ، انهم يأتون في أسرع بكثير هذه المرة . أنا لا يمكن أن تعقد لهم! Artoo ، ",
 "social_description": "دوستان جدید بیابید و با مردمان جدید آشنا شوید",
-"social_title": "اجتماعي"
+"social_title": "اجتماعي",
+"about_us": " "
 });
 
 $translateProvider.translations("sv", {
@@ -91,7 +94,7 @@ $translateProvider.translations("sv", {
 "health_description": "din kropp är ditt tempel. hitta den vård du behöver för att hålla dig frisk",
 "health_title": "hälsa",
 "housing_description": "hitta ett boende i ditt nya hemland.",
-"housing_title": "boende", 
+"housing_title": "boende",
 "information_description": "lär dig allt om Sverige och svenskar, allt från byråkrati till fika",
 "information_title": "information",
 "learnMore":"learn More",
@@ -104,6 +107,7 @@ $translateProvider.translations("sv", {
 "refugee_tech_info": "Vi möjligör samarbete mellan alla delar av samhället med målet att tillvarata potentialen hos nyanlända genom effektivt designade och utvecklade lösningar.",
 "setelin_description": "Setelin är resultatet från ett hackathon organiserat av Refugee Tech tillsammans med Migrationsverket och STHLM TECH. Refugee Tech tog på sig att vidareutveckla plattformen tillsammans med voluntärer.",
 "social_description": " vänner gör oss till dem vi är, hitta nya vänner och skapa nya bekantskaper",
-"social_title": "social"
+"social_title": "social",
+"about_us": " "
 });
 }]);
