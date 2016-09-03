@@ -25,7 +25,7 @@ $translateProvider.translations("ar", {
 "setelin_header": " ",
 "social_description": " قل لي من تعاشر، أقول لك من أنت. تعرف على أناس جدد و ابدأ صداقات جديدة",
 "social_title": "تواصل اجتماعي",
-"about_us": " "
+"about_us": "عنا"
 });
 
 $translateProvider.translations("en", {
@@ -81,7 +81,7 @@ $translateProvider.translations("fa", {
 "setelin_header": " جلة من امرنا، لوقا ، انهم يأتون في أسرع بكثير هذه المرة . أنا لا يمكن أن تعقد لهم! Artoo ، ",
 "social_description": "دوستان جدید بیابید و با مردمان جدید آشنا شوید",
 "social_title": "اجتماعي",
-"about_us": " "
+"about_us": "درباره ما"
 });
 
 $translateProvider.translations("sv", {
@@ -108,6 +108,6 @@ $translateProvider.translations("sv", {
 "setelin_description": "Setelin är resultatet från ett hackathon organiserat av Refugee Tech tillsammans med Migrationsverket och STHLM TECH. Refugee Tech tog på sig att vidareutveckla plattformen tillsammans med voluntärer.",
 "social_description": " vänner gör oss till dem vi är, hitta nya vänner och skapa nya bekantskaper",
 "social_title": "social",
-"about_us": " "
+"about_us": "om oss"
 });
 }]);
