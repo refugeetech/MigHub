@@ -8,7 +8,7 @@
   <ion-content>
     <form ng-submit="doapp()" class="app-detail">
       <div class="row">
-      
+
           <button style="position:absolute;left:10px;top:17px;" class="button button-icon" ng-click="closeapp()">  <i class="icon ion-chevron-left"></i> </button>
 
 
@@ -24,9 +24,9 @@
 
       <div class="row" style="width: 98%;margin: 0 1%;">
         <div class="col col-40">
-          
+
           <!-- <img style="border-radius: 30%" ng-show={{app}} ng-src="{{ '/img/apps/logo_'+app._id+'.png' }}" height="40%" width="40%"> -->
-          <img class="img-responsive" ng-src="{{ 'img/apps/logo_'+app._id+'.png' }}" style="width:100%;">
+          <img class="img-responsive" ng-src="{{ getLogo(app) }}" style="width:100%;">
           </div>
           <div class="col">
             <p style="margin:8px 5px 10px 20px;"> {{ app.shortDescription }} </p>

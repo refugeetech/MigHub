@@ -34,7 +34,7 @@
       <ion-list>
         <div class="item-separator" ng-repeat="app in apps">
           <a class="item item-thumbnail-left" ng-click="showapp(app)">
-            <img ng-src="{{ 'img/apps/logo_'+app._id+'.png' }}">
+            <img ng-src="{{ getLogo(app) }}">
             <h2>{{app.name}}</h2>
             <p class="app-desc">{{app.shortDescription}}</p>
             <!-- <p class="like-num">{{app.upvotes}} likes</p> --> <!-- This will not currently be implemented -->
