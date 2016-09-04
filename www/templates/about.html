@@ -7,10 +7,8 @@
         <button style="position:absolute;left:10px;top:28px;" class="button button-icon icon ion-chevron-left" ng-click="closeAbout()"></button>
 
         <div class="col">
-          <h1 class="text-center about-title">about</h1>
-          <p class="detail"> Setelin was initiated during a hackathon in a collaboration between Refugee Tech,
-              STHM TECH and Migrationsverket the 29th of May. Its an historical event where an
-              government agency reaches out and collaborates with a tech community. </p>
+          <h1 class="text-center about-title">{{ 'about_us' | translate }}</h1>
+          <p class="detail"> {{ 'setelin_description' | translate }} </p>
         </div>
       </div>
 
@@ -25,10 +23,8 @@
       <div class="row" style="margin-top:20px;">
         <div class="col">
           <!-- Img, border rounded -->
-          <h1 class="text-center about-title">contributors</h1>
-          <p>
-            These are the volonteers that contributed in this great initiative
-          </p>
+          <h1 class="text-center about-title">{{  'contributors_title' | translate }}</h1>
+          <p>{{ 'contributors_description' | translate }}</p>
           <ul class="collaborators">
             <li>Aldin Galgic</li><li>
             Ali Zamli </li><li>
@@ -82,17 +78,16 @@
 
       <div class="row">
         <div class="col">
-          <p>We build bridges between all parts of society to enable refugees’ potential,
-             relying on efficiently designed and developed technology solutions.</p>
+          <p>{{ 'refugee_tech_info' | translate }}</p>
         </div>
       </div>
 
       <div class="row" style="margin-top:20px;">
         <div class="col links">
-          <h1 class="text-center">follow us</h1>
+          <h1 class="text-center">{{ 'follow_us' | translate }}</h1>
           <div class="row">
             <a class="button button-clear button-dark" href="http://refugeetech.com/" target="_blank">
-              visit us
+              {{ 'visit_us' | translate }}
             </a>
           </div>
           <div class="row">
@@ -102,12 +97,12 @@
           </div>
           <div class="row">
             <a class="button button-clear button-dark" href="https://refugee1.typeform.com/to/WLYvfG" target="_blank">
-              add your app in Setelin
+              {{ 'add_your_app' | translate }}
             </a>
           </div>
           <div class="row">
             <a class="button button-clear button-dark" href="emailto: info@refugeetech.com" target="_blank">
-              contact
+              {{ 'contact' | translate }}
             </a>
           </div>
         </div>
