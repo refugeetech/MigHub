@@ -90,7 +90,7 @@ angular.module('starter.controllers', [])
         icon_color: '#4e6ba4'
     }, {
         title: 'media & comunication',
-        slug: 'media_comunication',
+        slug: 'media-and-communication',
         color: '#e55262',
         icon_color: '#a6404b'
     }, {
@@ -100,7 +100,7 @@ angular.module('starter.controllers', [])
         icon_color: '#9e5e81'
     }, {
         title: 'health',
-        slug: 'health',
+        slug: 'healthcare',
         color: '#e55262',
         icon_color: '#ad4550'
     }]
