@@ -24,7 +24,8 @@ $translateProvider.translations("ar", {
 "setelin_footer": " ",
 "setelin_header": " ",
 "social_description": " قل لي من تعاشر، أقول لك من أنت. تعرف على أناس جدد و ابدأ صداقات جديدة",
-"social_title": "تواصل اجتماعي"
+"social_title": "تواصل اجتماعي",
+"about_us": "عنا"
 });
 
 $translateProvider.translations("en", {
@@ -50,7 +51,8 @@ $translateProvider.translations("en", {
 "refugee_tech_info": " We build bridges between parts of the society to enable newcomers potential relying on efficiently designed and developed solutions",
 "setelin_description": " Setelin was created as a result of a hackathon that was organised by Refugee Tech, together with Migrationsverket and STHLM TECH. The hackathon joined forces of Swedish tech initiatives who deal with social topics. Refugee Tech has taken the burden of the development of the Setelin platform, together with the help of several volunteers and contributors.",
 "social_description": " Friends make us who we are, find new friends and meet new folks",
-"social_title": "Social"
+"social_title": "Social",
+"about_us": "About us"
 });
 
 $translateProvider.translations("fa", {
@@ -78,7 +80,8 @@ $translateProvider.translations("fa", {
 "setelin_footer": " حول setelin ، لوقا، و انهم عائدون في أسرع بكثير هذه المرة . أنا لا يمكن أن تعقد لهم! Artoo ، ومحاولة زيادة القوة ! عجلوا ، لوقا ! انتظر! أنا على الزعيم. تشبث ، Artoo ! استخدم القوه يا لوك. ترك، لوقا . مشاركة أو زيارة ؟ ",
 "setelin_header": " جلة من امرنا، لوقا ، انهم يأتون في أسرع بكثير هذه المرة . أنا لا يمكن أن تعقد لهم! Artoo ، ",
 "social_description": "دوستان جدید بیابید و با مردمان جدید آشنا شوید",
-"social_title": "اجتماعي"
+"social_title": "اجتماعي",
+"about_us": "درباره ما"
 });
 
 $translateProvider.translations("sv", {
@@ -104,6 +107,7 @@ $translateProvider.translations("sv", {
 "refugee_tech_info": "Vi möjligör samarbete mellan alla delar av samhället med målet att tillvarata potentialen hos nyanlända genom effektivt designade och utvecklade lösningar.",
 "setelin_description": "Setelin är resultatet från ett hackathon organiserat av Refugee Tech tillsammans med Migrationsverket och STHLM TECH. Refugee Tech tog på sig att vidareutveckla plattformen tillsammans med voluntärer.",
 "social_description": " vänner gör oss till dem vi är, hitta nya vänner och skapa nya bekantskaper",
-"social_title": "social"
+"social_title": "social",
+"about_us": "om oss"
 });
 }]);
