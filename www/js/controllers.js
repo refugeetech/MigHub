@@ -244,6 +244,19 @@ angular.module('starter.controllers', [])
 
     /* End Favorite functions */
 
+    $scope.getLogo = function(app){
+      if(app===undefined){
+          return;
+      }
+      var links = app.links;
+      for (var i = 0; i < links.length; i++) {
+        if(links[i].type === 'logo'){
+          return links[i].url;
+        }
+      }
+      return "img/categories-"+app._id+".png"
+    }
+
 })
 
 .controller('CategoriesCtrl', function($rootScope, API, $scope, $ionicScrollDelegate) {
