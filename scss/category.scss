@@ -119,3 +119,13 @@
   -webkit-box-orient: vertical;
   white-space: normal !important;
 }
+
+#catNavBar .bar,
+#catNavBar .bar-header,
+#catNavBar .bar-stable .title-center .header-item {
+	background-color: white !important;
+	border: 0 !important;
+	border-bottom-color: white !important;
+	background-image: none !important;
+	border-bottom: none !important;
+}
