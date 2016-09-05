@@ -9,6 +9,7 @@ $translateProvider.translations("ar", {
   "contributors_title": null,
   "education_description": "قم بتطوير خبراتك المعرفية و تنمية مهاراتك من اجل مستقبل أفضل",
   "education_title": "تعليم",
+  "email_hint": null,
   "employment_description": "ابحث عن  فرص شغل او تكوين مهني، التق بمهنيين بنفس اهتماماتك",
   "employment_title": "شغل",
   "follow_us": null,
@@ -24,12 +25,15 @@ $translateProvider.translations("ar", {
   "language_title": "لغات",
   "media-and-communication_description": "تّعرف على قصص ملهمة، و تجارب مثيرة غيرت حياة الناس",
   "media-and-communication_title": "إعلام و مواصلات",
+  "newsletter_description": null,
+  "newsletter_title": null,
   "refugee_tech_info": "نقوم بتوحيد جهود المجتمع، من اجل مساعدة القادمين الجدد. نقوم بذلك من خلال توظيف تكنولجيات وخدم معدة لذلك ",
   "setelin_description": "تم إنشاء 'ستل إن' خلال هكاتون نظمته 'ريفوجي تك ' مع مصلحة الهجرة و 'ستكهولم تك '. خلال الهكاتون، تم توحيد جهود المبادرات التي تساعد اللاجئين في السويد من خلال إنشاء هذا التطبيق.\nقامت 'ريفوجي تك ' بعد ذلك بالسهر على إتمام التطبيق.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "قل لي من تعاشر، أقول لك من أنت. تعرف على أناس جدد و ابدأ صداقات جديدة",
   "social_title": "تواصل اجتماعي",
+  "subscribe_label": null,
   "visit_us": null
 });
 
@@ -43,6 +47,7 @@ $translateProvider.translations("en", {
   "contributors_title": "contributors",
   "education_description": "Get smarter, develop new skills and continue growing",
   "education_title": "education",
+  "email_hint": "Sign up with your@email.com",
   "employment_description": "Start networking, get an internship, a job or start new business",
   "employment_title": "employment",
   "follow_us": "follow us",
@@ -58,12 +63,15 @@ $translateProvider.translations("en", {
   "language_title": "language",
   "media-and-communication_description": "Get inspired and learn from other people’s lives and experiences.",
   "media-and-communication_title": "media & communication",
+  "newsletter_description": "lorem ipsum in collaboration with this and that date",
+  "newsletter_title": "newsletter",
   "refugee_tech_info": "We build bridges between parts of the society to enable newcomers potential relying on efficiently designed and developed solutions",
   "setelin_description": "Setelin was created as a result of a hackathon that was organised by Refugee Tech, together with Migrationsverket and STHLM TECH. The hackathon joined forces of Swedish tech initiatives who deal with social topics.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "Friends make us who we are, find new friends and meet new folks.",
   "social_title": "social",
+  "subscribe_label": "subscribe",
   "visit_us": "visit us"
 });
 
@@ -77,6 +85,7 @@ $translateProvider.translations("fa", {
   "contributors_title": null,
   "education_description": "باهوش تر شوید و مهارت هایتان  را بیافزایید",
   "education_title": "تحصیلات",
+  "email_hint": null,
   "employment_description": "با دیگران ارتباط برقرار کنید،تا کارآموزی ويا شغل ثابت  بگیرید",
   "employment_title": "استخدام",
   "follow_us": null,
@@ -92,12 +101,15 @@ $translateProvider.translations("fa", {
   "language_title": "زبان",
   "media-and-communication_description": "از زندگی وتجربیات دیگران الهام بگیرید",
   "media-and-communication_title": "رسانه و ارتباطات",
+  "newsletter_description": null,
+  "newsletter_title": null,
   "refugee_tech_info": "ما پلى هستيم بين بخش هاى مختلف جامعه تا به وسيله ى  تكنولوژى و راه حل هاى سازمان يافته، توانايى هاى مهاجران را شكوفا كنيم.",
   "setelin_description": "ستلین در یک هکتن با مدیریت رفیوجی تک و همکاری اداره ی مهاجرت و استکهلم تک شکل گرفت. این محفل پروژه هایی که هدف کمک کردن به مسائل اجتماعی دارند را دور هم جمع کرد.\nرفیوجی تک مسؤلیت توسعه وتکمیل کردن پلتفرم ستلین را ، با یاری داوطلبان و همکاران دیگر،  به عهده گرفت.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "دوستان جدید بیابید و با مردمان جدید آشنا شوید",
   "social_title": "اجتماعي",
+  "subscribe_label": null,
   "visit_us": null
 });
 
@@ -111,6 +123,7 @@ $translateProvider.translations("sv", {
   "contributors_title": "volontärer",
   "education_description": "Bli mer skicklig, utveckla nya kompetenser och fortsätt växa",
   "education_title": "utbildning",
+  "email_hint": null,
   "employment_description": "Börja nätverka, få ett internship, ett jobb eller starta eget företag",
   "employment_title": "jobb",
   "follow_us": "följ oss",
@@ -126,12 +139,15 @@ $translateProvider.translations("sv", {
   "language_title": "språk",
   "media-and-communication_description": "Bli inspirerad och ta lärdom från andra människors liv och erfarenheter",
   "media-and-communication_title": "media & kommunikation",
+  "newsletter_description": null,
+  "newsletter_title": "nyhetsbrev",
   "refugee_tech_info": "Vi möjligör samarbete mellan alla delar av samhället med målet att tillvarata potentialen hos nyanlända genom effektivt designade och utvecklade lösningar",
   "setelin_description": "Setelin är resultatet från ett hackathon organiserat av Refugee Tech tillsammans med Migrationsverket och STHLM TECH.\nRefugee Tech tog på sig att vidareutveckla plattformen tillsammans med voluntärer.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "Vänner gör oss till dem vi är, hitta nya vänner och skapa nya bekantskaper",
   "social_title": "socialt",
+  "subscribe_label": null,
   "visit_us": "besök oss"
 });
 }]);

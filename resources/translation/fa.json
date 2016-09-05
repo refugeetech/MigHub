@@ -8,6 +8,7 @@
   "contributors_title": null,
   "education_description": "باهوش تر شوید و مهارت هایتان  را بیافزایید",
   "education_title": "تحصیلات",
+  "email_hint": null,
   "employment_description": "با دیگران ارتباط برقرار کنید،تا کارآموزی ويا شغل ثابت  بگیرید",
   "employment_title": "استخدام",
   "follow_us": null,
@@ -23,11 +24,14 @@
   "language_title": "زبان",
   "media-and-communication_description": "از زندگی وتجربیات دیگران الهام بگیرید",
   "media-and-communication_title": "رسانه و ارتباطات",
+  "newsletter_description": null,
+  "newsletter_title": null,
   "refugee_tech_info": "ما پلى هستيم بين بخش هاى مختلف جامعه تا به وسيله ى  تكنولوژى و راه حل هاى سازمان يافته، توانايى هاى مهاجران را شكوفا كنيم.",
   "setelin_description": "ستلین در یک هکتن با مدیریت رفیوجی تک و همکاری اداره ی مهاجرت و استکهلم تک شکل گرفت. این محفل پروژه هایی که هدف کمک کردن به مسائل اجتماعی دارند را دور هم جمع کرد.\nرفیوجی تک مسؤلیت توسعه وتکمیل کردن پلتفرم ستلین را ، با یاری داوطلبان و همکاران دیگر،  به عهده گرفت.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "دوستان جدید بیابید و با مردمان جدید آشنا شوید",
   "social_title": "اجتماعي",
+  "subscribe_label": null,
   "visit_us": null
 }

@@ -8,6 +8,7 @@
   "contributors_title": "contributors",
   "education_description": "Get smarter, develop new skills and continue growing",
   "education_title": "education",
+  "email_hint": "Sign up with your@email.com",
   "employment_description": "Start networking, get an internship, a job or start new business",
   "employment_title": "employment",
   "follow_us": "follow us",
@@ -23,11 +24,14 @@
   "language_title": "language",
   "media-and-communication_description": "Get inspired and learn from other people’s lives and experiences.",
   "media-and-communication_title": "media & communication",
+  "newsletter_description": "lorem ipsum in collaboration with this and that date",
+  "newsletter_title": "newsletter",
   "refugee_tech_info": "We build bridges between parts of the society to enable newcomers potential relying on efficiently designed and developed solutions",
   "setelin_description": "Setelin was created as a result of a hackathon that was organised by Refugee Tech, together with Migrationsverket and STHLM TECH. The hackathon joined forces of Swedish tech initiatives who deal with social topics.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "Friends make us who we are, find new friends and meet new folks.",
   "social_title": "social",
+  "subscribe_label": "subscribe",
   "visit_us": "visit us"
 }
