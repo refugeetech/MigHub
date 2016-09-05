@@ -50,3 +50,20 @@
 .button.button-icon:before {
     font-size: 20px;
 }
+
+#contributors {
+  width: 100%;
+}
+
+#contributors tr td:nth-child(1) {
+  margin: 10px;
+  font-size: 10pt;
+  font-weight: 800;
+  line-height: 1.8;
+  text-align: left;
+  width: 50%;
+}
+
+#contributors tr td:nth-child(2) {
+  font-weight: 100;
+}
