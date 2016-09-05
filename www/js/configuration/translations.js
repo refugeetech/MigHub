@@ -63,13 +63,13 @@ $translateProvider.translations("en", {
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "Friends make us who we are, find new friends and meet new folks.",
-  "social_title": "Social",
+  "social_title": "social",
   "visit_us": "visit us"
 });
 
 $translateProvider.translations("fa", {
   "about_us": "درباره ما",
-  "add_your_app": null,
+  "add_your_app": "اپليكشن خود را اضافه كنيد",
   "categories": "دسته بندی ها",
   "choose_language": "انتخاب زبان",
   "contact": null,
@@ -92,7 +92,7 @@ $translateProvider.translations("fa", {
   "language_title": "زبان",
   "media-and-communication_description": "از زندگی وتجربیات دیگران الهام بگیرید",
   "media-and-communication_title": "رسانه و ارتباطات",
-  "refugee_tech_info": "نهج حصلت على أي أفكار التطبيق المباشر لهم RT إذا المطور يريد تحميل التطبيق .",
+  "refugee_tech_info": "ما پلى هستيم بين بخش هاى مختلف جامعه تا به وسيله ى  تكنولوژى و راه حل هاى سازمان يافته، توانايى هاى مهاجران را شكوفا كنيم.",
   "setelin_description": "ستلین در یک هکتن با مدیریت رفیوجی تک و همکاری اداره ی مهاجرت و استکهلم تک شکل گرفت. این محفل پروژه هایی که هدف کمک کردن به مسائل اجتماعی دارند را دور هم جمع کرد.\nرفیوجی تک مسؤلیت توسعه وتکمیل کردن پلتفرم ستلین را ، با یاری داوطلبان و همکاران دیگر،  به عهده گرفت.",
   "setelin_footer": null,
   "setelin_header": null,

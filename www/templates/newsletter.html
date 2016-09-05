@@ -1,0 +1,30 @@
+<ion-modal-view class="setelin">
+  <ion-content  overflow-scroll="false">
+    <div class="setelin">
+      <div class="col newsletter-content">
+        <div class="row">
+
+          <button style="position:absolute;left:10px;top:28px;" class="button button-icon icon ion-chevron-left" ng-click="closeNewsletter()"></button>
+
+          <div class="col">
+            <h1 class="text-center about-title">{{ 'newsletter_title' | translate }}</h1>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p class="text-center">{{ 'newsletter_description' | translate }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="item item-input item-floating-label">
+            <input class="email-input" type="text" placeholder="{{ 'email_hint' | translate}}" style="background-color: transparent;">
+          </label>
+          <p class="text-center">{{ 'subscribe_lable' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

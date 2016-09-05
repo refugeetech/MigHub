@@ -153,6 +153,22 @@ angular.module('starter.controllers', [])
         $scope.closeapp()
     }
 
+    $ionicModal.fromTemplateUrl('templates/newsletter.html', {
+        scope: $scope
+    }).then(function(modal) {
+        $scope.newsletterModal = modal
+    })
+
+    // Triggered in the about modal to close it
+    $scope.closeNewsletter = function() {
+        $scope.newsletterModal.hide()
+    }
+
+    // Open the about aboutModal
+    $scope.showNewsletter = function() {
+        $scope.newsletterModal.show()
+    }
+
     $ionicModal.fromTemplateUrl('templates/about.html', {
         scope: $scope
     }).then(function(modal) {
@@ -168,12 +184,6 @@ angular.module('starter.controllers', [])
     $scope.showAbout = function() {
         $scope.aboutModal.show()
     }
-
-    // Perform the about action when the user submits the app form
-    $scope.doapp = function() {
-        $scope.closeapp()
-    }
-
 
     /* Begin Favorite functions */
 
