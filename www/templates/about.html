@@ -1,57 +1,178 @@
 <ion-modal-view>
-  <ion-content  overflow-scroll="false">
+  <ion-content overflow-scroll="false">
     <div class="setelin">
-
       <div class="row">
 
         <button style="position:absolute;left:10px;top:28px;" class="button button-icon icon ion-chevron-left" ng-click="closeAbout()"></button>
 
         <div class="col">
-          <h1 class="text-center about-title">about</h1>
-          <p class="detail"> Setelin was initiated during a hackathon in a collaboration between Refugee Tech,
-              STHM TECH and Migrationsverket the 29th of May. Its an historical event where an
-              government agency reaches out and collaborates with a tech community. </p>
+          <h1 class="text-center about-title">{{ 'about_us' | translate }}</h1>
+          <p class="detail"> {{ 'setelin_description' | translate }} </p>
         </div>
       </div>
 
- <!--     <div class="row">
+      <!--     <div class="row">
         <div class="col feedback">
           <button class="button button-clear button-dark">
             feedback
           </button>
         </div>
       </div>-->
-
       <div class="row" style="margin-top:20px;">
         <div class="col">
+          <h1 class="text-center about-title">{{  'contributors_title' | translate }}</h1>
+          <p>{{ 'contributors_description' | translate }}</p>
+        </div>
+      </div>
+      <div class="row" style="margin-top:20px;">
+        <div class="col">
+          <table id="contributors">
+            <tr>
+              <td>Adnan Abdul Ghani </td>
+              <td>coordination</td>
+            </tr>
+            <tr>
+              <td>Adrian Solitander </td>
+              <td>pr & coordination </td>
+            </tr>
+            <tr>
+              <td>Aldin Galjic </td>
+              <td>initiative content </td>
+            </tr>
+            <tr>
+              <td>Ali Zamli </td>
+              <td>design assets </td>
+            </tr>
+            <tr>
+              <td>Arsham Afshari </td>
+              <td>collaborators </td>
+            </tr>
+            <tr>
+              <td>Anna Iosif </td>
+              <td>developer </td>
+            </tr>
+            <tr>
+              <td>Christian Landgren </td>
+              <td>tech lead </td>
+            </tr>
+            <tr>
+              <td>David Tobar Herrera </td>
+              <td>ux & ui design </td>
+            </tr>
+            <tr>
+              <td>Elhabib Moustaid </td>
+              <td>research & analytics </td>
+            </tr>
+            <tr>
+              <td>Jamil Walli </td>
+              <td>copy </td>
+            </tr>
+            <tr>
+              <td>Leo Salmonsson </td>
+              <td>tech lead </td>
+            </tr>
+            <tr>
+              <td>Leonard Pauli </td>
+              <td>developer </td>
+            </tr>
+            <tr>
+              <td>Lisa Söderlindh </td>
+              <td>pr & communication </td>
+            </tr>
+            <tr>
+              <td>Mikael Ribbenvik </td>
+              <td>coordinator </td>
+            </tr>
+            <tr>
+              <td>Milad Fallah </td>
+              <td>project leader </td>
+            </tr>
+            <tr>
+              <td>Ningjing Chen </td>
+              <td>developer </td>
+            </tr>
+            <tr>
+              <td>Oscar Haglind </td>
+              <td>developer </td>
+            </tr>
+            <tr>
+              <td>Shahin Baharan </td>
+              <td>pr & communication </td>
+            </tr>
+            <tr>
+              <td>Susanne Najafi </td>
+              <td>coordinatior </td>
+            </tr>
+            <tr>
+              <td>Tobias Rosman </td>
+              <td>wireframing </td>
+            </tr>
+            <tr>
+              <td>Tyler Crowley </td>
+              <td>coordinator </td>
+            </tr>
+            <tr>
+              <td>Vitali Poluzhnikov </td>
+              <td>brand identity </td>
+            </tr>
+          </table>
+
+
           <!-- Img, border rounded -->
-          <h1 class="text-center about-title">contributors</h1>
-          <p>
-            These are the volonteers that contributed in this great initiative
-          </p>
-          <ul class="collaborators">
-            <li>Aldin Galgic</li><li>
-            Ali Zamli </li><li>
-            Arsham Afrhari </li><li>
-            Christian Landgren </li><li>
-            David Tobar Herrera </li><li>
-            Elhabib Moustaid </li><li>
-            Leop Salmonsson </li><li>
-            Leonard Pauli </li><li>
-            Mikael Ribbenvik </li><li>
-            Milad Fallah </li><li>
-            Ningjing Chen </li><li>
-            Oscar Haglind </li><li>
-            Shahin Baharan </li><li>
-            Susanne Najfi </li><li>
-            Tobias Rosman </li><li>
-            Tyler Crowley </li><li>
-            Vitali Poluzhnikov </li>
+          <!-- <ul class="collaborators">
+            <li>Adnan Abdul Ghani </li>
+            <li>Adrian Solitander </li>
+            <li>Aldin Galjic </li>
+            <li>Ali Zamli </li>
+            <li>Arsham Afshari </li>
+            <li>Anna Iosif </li>
+            <li>Christian Landgren </li>
+            <li>David Tobar Herrera </li>
+            <li>Elhabib Moustaid </li>
+            <li>Jamil Walli </li>
+            <li>Leo Salmonsson </li>
+            <li>Leonard Pauli </li>
+            <li>Lisa Söderlindh </li>
+            <li>Mikael Ribbenvik </li>
+            <li>Milad Fallah </li>
+            <li>Ningjing Chen </li>
+            <li>Oscar Haglind </li>
+            <li>Shahin Baharan </li>
+            <li>Susanne Najafi </li>
+            <li>Tobias Rosman </li>
+            <li>Tyler Crowley </li>
+            <li>Vitali Poluzhnikov </li>
           </ul>
+        </div>
+        <div class="col">
+          <ul class="collaborators contribution">
+            <li>coordination</li>
+            <li>pr & coordination </li>
+            <li>initiative content </li>
+            <li>design assets </li>
+            <li>collaborators </li>
+            <li>developer </li>
+            <li>tech lead </li>
+            <li>ux & ui design </li>
+            <li>research & analytics </li>
+            <li>copy </li>
+            <li>tech lead </li>
+            <li>developer </li>
+            <li>pr & communication </li>
+            <li>coordinator </li>
+            <li>project leader </li>
+            <li>developer </li>
+            <li>developer </li>
+            <li>pr & communication </li>
+            <li>coordinatior </li>
+            <li>wireframing </li>
+            <li>coordinator </li>
+            <li>brand identity </li>
+          </ul> -->
         </div>
       </div>
 
-     <!-- <div class="row">
+      <!-- <div class="row">
         <div class="col social">
           <h3 class="text-center" style="margin-top: 8px;">follow us</h3>
           <div class="row">
@@ -72,7 +193,8 @@
         </div>
       </div>-->
 
-    </div> <!-- End setelin part -->
+    </div>
+    <!-- End setelin part -->
 
     <div class="refugeetech">
       <div class="row" style="text-align: center">
@@ -82,17 +204,16 @@
 
       <div class="row">
         <div class="col">
-          <p>We build bridges between all parts of society to enable refugees’ potential,
-             relying on efficiently designed and developed technology solutions.</p>
+          <p>{{ 'refugee_tech_info' | translate }}</p>
         </div>
       </div>
 
       <div class="row" style="margin-top:20px;">
         <div class="col links">
-          <h1 class="text-center">follow us</h1>
+          <h1 class="text-center about-title">{{ 'follow_us' | translate }}</h1>
           <div class="row">
             <a class="button button-clear button-dark" href="http://refugeetech.com/" target="_blank">
-              visit us
+              {{ 'visit_us' | translate }}
             </a>
           </div>
           <div class="row">
@@ -102,12 +223,12 @@
           </div>
           <div class="row">
             <a class="button button-clear button-dark" href="https://refugee1.typeform.com/to/WLYvfG" target="_blank">
-              add your app in Setelin
+              {{ 'add_your_app' | translate }}
             </a>
           </div>
           <div class="row">
             <a class="button button-clear button-dark" href="emailto: info@refugeetech.com" target="_blank">
-              contact
+              {{ 'contact' | translate }}
             </a>
           </div>
         </div>
