@@ -8,6 +8,7 @@
   "contributors_title": null,
   "education_description": "قم بتطوير خبراتك المعرفية و تنمية مهاراتك من اجل مستقبل أفضل",
   "education_title": "تعليم",
+  "email_hint": null,
   "employment_description": "ابحث عن  فرص شغل او تكوين مهني، التق بمهنيين بنفس اهتماماتك",
   "employment_title": "شغل",
   "follow_us": null,
@@ -23,11 +24,14 @@
   "language_title": "لغات",
   "media-and-communication_description": "تّعرف على قصص ملهمة، و تجارب مثيرة غيرت حياة الناس",
   "media-and-communication_title": "إعلام و مواصلات",
+  "newsletter_description": null,
+  "newsletter_title": null,
   "refugee_tech_info": "نقوم بتوحيد جهود المجتمع، من اجل مساعدة القادمين الجدد. نقوم بذلك من خلال توظيف تكنولجيات وخدم معدة لذلك ",
   "setelin_description": "تم إنشاء 'ستل إن' خلال هكاتون نظمته 'ريفوجي تك ' مع مصلحة الهجرة و 'ستكهولم تك '. خلال الهكاتون، تم توحيد جهود المبادرات التي تساعد اللاجئين في السويد من خلال إنشاء هذا التطبيق.\nقامت 'ريفوجي تك ' بعد ذلك بالسهر على إتمام التطبيق.",
   "setelin_footer": null,
   "setelin_header": null,
   "social_description": "قل لي من تعاشر، أقول لك من أنت. تعرف على أناس جدد و ابدأ صداقات جديدة",
   "social_title": "تواصل اجتماعي",
+  "subscribe_label": null,
   "visit_us": null
 }
