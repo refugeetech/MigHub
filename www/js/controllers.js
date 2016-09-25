@@ -367,3 +367,11 @@ slide.controller('SlideboxController', function($scope) {
 
     })
 })
+
+.controller('googleanalytics', function($scope) {
+    if(typeof analytics !== undefined) { analytics.trackView("Awesome Controller"); }
+
+    $scope.initEvent = function() {
+        if(typeof analytics !== undefined) { analytics.trackEvent("Category", "Action", "Label", 25); }
+    }
+});
