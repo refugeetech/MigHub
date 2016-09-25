@@ -262,6 +262,7 @@ angular.module('starter.controllers', [])
 .controller('CategoriesCtrl', function($rootScope, API, $scope, $ionicScrollDelegate) {
     var categories = API.categories().$promise.then(function() {
         $rootScope.categories = categories
+        console.log('loghaaa ', $translate.use())
     });
 
     $scope.getScrollPosition = function() {
@@ -303,10 +304,23 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CategoryCtrl', function($scope, $state, $stateParams, $ionicScrollDelegate, API) {
+.controller('CategoryCtrl', function($scope, $translate, $state, $stateParams, $ionicScrollDelegate, API) {
     $scope.category = $scope.categories.filter(function(category) {
         return category.slug === $stateParams.categoryId
     }).pop()
+
+
+      // RTL direction ::
+      $scope.getRtlDirection = function(){
+        if($translate.use() == 'ar' || $translate.use() == 'fa' ){
+          console.log(">>>"+$translate.use())
+          return "right"
+        } else{
+          console.log(">>>EN")
+          return "left"
+        }
+      }
+
 
     $scope.apps = []
 
@@ -348,6 +362,7 @@ angular.module('starter.controllers', [])
             categoryId: next.slug
         })
     }
+
 
 })
 
