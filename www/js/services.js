@@ -75,13 +75,20 @@
       downv.get({id: projectId})
     }
 
+    //for newsletter
+    var newsletter = $resource('https://refugeetech-projecthub-cms.meteorapp.com/api/v02/newsletter/:email', {email: '@email'})
+    var registerEmail = function (email) {
+      newsletter.get({id: projectId})
+    }
+
     return {
       favoriteStore: favoriteStore,
       categories: getCategories,
       projects: getProjects,
       projectById: getProjectById,
       upVote: upVote,
-      downVote: downVote
+      downVote: downVote,
+      registerEmail,registerEmail
     }
 
   }

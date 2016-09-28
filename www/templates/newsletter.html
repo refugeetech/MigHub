@@ -20,9 +20,9 @@
 
         <div class="row">
           <label class="item item-input item-floating-label">
-            <input class="email-input" type="text" placeholder="{{ 'email_hint' | translate}}" style="background-color: transparent; min-width: 245px;">
+            <input class="email-input" ng-model="newsletterEmail" type="text" placeholder="{{ 'email_hint' | translate}}" style="background-color: transparent; min-width: 245px;">
           </label>
-          <p class="text-center">{{ 'subscribe_label' | translate }}</p>
+          <button class="button button-icon"  ng-click="registerEmail(newsletterEmail);">{{ 'subscribe_label' | translate }}</button>
         </div>
       </div>
     </div>

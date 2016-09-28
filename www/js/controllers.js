@@ -169,6 +169,12 @@ angular.module('starter.controllers', [])
         $scope.newsletterModal.show()
     }
 
+    $scope.newsletterEmail = null;
+    $scope.registerEmail = function(email) {
+        console.log(email);
+        API.registerEmail(email)
+    }
+
     $ionicModal.fromTemplateUrl('templates/about.html', {
         scope: $scope
     }).then(function(modal) {
