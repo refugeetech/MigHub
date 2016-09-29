@@ -81,6 +81,10 @@
       newsletter.get({id: projectId})
     }
 
+    var emails = function (emailValue) {
+      newsletter.get({email: emailValue})
+    }
+
     return {
       favoriteStore: favoriteStore,
       categories: getCategories,
@@ -88,7 +92,8 @@
       projectById: getProjectById,
       upVote: upVote,
       downVote: downVote,
-      registerEmail: registerEmail
+      registerEmail: registerEmail,
+      emails: emails
     }
 
   }

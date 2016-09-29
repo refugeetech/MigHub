@@ -171,20 +171,31 @@ angular.module('starter.controllers', [])
 
     // Call email registration
     $scope.newsletterEmail = null;
+    $scope.emails = null;
+    // by default hide info message
+    $scope.showInfo = "ng-hide"
+    $scope.messageInfo = "newsletter_registration_info"
+
     $scope.registerEmail = function(email) {
       console.log(email)
-      
+      console.log("emails:" + API.emails(email))
+      $scope.emails = API.emails(email)
+
+      if($scope.emails.toContain(email)){
+        $scope.messageInfo = "newsletter_registration_exist"
+        console.log("true")
+      } else {
+        API.registerEmail(email)
+      }
+
       $scope.hideForm = "ng-hide"
       $scope.showInfo = "ng-show"
 
-      //API.registerEmail(email)
     }
 
-    // by default hide info message
-    $scope.showInfo = "ng-hide"
 
     // Email validation
-    $scope.validEmail = function(email){
+    /*$scope.validEmail = function(email){
       console.log("newsletterEmail="+email)
       var valid = angular.element($scope.binding('mailForm.input.$valid'))
       var text = angular.element($scope.binding('newsletterEmail'))
@@ -208,9 +219,7 @@ angular.module('starter.controllers', [])
         expect(valid.getText()).toContain('false')
       })
 
-      console.log(input)
-
-    }
+    }*/
 
 
     $ionicModal.fromTemplateUrl('templates/about.html', {
