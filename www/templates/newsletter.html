@@ -19,10 +19,22 @@
         </div>
 
         <div class="row">
+          <form name="myForm" novalidate>
           <label class="item item-input item-floating-label">
-            <input class="email-input" ng-model="newsletterEmail" type="text" placeholder="{{ 'email_hint' | translate}}" style="background-color: transparent; min-width: 245px;">
+            <input class="email-input" name="email" ng-model="newsletterEmail" type="email" placeholder="{{ 'email_hint' | translate}}" style="background-color: transparent; min-width: 245px;" required>
           </label>
-          <button class="button button-icon"  ng-click="registerEmail(newsletterEmail);">{{ 'subscribe_label' | translate }}</button>
+          <button class="button button-icon"
+            ng-click="registerEmail(newsletterEmail);"
+            ng-disabled="myForm.email.$dirty && myForm.email.$invalid || myForm.email.$touched">
+            {{ 'subscribe_label' | translate }}
+          </button>
+          </br>
+          <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+            <span ng-show="myForm.email.$error.required">Email is required.</span>
+            <span ng-show="myForm.email.$error.email">Invalid email address.</span>         
+          </span>
+
+          </form>
         </div>
       </div>
     </div>

@@ -169,11 +169,43 @@ angular.module('starter.controllers', [])
         $scope.newsletterModal.show()
     }
 
+    // Call email registration
     $scope.newsletterEmail = null;
     $scope.registerEmail = function(email) {
-        console.log(email);
-        API.registerEmail(email)
+      console.log(email)
+      $scope.validEmail(email)
+      API.registerEmail(email)
     }
+
+    // Email validation
+    $scope.validEmail = function(email){
+      console.log("newsletterEmail="+email)
+      var valid = angular.element($scope.binding('mailForm.input.$valid'))
+      var text = angular.element($scope.binding('newsletterEmail'))
+      var input = angular.element(email)
+
+      it('should init to model', function(){
+        expect(email).toContain('m@m.m')
+        expect(valid.getText()).toContain('true')
+      })
+
+      it('should be invalid if empty', function(){
+        input.clear()
+        input.sendKeys('')
+        expect(text.getText()).toEqual('text=')
+        expect(valid.getText()).toContain('false')
+      })
+
+      it('should be invalid if not email', function(){
+        input.clear()
+        input.sendKeys('xxx')
+        expect(valid.getText()).toContain('false')
+      })
+
+      console.log(input)
+
+    }
+
 
     $ionicModal.fromTemplateUrl('templates/about.html', {
         scope: $scope

@@ -88,7 +88,7 @@
       projectById: getProjectById,
       upVote: upVote,
       downVote: downVote,
-      registerEmail,registerEmail
+      registerEmail: registerEmail
     }
 
   }

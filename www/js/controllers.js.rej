@@ -1,0 +1,14 @@
+diff a/www/js/controllers.js b/www/js/controllers.js	(rejected hunks)
+@@ -169,6 +169,12 @@
+         $scope.newsletterModal.show()
+     }
+ 
++    $scope.newsletterEmail = null;
++    $scope.registerEmail = function(email) {
++        console.log(email);
++        API.registerEmail(email)
++    }
++
+     $ionicModal.fromTemplateUrl('templates/about.html', {
+         scope: $scope
+     }).then(function(modal) {
