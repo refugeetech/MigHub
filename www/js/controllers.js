@@ -173,9 +173,15 @@ angular.module('starter.controllers', [])
     $scope.newsletterEmail = null;
     $scope.registerEmail = function(email) {
       console.log(email)
-      $scope.validEmail(email)
-      API.registerEmail(email)
+      
+      $scope.hideForm = "ng-hide"
+      $scope.showInfo = "ng-show"
+
+      //API.registerEmail(email)
     }
+
+    // by default hide info message
+    $scope.showInfo = "ng-hide"
 
     // Email validation
     $scope.validEmail = function(email){
