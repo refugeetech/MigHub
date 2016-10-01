@@ -176,20 +176,18 @@ angular.module('starter.controllers', [])
     $scope.messageInfo = "newsletter_registration_info"
 
     $scope.registerEmail = function(email) {
-      console.log(email)
 
-      $scope.statusm = API.registerEmail(email)
+      API.registerEmail(email).$promise.then(function(res) {
+        //console.log(res);
+        if(res.status === "exists"){
+          $scope.messageInfo = "newsletter_registration_exist"
+        } else if(res.status === "success") {
+          $scope.messageInfo = "newsletter_registration_info"
+        }
 
-      console.log("=>" + $scope.statusm)
-
-      if($scope.statusm.status === "exists"){
-        $scope.messageInfo = "newsletter_registration_exist"
-      } else if($scope.statusm.status === "success") {
-        $scope.messageInfo = "newsletter_registration_info"
-      }
-
-      $scope.hideForm = "ng-hide"
-      $scope.showInfo = "ng-show"
+        $scope.hideForm = "ng-hide"
+        $scope.showInfo = "ng-show"
+      })
 
     }
 

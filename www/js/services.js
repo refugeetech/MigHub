@@ -78,11 +78,7 @@
     //for newsletter
     var newsletter = $resource('https://refugeetech-projecthub-cms.meteorapp.com/api/v02/newsletter/:email', {email: '@email'})
     var registerEmail = function (mail) {
-      newsletter.get({email: mail})
-    }
-
-    var emails = function (emailValue) {
-      newsletter.get({email: emailValue})
+      return newsletter.get({email: mail})
     }
 
     return {
@@ -92,8 +88,7 @@
       projectById: getProjectById,
       upVote: upVote,
       downVote: downVote,
-      registerEmail: registerEmail,
-      emails: emails
+      registerEmail: registerEmail
     }
 
   }
