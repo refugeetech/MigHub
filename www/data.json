@@ -108,7 +108,7 @@
       {
         "type": "logo",
         "name": "Logo",
-        "url": "https://www.informationsverige.se/Svenska/Arbete-och-utbildning/PublishingImages/informationsverige_icon_05.png"
+        "url": "http://www.informationsverige.se/_layouts/15/Images/InfoSweden.Branding/Logo.png"
       }
     ],
     "challengeCategories": [
@@ -329,7 +329,7 @@
       {
         "type": "logo",
         "name": "Logo",
-        "url": "https://content.linkedin.com/content/dam/linkedinforgood/site/img/Welcome-talent/main-pdfs/400.png"
+        "url": "https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAXIAAAAJGY2NzBiMDhiLWYxMjAtNGU1OS05NWQzLWMzODg1NDk4M2RiZg.png"
       },
       {
         "type": "home",
@@ -453,18 +453,18 @@
   },
   {
     "_id": "2GahQ8q5eQJNnZjhm",
-    "name": "Welcome! App",
+    "name": "Welcome! Movement",
     "description": "Welcome! app makes it easier for newly arrived refugees and locals to connect. Through the app you can: - Reach out to others; - Create, host and join activities; - Chat with new interesting people: - Welcome! is translated to four languages: Arabic, Persian, Swedish and English. It enables people with different native languages to communicate through real time auto-translation. You can filter questions and activities based on popular categories, and you will see what is happening nearby.",
     "links": [
       {
         "type": "home",
         "name": "Home Page",
-        "url": "http://welcomeapp.se"
+        "url": "http://welcomemovement.se/"
       },
       {
         "type": "logo",
         "name": "Logo",
-        "url": "https://pbs.twimg.com/profile_images/665584301996695552/Lv7jkDjx.jpg"
+        "url": "https://pbs.twimg.com/profile_images/799315929486229504/hFZlay3h.jpg"
       },
       {
         "type": "appStore",
